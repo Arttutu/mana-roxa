@@ -14,10 +14,14 @@
     },
     {
       "id": 2,
-      "descricao": "Descubra as novidades e melhorias do Next.js 14, incluindo novas APIs e desempenho aprimorado.",
-      "titulo": "Novidades do Next.js 14",
+      "descricao": "Venha descobrir como utilizar eventos JS",
+      "titulo": "Eventos JS",
+      "titulo2": "Resumo",
+      "titulo3": "Eventos",
+      "texto":"Os eventos são basicamente um conjunto de ações que são realizadas em um determinado elemento da página web, seja ele um texto, uma imagem, ou uma div, por exemplo. Muitas das interações do usuário que está visitando sua página com o conteúdo do seu site podem ser consideradas eventos.",
       "slug": "novidades-next-14",
-      "img": "/assets/img/next.png"
+      "img": "/assets/img/js.png",
+      "imagem2":"/assets/img/2/img1.png"
     },
     {
       "id": 3,
@@ -25,21 +29,5 @@
       "titulo": "Usando Tailwind CSS com Next.js",
       "slug": "tailwind-css-nextjs",
       "img": "/assets/img/next.png"
-    },
-  
-  
-  {
-    "id": 2,
-    "descricao": "Descubra as novidades e melhorias do Next.js 14, incluindo novas APIs e desempenho aprimorado.",
-    "titulo": "Novidades do Next.js 14",
-    "slug": "novidades-next-14",
-    "img": "/assets/img/next.png"
-  },
-  {
-    "id": 3,
-    "descricao": "Aprenda a usar o Tailwind CSS com o Next.js para estilizar suas aplicações de forma eficiente e moderna.",
-    "titulo": "Usando Tailwind CSS com Next.js",
-    "slug": "tailwind-css-nextjs",
-    "img": "/assets/img/next.png"
-  }
+    }
 ]

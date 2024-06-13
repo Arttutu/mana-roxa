@@ -4,11 +4,11 @@ import Image from "next/image";
 export default function Card({ img, postTitulo }) {
   console.log(img);
   return (
-    <div className=" w-full sm:w-[400px]   flex flex-col gap-4">
+    <div className="w-full h-[300px]  flex flex-col justify-around ">
       <Image
-        className="w-full"
-        width={400}
-        height={300}
+        className="rounded-lg"
+        width={350}
+        height={250}
         src={img}
         alt="imagem do post"
       />

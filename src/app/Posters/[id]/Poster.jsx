@@ -29,7 +29,6 @@ export default function Poster() {
   const {
     titulo,
     titulo2,
-    titulo3,
     descricao,
     texto,
     texto2,
@@ -39,13 +38,14 @@ export default function Poster() {
   } = posterData;
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-8">
       <div className="flex gap-8 items-center">
         <h1 className="text-textoPrincipal text-2xl font-semibold">{titulo}</h1>
-        <span className=" text-textoPrincipal text-4xl">-</span>
-        <p className="text-xl text-textoPrincipal">{descricao}</p>
+        <span className=" text-textoPrincipal text-4xl">---´´</span>
+        <p className="text-xl text-textoPrincipal">{descricao4}</p>
       </div>
-      <div className="flex flex-col items-start gap-8 mt-12">
+
+      <div className="flex flex-col items-start gap-24">
         <h2 className="text-3xl text-textoPrincipal">{titulo2}</h2>
         <p className=" text-md sm:text-xl text-paragrafo">{texto}</p>
         {posterData.imagem1 ? (
@@ -60,7 +60,6 @@ export default function Poster() {
         ) : (
           ""
         )}
-        <h3 className="text-3xl text-textoPrincipal">{titulo3}</h3>
         <p className=" text-md sm:text-xl text-paragrafo">{texto2}</p>
         {posterData.imagem2 ? (
           <div className="w-full flex justify-center bg-background2 p-12">
