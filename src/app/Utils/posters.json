@@ -9,7 +9,10 @@
       "imagem1":"/assets/img/1/img1.png",
       "imagem2":"/assets/img/1/img2.png",    
       "slug": "rotas-aninhadas-next-14",
+      "tempo":"4",
+      "data":"11/06/2024",
       "texto3": "Vantagens Incríveis Por que você deveria se apaixonar por rotas dinâmicas no Next.js? Aqui vão algumas razões: Flexibilidade Total: Crie páginas dinâmicas que se ajustam automaticamente com base nos dados da sua aplicação. Escalabilidade: Lidar com grandes volumes de conteúdo se torna uma brincadeira de criança, pois você pode pré-renderizar tudo de forma estática com getStaticPaths e getStaticProps. Simplicidade na Manutenção: Menos arquivos, menos confusão. É a beleza da organização e eficiência em seu código. Conclusão Então, pessoal, espero que vocês tenham se sentido inspirados a explorar as maravilhas das rotas dinâmicas com Next.js. Se você quer saber mais sobre como implementar essa magia em seus próprios projetos, não deixe de conferir a documentação oficial do Next.js sobre Rotas Dinâmicas. Vamos transformar suas ideias em realidade digital de uma forma dinâmica e encantadora. Não se esqueça de deixar seus comentários abaixo e compartilhar suas experiências com rotas dinâmicas. Estou ansioso para ver o que vocês vão criar! Até a próxima aventura digital, Arthur",
+      "resumo":"",
       "img": "/assets/img/next.png"
     },
     {
@@ -18,6 +21,9 @@
       "titulo": "Eventos JS",
       "titulo2": "Resumo",
       "titulo3": "Eventos",
+      "tempo":"4",
+      "resumo":"",
+      "data":"11/06/2024",
       "texto":"Os eventos são basicamente um conjunto de ações que são realizadas em um determinado elemento da página web, seja ele um texto, uma imagem, ou uma div, por exemplo. Muitas das interações do usuário que está visitando sua página com o conteúdo do seu site podem ser consideradas eventos.",
       "slug": "novidades-next-14",
       "img": "/assets/img/js.png",
@@ -28,6 +34,9 @@
       "descricao": "Aprenda a usar o Tailwind CSS com o Next.js para estilizar suas aplicações de forma eficiente e moderna.",
       "titulo": "Usando Tailwind CSS com Next.js",
       "slug": "tailwind-css-nextjs",
+      "tempo":"4",
+      "resumo":"",
+      "data":"11/06/2024",
       "img": "/assets/img/next.png"
     }
 ]

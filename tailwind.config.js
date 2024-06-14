@@ -15,8 +15,14 @@ module.exports = {
       hover:"#7f5af0",
       botaoTexto:"#fffffe"
     },
+    extend: {
+      fontFamily: {
+        font1: "spicy-rice-regula",
+        font2: "source-sans-3"
+      },
+    }
     
   
   },
   plugins: [],
-};
+}
