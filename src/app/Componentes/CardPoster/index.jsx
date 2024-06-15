@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Card({ img, postTitulo, tempo, data, resumo }) {
   const descricao = typeof resumo === "string" ? resumo.slice(0, 150) : "";
   return (
-    <div className="w-[450px]   rounded-lg  flex flex-col justify-between  ">
+    <div className="w-full sm:w-[450px] rounded-lg  flex flex-col justify-between  ">
       <Image
         className=" w-full"
         width={350}
