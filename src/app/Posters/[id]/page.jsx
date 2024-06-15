@@ -6,12 +6,10 @@ import Image from "next/image";
 
 export default function Poster() {
   const params = useParams();
-  const id = parseInt(params.id, 10); // Obtém o id da URL e converte para número
+  const id = parseInt(params.id, 10);
 
-  // Encontra o pôster correspondente no metadata
   const posterData = metadata.find((item) => item.id === id);
 
-  // Se não encontrar o pôster, exibe mensagem de erro
   if (!posterData) {
     return (
       <div className="flex flex-col gap-4">
@@ -25,7 +23,6 @@ export default function Poster() {
     );
   }
 
-  // Desestrutura o título e a descrição do pôster encontrado
   const {
     titulo,
     titulo2,
@@ -40,11 +37,11 @@ export default function Poster() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex gap-8 items-center">
+      <div className="flex flex-col sm:flex sm:flex-row gap-8 items-center">
         <h1 className="text-textoPrincipal text-2xl font-semibold font-font1">
           {titulo}
         </h1>
-        <span className=" text-textoPrincipal text-4xl">-</span>
+        <span className="  text-textoPrincipal text-4xl">-</span>
         <p className="text-xl text-textoPrincipal  font-font1">{descricao}</p>
       </div>
       <div className="flex flex-col items-start gap-8 mt-12">

@@ -38,5 +38,35 @@
       "resumo":"",
       "data":"11/06/2024",
       "img": "/assets/img/next.png"
+    },    
+    {
+      "id": 4,
+      "descricao": "Aprenda a usar o Tailwind CSS com o Next.js para estilizar suas aplicações de forma eficiente e moderna.",
+      "titulo": "Usando Tailwind CSS com Next.js",
+      "slug": "tailwind-css-nextjs",
+      "tempo":"4",
+      "resumo":"",
+      "data":"11/06/2024",
+      "img": "/assets/img/next.png"
+    },
+    {
+      "id": 4,
+      "descricao": "Aprenda a usar o Tailwind CSS com o Next.js para estilizar suas aplicações de forma eficiente e moderna.",
+      "titulo": "Usando Tailwind CSS com Next.js",
+      "slug": "tailwind-css-nextjs",
+      "tempo":"4",
+      "resumo":"",
+      "data":"11/06/2024",
+      "img": "/assets/img/next.png"
+    },
+    {
+      "id": 4,
+      "descricao": "Aprenda a usar o Tailwind CSS com o Next.js para estilizar suas aplicações de forma eficiente e moderna.",
+      "titulo": "Usando Tailwind CSS com Next.js",
+      "slug": "tailwind-css-nextjs",
+      "tempo":"4",
+      "resumo":"",
+      "data":"11/06/2024",
+      "img": "/assets/img/next.png"
     }
-]
+  ]

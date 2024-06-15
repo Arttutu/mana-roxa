@@ -2,29 +2,30 @@ import React from "react";
 
 import Image from "next/image";
 export default function Card({ img, postTitulo, tempo, data, resumo }) {
-  const descricao = typeof resumo === "string" ? resumo.slice(0, 70) : "";
+  const descricao = typeof resumo === "string" ? resumo.slice(0, 150) : "";
   return (
-    <div className="w-full h-[auto]  flex flex-col justify-around ">
+    <div className="w-[450px]   rounded-lg  flex flex-col justify-between  ">
       <Image
-        className="rounded-lg"
+        className=" w-full"
         width={350}
-        height={250}
+        height={100}
         src={img}
         alt="imagem do post"
       />
-      <div className="flex gap-4 items-center">
+      <div className="flex p-4  gap-4 items-center ">
         <span className="text-textoPrincipal text-md  font-font2">{data}</span>
         <span className="text-textoPrincipal text-md  font-font2">
           {tempo}min
         </span>
       </div>
-      <h2 className="text-textoPrincipal text-xl font-bold font-font1">
-        {postTitulo}
-      </h2>
-      <div className=""></div>
-      <p className="text-textoPrincipal text-md font-bold font-font2 w-full flex flex-wrap">
-        {descricao}...
-      </p>
+      <div className="w-full flex flex-col gap-4 p-4  ">
+        <h2 className="text-titulo text-xl font-bold font-font1 ">
+          {postTitulo}
+        </h2>
+        <p className="text-textoPrincipal text-lg font-bold font-font2 w-full flex flex-wrap leading-6">
+          {descricao}...
+        </p>
+      </div>
     </div>
   );
 }

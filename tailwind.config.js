@@ -11,17 +11,12 @@ module.exports = {
       background2:"#242629",
       textoPrincipal: "#fffffe",
       paragrafo: "#94a1b2",
+      titulo:"#7f5af0",
       botao:"#7f5af0",
       hover:"#7f5af0",
       botaoTexto:"#fffffe"
     },
-    extend: {
-      fontFamily: {
-        font1: "spicy-rice-regula",
-        font2: "source-sans-3"
-      },
-    }
-    
+
   
   },
   plugins: [],
