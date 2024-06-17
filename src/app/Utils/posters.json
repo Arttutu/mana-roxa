@@ -2,71 +2,16 @@
   
     {
       "id": 1,
-      "descricao": "Aprenda a criar rotas aninhadas no Next.js 14 para construir aplicações web complexas e bem organizadas.",
-      "titulo": "Como criar rotas aninhadas com Next 14",
-      "texto": "E aí, pessoal aventureiro! Sejam muito bem-vindos ao meu blog, onde hoje vamos mergulhar de cabeça no fascinante mundo das rotas dinâmicas com Next.js. Se você é como eu, que adora explorar novas tecnologias para criar aplicações web incríveis, então você veio ao lugar certo! O Que São Rotas Dinâmicas? Imagine poder criar páginas que se ajustam automaticamente com base nos parâmetros da URL. Isso é exatamente o que as rotas dinâmicas no Next.js permitem fazer. Com apenas alguns colchetes mágicos na nomenclatura do arquivo, como [id].js ou [...slug].js, você abre um mundo de possibilidades para lidar com URLs variáveis e capturar múltiplos segmentos. É como ter uma varinha de condão para transformar seu site em algo flexível e adaptável às necessidades do usuário. Exemplo na Prática Vamos pensar juntos: você cria um arquivo pages/posts/[id].js. Simples assim! Agora seu site pode lidar com URLs como /posts/1, /posts/2, /posts/3, e por aí vai. E a melhor parte? Você pode acessar o parâmetro id diretamente no componente utilizando o useRouter do Next.js. É como magia acontecendo no seu código!",
-      "texto2": "Indo Além: Segmentos de Captura Total Mas espera, tem mais! Com o Next.js, você também pode capturar múltiplos segmentos de uma URL usando .... Por exemplo, com pages/posts/[...slug].js, seu site pode lidar com URLs como /posts/a, /posts/a/b, /posts/a/b/c, e por aí vai. O parâmetro slug se torna um array contendo os segmentos capturados da URL. É como ter superpoderes para lidar com qualquer estrutura de URL que você possa imaginar!",
+    
+      "titulo": "Slash quest é bom?",
+      "texto": "Slash Quest é uma aventura de ação com controles não convencionais e heróis improváveis. Uma espada falante precisa da sua ajuda para se reunir com sua dona, a Rainha. Gire, lute e tropece em um mundo intrigante cheio de quebra-cabeças, segredos e amigos. Esqueça sua fantasia de poder. Os controles simples, mas desconhecidos, de Slash Quest colocarão você na pele de um cavaleiro improvável com um grande coração, uma arma ainda maior e absolutamente nenhuma habilidade.",
       "imagem1":"/assets/img/1/img1.png",
-      "imagem2":"/assets/img/1/img2.png",    
-      "slug": "rotas-aninhadas-next-14",
-      "tempo":"4",
+      "video":"https://www.youtube.com/embed/VMEN9-kQCW8",
+      "imagem2":"",    
+      "autor":"Arthur",
+      "tempo":"5",
       "data":"11/06/2024",
-      "texto3": "Vantagens Incríveis Por que você deveria se apaixonar por rotas dinâmicas no Next.js? Aqui vão algumas razões: Flexibilidade Total: Crie páginas dinâmicas que se ajustam automaticamente com base nos dados da sua aplicação. Escalabilidade: Lidar com grandes volumes de conteúdo se torna uma brincadeira de criança, pois você pode pré-renderizar tudo de forma estática com getStaticPaths e getStaticProps. Simplicidade na Manutenção: Menos arquivos, menos confusão. É a beleza da organização e eficiência em seu código. Conclusão Então, pessoal, espero que vocês tenham se sentido inspirados a explorar as maravilhas das rotas dinâmicas com Next.js. Se você quer saber mais sobre como implementar essa magia em seus próprios projetos, não deixe de conferir a documentação oficial do Next.js sobre Rotas Dinâmicas. Vamos transformar suas ideias em realidade digital de uma forma dinâmica e encantadora. Não se esqueça de deixar seus comentários abaixo e compartilhar suas experiências com rotas dinâmicas. Estou ansioso para ver o que vocês vão criar! Até a próxima aventura digital, Arthur",
-      "resumo":"",
-      "img": "/assets/img/next.png"
-    },
-    {
-      "id": 2,
-      "descricao": "Venha descobrir como utilizar eventos JS",
-      "titulo": "Eventos JS",
-      "titulo2": "Resumo",
-      "titulo3": "Eventos",
-      "tempo":"4",
-      "resumo":"",
-      "data":"11/06/2024",
-      "texto":"Os eventos são basicamente um conjunto de ações que são realizadas em um determinado elemento da página web, seja ele um texto, uma imagem, ou uma div, por exemplo. Muitas das interações do usuário que está visitando sua página com o conteúdo do seu site podem ser consideradas eventos.",
-      "slug": "novidades-next-14",
-      "img": "/assets/img/js.png",
-      "imagem2":"/assets/img/2/img1.png"
-    },
-    {
-      "id": 3,
-      "descricao": "Aprenda a usar o Tailwind CSS com o Next.js para estilizar suas aplicações de forma eficiente e moderna.",
-      "titulo": "Usando Tailwind CSS com Next.js",
-      "slug": "tailwind-css-nextjs",
-      "tempo":"4",
-      "resumo":"",
-      "data":"11/06/2024",
-      "img": "/assets/img/next.png"
-    },    
-    {
-      "id": 4,
-      "descricao": "Aprenda a usar o Tailwind CSS com o Next.js para estilizar suas aplicações de forma eficiente e moderna.",
-      "titulo": "Usando Tailwind CSS com Next.js",
-      "slug": "tailwind-css-nextjs",
-      "tempo":"4",
-      "resumo":"",
-      "data":"11/06/2024",
-      "img": "/assets/img/next.png"
-    },
-    {
-      "id": 4,
-      "descricao": "Aprenda a usar o Tailwind CSS com o Next.js para estilizar suas aplicações de forma eficiente e moderna.",
-      "titulo": "Usando Tailwind CSS com Next.js",
-      "slug": "tailwind-css-nextjs",
-      "tempo":"4",
-      "resumo":"",
-      "data":"11/06/2024",
-      "img": "/assets/img/next.png"
-    },
-    {
-      "id": 4,
-      "descricao": "Aprenda a usar o Tailwind CSS com o Next.js para estilizar suas aplicações de forma eficiente e moderna.",
-      "titulo": "Usando Tailwind CSS com Next.js",
-      "slug": "tailwind-css-nextjs",
-      "tempo":"4",
-      "resumo":"",
-      "data":"11/06/2024",
-      "img": "/assets/img/next.png"
+      "texto3": "",
+      "resumo":""
     }
-  ]
+   ]
