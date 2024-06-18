@@ -21,7 +21,7 @@ export default function RootLayout({children}) {
           Sobre nós
           </Link>
        </header>
-        <main className=" container mx-auto p-8">{children}</main>
+        <main className=" container mx-auto px-4 py-8">{children}</main>
       </body>
     </html>
   );
