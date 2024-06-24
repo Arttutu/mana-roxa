@@ -53,7 +53,7 @@ export default function Poster() {
         ) : (
           ""
         )}
-        <h1 className="text-botao text-xl sm:text-4xl font-semibold font-font1">
+        <h1 className="text-textoPrincipal  text-xl sm:text-3xl  font-font1">
           {titulo}
         </h1>
         <p className=" text-md sm:text-2xl text-paragrafo font-font2">
@@ -68,11 +68,15 @@ export default function Poster() {
             allowfullscreen
           ></iframe>
         </div>
-        <h2 className="text-3xl text-botao font-font1">{titulo2}</h2>
+        <h2 className=" text-xl sm:text-3xl text-textoPrincipalfont-font1">
+          {titulo2}
+        </h2>
         <p className=" text-md sm:text-2xl text-paragrafo leading-8 ">
           {texto2}
         </p>
-        <h3 className="text-3xl text-botao font-font2">{titulo3}</h3>
+        <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
+          {titulo3}
+        </h3>
         {posterData.imagem2 ? (
           <div className="w-full flex justify-center bg-background2 p-12">
             <Image
@@ -88,7 +92,9 @@ export default function Poster() {
         <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
           {texto3}
         </p>
-        <h3 className="text-3xl text-botao font-font2">{titulo4}</h3>
+        <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
+          {titulo4}
+        </h3>
         <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
           {texto4}
         </p>
