@@ -4,7 +4,7 @@ import Card from "./Componentes/CardPoster";
 
 export default function Home() {
   return (
-    <section className="justify-center flex gap-12 w-full flex-wrap mt-12">
+    <section className="justify-center flex gap-12 w-full flex-wrap ">
       {metadata.map((item, index) => (
         <div className=" bg-background2 rounded-lg  flex items-center justify-between flex-col gap-4" key={index}>
           <Card img={item.imagem1} postTitulo={item.titulo} tempo={item.tempo} data={item.data} resumo={item.texto} autor={item.autor} />

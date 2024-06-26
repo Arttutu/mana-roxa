@@ -24,9 +24,15 @@ export default function RootLayout({children}) {
             </Link>
            
           </nav>
-        
        </header>
-        <main className=" container mx-auto px-4 py-8">{children}</main>
+        <main className=" container mx-auto px-4 py-16">{children}</main>
+        <footer className=" bg-background2 p-8 w-full flex justify-around">
+          <div className="container mx-auto flex items-center justify-center">          
+          <span className="text-textoPrincipal text-md sm:text-2xl">Copyright © Cronicas do console. Todos os direitos reservados.</span>
+      
+          </div>
+
+        </footer>
       </body>
     </html>
   );

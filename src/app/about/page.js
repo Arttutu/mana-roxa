@@ -1,6 +1,6 @@
-import Image from 'next/image'
+
 import React from 'react'
-import arthur from "../../../public/assets/img/arthur.jpeg"
+
 export default function about() {
   return (
     <div className='flex flex-col container gap-8'>

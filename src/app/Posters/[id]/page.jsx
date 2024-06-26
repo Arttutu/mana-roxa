@@ -28,13 +28,21 @@ export default function Poster() {
     titulo2,
     titulo3,
     titulo4,
+    titulo5,
+    titulo6,
     texto,
     texto2,
     texto3,
     imagem1,
     imagem2,
+    imagem3,
+    imagem4,
+    imagem5,
+    imagem6,
     video,
     texto4,
+    texto5,
+    texto6,
   } = posterData;
 
   return (
@@ -59,16 +67,21 @@ export default function Poster() {
         <p className=" text-md sm:text-2xl text-paragrafo font-font2">
           {texto}
         </p>
-        <div className="w-full flex items-center justify-center">
-          <iframe
-            width="800"
-            height="500"
-            src={video}
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <h2 className=" text-xl sm:text-3xl text-textoPrincipalfont-font1">
+        {video ? (
+          <div className="w-full flex items-center justify-center">
+            <iframe
+              width="800"
+              height="500"
+              src={video}
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        ) : (
+          ""
+        )}
+
+        <h2 className=" text-xl sm:text-3xl text-textoPrincipal font-font1">
           {titulo2}
         </h2>
         <p className=" text-md sm:text-2xl text-paragrafo leading-8 ">
@@ -98,6 +111,26 @@ export default function Poster() {
         <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
           {texto4}
         </p>
+        <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
+          {titulo5}
+        </h3>
+        <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
+          {texto5}
+        </p>
+        <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
+          {titulo6}
+        </h3>
+        <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
+          {texto6}
+        </p>
+        <div className="w-full flex justify-center bg-background2 p-12">
+          <Image
+            alt="imagem de numero 6 do poster"
+            src={imagem6}
+            width={500}
+            height={500}
+          ></Image>
+        </div>
       </div>
     </div>
   );
