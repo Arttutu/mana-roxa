@@ -87,9 +87,7 @@ export default function Poster() {
         <p className=" text-md sm:text-2xl text-paragrafo leading-8 ">
           {texto2}
         </p>
-        <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
-          {titulo3}
-        </h3>
+
         {posterData.imagem2 ? (
           <div className="w-full flex justify-center bg-background2 p-12">
             <Image
@@ -102,35 +100,78 @@ export default function Poster() {
         ) : (
           ""
         )}
+        <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
+          {titulo3}
+        </h3>
         <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
           {texto3}
         </p>
+        {imagem3 ? (
+          <div className="w-full flex justify-center bg-background2 p-12">
+            <Image
+              alt="imagem de numero 6 do poster"
+              src={imagem3}
+              width={500}
+              height={500}
+            />
+          </div>
+        ) : (
+          ""
+        )}
         <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
           {titulo4}
         </h3>
         <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
           {texto4}
         </p>
+        {imagem4 ? (
+          <div className="w-full flex justify-center bg-background2 p-12">
+            <Image
+              alt="imagem de numero 6 do poster"
+              src={imagem4}
+              width={500}
+              height={500}
+            />
+          </div>
+        ) : (
+          ""
+        )}
         <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
           {titulo5}
         </h3>
         <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
           {texto5}
         </p>
+        {imagem5 ? (
+          <div className="w-full flex justify-center bg-background2 p-12">
+            <Image
+              alt="imagem de numero 6 do poster"
+              src={imagem5}
+              width={500}
+              height={500}
+            />
+          </div>
+        ) : (
+          ""
+        )}
         <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
           {titulo6}
         </h3>
         <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
           {texto6}
         </p>
-        <div className="w-full flex justify-center bg-background2 p-12">
-          <Image
-            alt="imagem de numero 6 do poster"
-            src={imagem6}
-            width={500}
-            height={500}
-          ></Image>
-        </div>
+        {imagem6 ? (
+          <div className="w-full flex justify-center bg-background2 p-12">
+            <Image
+              alt="imagem de numero 6 do poster"
+              src={imagem6}
+              width={500}
+              height={500}
+            />
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
