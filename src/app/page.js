@@ -1,7 +1,8 @@
 import Link from "next/link";
-import metadata from "./Utils/posters.json";
+import dados from "./Utils/posters.json";
 import Card from "./Componentes/CardPoster";
 
+const metadata = dados.reverse();
 export default function Home() {
   return (
     <section className="justify-center flex gap-12 w-full flex-wrap ">
