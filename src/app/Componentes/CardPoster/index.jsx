@@ -1,18 +1,17 @@
-import React from "react";
-
-import Image from "next/image";
+import React from "react"
+import Image from "next/image"
+import Link from "next/link"
+import Avatar from "../Avatar/index.jsx"
 export default function Card({ img, postTitulo, tempo, data, resumo, autor }) {
-  const descricao = typeof resumo === "string" ? resumo.slice(0, 150) : "";
+  const descricao = typeof resumo === "string" ? resumo.slice(0, 150) : ""
   return (
-    <div className="w-full sm:w-[450px] sm:h-[550px] rounded-lg  flex flex-col justify-between  ">
-      <Image
-        className=" w-full"
-        width={400}
-        height={100}
-        src={img}
-        alt="imagem do post"
-      />
-      <div className="flex p-4  gap-4 items-center ">
+    <article className="w-full sm:w-[450px] sm:h-[600px] rounded-lg  flex flex-col justify-between  ">
+      <header>
+        <figure>
+          <Image width={450} height={0} src={img} alt="imagem do post" />
+        </figure>
+      </header>
+      <section className="flex p-4  gap-4 items-center ">
         <span className="text-textoPrincipal  text-xs sm:text-md  font-font2">
           por {autor}
         </span>
@@ -22,15 +21,23 @@ export default function Card({ img, postTitulo, tempo, data, resumo, autor }) {
         <span className="text-textoPrincipal  text-xs sm:text-md  font-font2">
           {tempo}min
         </span>
-      </div>
-      <div className="w-full flex flex-col gap-4 p-4  ">
+      </section>
+      <section className="w-full flex flex-col gap-4 p-4  ">
         <h2 className="text-titulo text-xl font-bold font-font1 ">
           {postTitulo}
         </h2>
         <p className="text-textoPrincipal text-sm sm:text-lg font-bold font-font2 w-full flex flex-wrap leading-6">
           {descricao}...
         </p>
-      </div>
-    </div>
-  );
+      </section>
+      <footer className="flex justify-self-end gap-16 items-center">
+        <Link href={`/Posters/${encodeURIComponent(postTitulo)}`}>
+          <button className="bg-botao text-botaoTexto w-[200px] p-2 m-8 rounded-md shadow-sm shadow-botao">
+            Ler Mais
+          </button>
+        </Link>
+        <Avatar autor={autor} />
+      </footer>
+    </article>
+  )
 }

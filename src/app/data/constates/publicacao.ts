@@ -1,6 +1,6 @@
-import { Publicacao } from "@/core/model/Publicacao"
+import { Publicacao } from "../../../core/model/Publicacao"
 
-const publicacao: Publicacao[] = [
+export const publicacao: Publicacao[] = [
   {
     id: 1,
     titulo: "Slash Quest é bom?",
@@ -11,6 +11,7 @@ const publicacao: Publicacao[] = [
     imagem1: "/assets/img/1/img1.png",
     video: "https://www.youtube.com/embed/VMEN9-kQCW8",
     imagem2: "",
+    imagem3: "",
     autor: "Arthur",
     tempo: "4",
     data: "17/06/2024",
@@ -21,6 +22,30 @@ const publicacao: Publicacao[] = [
     texto4:
       "Em suma, Slash Quest tem um visual agradável e uma história cativante e personagens carismáticos, sendo uma boa opção para passar o tempo. No entanto, conta com inimigos repetitivos e é muito fácil.",
     resumo: "",
+    imagem4: "",
+  },
+
+  {
+    id: 2,
+    titulo: "Elden Ring - Tudo sobre o Samurai",
+    titulo2: "Samurai",
+    titulo4: "Status Iniciais",
+    texto:
+      "Samurais são guerreiros orientais que usam katanas como arma principal. Em estilo de jogo, a classe é bastante parecida com os Guerreiros, por focar mais no ataque do que na defesa. Há, porém, um diferencial importante: todas as katanas do jogo causam hemorragia nos inimigos de forma passiva.",
+    texto2:
+      "Hemorragia é um status muito importante em Elden Ring, pois causa uma grande quantidade de dano após um certo número de ataques. Poder fazer isso logo no início da aventura ajuda muito nas lutas contra os primeiros chefes. No arsenal inicial, Samurais também contam com um arco para lutas à distância.",
+    texto3:
+      "Quando evoluir os atributos, foque os pontos em Vitalidade, Destreza e Fortitude. Katanas também ficam mais fortes conforme a Força do personagem, mas Destreza ainda é mais importante. Colocar pontos em Arcano vai permitir causar hemorragia mais rápido e com mais frequência em inimigos.",
+    imagem1: "/assets/img/2/img1.png",
+    imagem2: "",
     imagem3: "",
+    imagem4: "/assets/img/2/img3.png",
+    video: "",
+    autor: "Arthur",
+    imgAutor: "/assets/img/autor/arthur.jpeg",
+    tempo: "4",
+    data: "26/06/2024",
+    texto4: "",
+    resumo: "",
   },
 ]

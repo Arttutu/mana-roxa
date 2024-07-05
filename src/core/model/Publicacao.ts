@@ -8,6 +8,7 @@ export interface Publicacao {
   video: String
   imagem2: String
   autor: String
+  imgAutor: String
   tempo: String
   data: String
   texto2: String
@@ -15,4 +16,5 @@ export interface Publicacao {
   texto4: String
   resumo: String
   imagem3: String
+  imagem4: String
 }

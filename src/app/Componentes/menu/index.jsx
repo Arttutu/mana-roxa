@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "next/link"
-import Menuitem from "../MenuItem/Menuitem"
+import Menuitem from "../MenuItem"
 export default function Menu() {
   return (
     <header className=" bg-background2 w-full flex flex-col sm:flex sm:flex-row items-center justify-around  gap-4   p-8">
