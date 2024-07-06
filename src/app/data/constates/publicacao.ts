@@ -22,7 +22,7 @@ export const publicacao: Publicacao[] = [
     texto4:
       "Em suma, Slash Quest tem um visual agradável e uma história cativante e personagens carismáticos, sendo uma boa opção para passar o tempo. No entanto, conta com inimigos repetitivos e é muito fácil.",
     resumo: "",
-    imgAutor: "/assets/img/autor/arthur.jpeg",
+    imgAutor: "/assets/img/autor/logo_avatar.jpeg",
     imagem4: "",
   },
 
@@ -43,7 +43,7 @@ export const publicacao: Publicacao[] = [
     imagem4: "/assets/img/2/img3.png",
     video: "",
     autor: "Arthur",
-    imgAutor: "/assets/img/autor/arthur.jpeg",
+    imgAutor: "/assets/img/autor/logo_avatar.jpeg",
     tempo: "4",
     data: "26/06/2024",
     texto4: "",

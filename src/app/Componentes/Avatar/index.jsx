@@ -1,6 +1,6 @@
 import Image from "next/image"
 import React from "react"
-import avatar from "../../../../public/assets/img/autor/arthur.jpeg"
+import avatar from "../../../../public/assets/img/autor/logo_avatar.jpeg"
 export default function Avatar({ autor, urlImg }) {
   return (
     <div className="flex flex-row gap-2 items-center">
