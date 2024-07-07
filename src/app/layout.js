@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-br" className={font.className}>
       <body className="w-full bg-background">
         <Menu />
-        <main className="container mx-auto px-4 py-16"> {children}</main>
+        <main className="container mx-auto px-4 py-16">{children}</main>
         <Rodape />
       </body>
     </html>

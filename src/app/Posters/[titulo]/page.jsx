@@ -3,7 +3,7 @@ import { useParams } from "next/navigation"
 import React from "react"
 import { publicacao } from "../../data/constates/publicacao"
 import Image from "next/image"
-
+import ItemPost from "../../Componentes/ItemPost/index.jsx"
 export default function Poster() {
   const params = useParams()
   const urlTitulo = decodeURIComponent(params.titulo)
@@ -12,17 +12,16 @@ export default function Poster() {
 
   if (!posterData) {
     return (
-      <div className="flex h-screen flex-col gap-4">
+      <section className="flex h-screen flex-col gap-4">
         <h1 className="text-textoPrincipal text-2xl font-semibold">
           Título não encontrado
         </h1>
         <div>
           <p className="text-xl text-paragrafo">Descrição não encontrada</p>
         </div>
-      </div>
+      </section>
     )
   }
-
   const {
     titulo,
     titulo2,
@@ -46,7 +45,7 @@ export default function Poster() {
   } = posterData
 
   return (
-    <div className=" flex flex-col">
+    <section className=" flex flex-col">
       <div className="flex flex-col items-start gap-8 ">
         {posterData.imagem1 ? (
           <div className="flex items-center w-full justify-center py-12  ">
@@ -80,100 +79,37 @@ export default function Poster() {
         ) : (
           ""
         )}
-
-        <h2 className=" text-xl sm:text-3xl text-textoPrincipal font-font1">
-          {titulo2}
-        </h2>
-        <p className=" text-md sm:text-2xl text-paragrafo leading-8 ">
-          {texto2}
-        </p>
-
-        {posterData.imagem2 ? (
-          <div className="w-full flex justify-center bg-background2 p-12">
-            <Image
-              alt="imagem de numero 1 do poster"
-              src={imagem2}
-              width={500}
-              height={500}
-            ></Image>
-          </div>
-        ) : (
-          ""
-        )}
-        <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
-          {titulo3}
-        </h3>
-        <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
-          {texto3}
-        </p>
-        {imagem3 ? (
-          <div className="w-full flex justify-center bg-background2 p-12">
-            <Image
-              priority
-              alt="imagem de numero 3 do poster"
-              src={imagem3}
-              width={500}
-              height={500}
-            />
-          </div>
-        ) : (
-          ""
-        )}
-        <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
-          {titulo4}
-        </h3>
-        <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
-          {texto4}
-        </p>
-        {imagem4 ? (
-          <div className="w-full flex justify-center bg-background2 p-12">
-            <Image
-              alt="imagem de numero 6 do poster"
-              src={imagem4}
-              width={500}
-              height={500}
-            />
-          </div>
-        ) : (
-          ""
-        )}
-        <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
-          {titulo5}
-        </h3>
-        <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
-          {texto5}
-        </p>
-        {imagem5 ? (
-          <div className="w-full flex justify-center bg-background2 p-12">
-            <Image
-              alt="imagem de numero 6 do poster"
-              src={imagem5}
-              width={500}
-              height={500}
-            />
-          </div>
-        ) : (
-          ""
-        )}
-        <h3 className=" text-xl sm:text-3xl text-textoPrincipal font-font2">
-          {titulo6}
-        </h3>
-        <p className=" text-md sm:text-2xl leading-8 text-paragrafo font-font2">
-          {texto6}
-        </p>
-        {imagem6 ? (
-          <div className="w-full flex justify-center bg-background2 p-12">
-            <Image
-              alt="imagem de numero 6 do poster"
-              src={imagem6}
-              width={500}
-              height={500}
-            />
-          </div>
-        ) : (
-          ""
-        )}
+        <ItemPost
+          posterData={posterData}
+          imagem={imagem2}
+          texto={texto2}
+          titulo={titulo2}
+        />
+        <ItemPost
+          posterData={posterData}
+          imagem={imagem3}
+          texto={texto3}
+          titulo={titulo3}
+        />
+        <ItemPost
+          posterData={posterData}
+          imagem={imagem4}
+          texto={texto4}
+          titulo={titulo4}
+        />
+        <ItemPost
+          posterData={posterData}
+          imagem={imagem5}
+          texto={texto5}
+          titulo={titulo5}
+        />
+        <ItemPost
+          posterData={posterData}
+          imagem={imagem6}
+          texto={texto6}
+          titulo={titulo6}
+        />
       </div>
-    </div>
+    </section>
   )
 }
