@@ -4,7 +4,7 @@ import React from "react"
 export default function ItemPost({ imagem, titulo, texto, posterData }) {
   return (
     <section className="flex flex-col gap-6">
-      <h2 className=" text-xl sm:text-3xl text-textoPrincipal font-font1">
+      <h2 className=" text-xl sm:text-3xl text-textoPrincipal ">
         {titulo ? titulo : ""}
       </h2>
       <p className=" text-md sm:text-2xl text-paragrafo leading-8 ">

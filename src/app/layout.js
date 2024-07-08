@@ -12,10 +12,14 @@ const font = Exo_2({
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className={font.className}>
-      <body className="w-full bg-background">
+      <body className="w-full h-screen flex  bg-background">
         <Menu />
-        <main className="container mx-auto px-4 py-16">{children}</main>
-        <Rodape />
+        <div className="w-full flex mt-80 sm:mt-0 flex-col">
+          <main className="flex-grow container mx-auto px-4 py-16">
+            {children}
+          </main>
+          <Rodape />
+        </div>
       </body>
     </html>
   )

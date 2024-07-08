@@ -1,5 +1,5 @@
+"use client"
 import React from "react"
-import Link from "next/link"
 import Card from "../CardPoster/index.jsx"
 
 export default function TelaPublicacao({ publicacao }) {
@@ -12,6 +12,7 @@ export default function TelaPublicacao({ publicacao }) {
             postTitulo={item.titulo}
             tempo={item.tempo}
             data={item.data}
+            slug={item.slug}
             resumo={item.texto}
             autor={item.autor}
           />

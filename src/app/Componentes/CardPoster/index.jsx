@@ -2,7 +2,15 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import Avatar from "../Avatar/index.jsx"
-export default function Card({ img, postTitulo, tempo, data, resumo, autor }) {
+export default function Card({
+  img,
+  postTitulo,
+  tempo,
+  data,
+  resumo,
+  autor,
+  slug,
+}) {
   const descricao = typeof resumo === "string" ? resumo.slice(0, 150) : ""
   return (
     <article className="w-full sm:w-[450px] sm:h-[600px] rounded-lg  flex flex-col justify-between  ">
@@ -33,7 +41,7 @@ export default function Card({ img, postTitulo, tempo, data, resumo, autor }) {
         </p>
       </section>
       <footer className="flex justify-around gap-8 items-center">
-        <Link href={`/Posters/${encodeURIComponent(postTitulo)}`}>
+        <Link href={`/Posters/${slug}`}>
           <button className="bg-botao text-botaoTexto w-[100px] p-2 m-8 rounded-md shadow-sm shadow-botao">
             Ler Mais
           </button>
