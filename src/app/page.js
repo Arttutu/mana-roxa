@@ -3,7 +3,7 @@ import looger from "../logger.js"
 import Link from "next/link.js"
 import db from "../../prisma/db.js"
 
-async function getPublicacao(page) {
+async function getPublicacao() {
   try {
     const posts = await db.post.findMany({
       include: {
@@ -26,7 +26,7 @@ async function getPublicacao(page) {
 
 export default async function Home({ searchParams }) {
   const PaginaAtual = searchParams?.page || 1
-  const { data: posts, prev, next } = await getPublicacao(PaginaAtual)
+  const { data: posts, prev, next } = await getPublicacao()
   return (
     <section className="justify-center flex  gap-8 w-full flex-wrap">
       <TelaPublicacao post={posts} />
