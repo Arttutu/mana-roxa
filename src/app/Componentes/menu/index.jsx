@@ -1,18 +1,22 @@
 import React from "react"
 import Link from "next/link"
 import Menuitem from "../MenuItem"
-import Image from "next/image"
-import Logo from "../../../../public/assets/logo.png"
+
+import { MdFeed, MdLogin, MdInfo, MdExitToApp } from "react-icons/md"
 
 export default function Menu() {
   return (
-    <header className="bg-background2 w-full items-center sm:w-[300px] fixed top-0 left-0 sm:static h-auto sm:h-[1600px] flex flex-col gap-2 p-8">
-      <Link href="/">
-        <Image src={Logo} height={200} width={200} alt="Logo do site" />
+    <header className="bg-background2 flex flex-col gap-8 p-4 justify-center items-center sm:w-full sm:flex sm:flex-row sm:justify-around sm:p-8 ">
+      <Link href="/" className="flex items-center flex-row gap-4">
+        <span className="text-2xl flex text-center text-textoPrincipal">
+          Cronicas de um Console
+        </span>
       </Link>
-      <nav className="flex flex-col gap-2 sm:gap-8 items-center">
-        <Menuitem nome="home" endereco="/" />
-        <Menuitem nome="sobre nós" endereco="/about" />
+      <nav className="flex flex-col sm:flex sm:flex-row gap-4    items-center">
+        <Menuitem nome="feed" endereco="/" Icon={MdFeed} />
+        <Menuitem nome="perfil" endereco="/about" Icon={MdLogin} />
+        <Menuitem nome="sobre nós " endereco="/about" Icon={MdInfo} />
+        <Menuitem nome="sair " endereco="/about" Icon={MdExitToApp} />
       </nav>
     </header>
   )

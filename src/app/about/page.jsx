@@ -3,12 +3,12 @@ import React from "react"
 export default function About() {
   return (
     <div className="flex flex-col container gap-8">
-      <h1 className="text-xl sm:text-3xl text-botao font-font1 font-bold">
+      <h1 className="text-xl sm:text-4xl text-textoPrincipal  font-bold">
         Um pouco da nossa Crônica
       </h1>
       <div className="flex flex-col gap-12 sm:flex sm:flex-row sm:gap-12 items-start mt-12 sm:mt-24">
-        <div className="w-full sm:full flex flex-col gap-4">
-          <h2 className="text-xl sm:text-3xl text-botao font-font1 font-bold">
+        <section className="bg-background2 p-8 rounded-lg w-full flex h-auto sm:h-[850px] flex-col gap-4">
+          <h2 className="text-xl sm:text-3xl text-botao underline font-bold">
             Arthur
           </h2>
           <p className="text-md sm:text-lg text-paragrafo leading-6 font-font2">
@@ -31,9 +31,9 @@ export default function About() {
             Fique à vontade para explorar, comentar e compartilhar suas próprias
             experiências de jogo.
           </p>
-        </div>
-        <div className="w-full sm:full flex flex-col gap-4">
-          <h2 className="text-xl sm:text-3xl text-botao font-font1 font-bold">
+        </section>
+        <section className="bg-background2 p-8 rounded-lg w-full h-auto sm:h-[850px]  flex flex-col gap-4">
+          <h2 className="text-xl sm:text-3xl text-botao underline font-bold">
             Daniel
           </h2>
           <p className="text-md sm:text-lg text-paragrafo leading-6 font-font2">
@@ -63,7 +63,7 @@ export default function About() {
             Slash, está no lugar certo! Fique à vontade para explorar, comentar
             e compartilhar suas próprias experiências de jogo.
           </p>
-        </div>
+        </section>
       </div>
     </div>
   )

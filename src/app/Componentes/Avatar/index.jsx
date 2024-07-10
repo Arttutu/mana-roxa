@@ -3,8 +3,8 @@ import React from "react"
 import avatar from "../../../../public/assets/img/autor/logo_avatar.jpeg"
 export default function Avatar({ autor, urlImg }) {
   return (
-    <div className="flex flex-row gap-2 items-center">
-      <h1 className="text-textoPrincipal  font-font2 text-sm sm:text-md">
+    <div className="flex flex-row gap-4 items-center">
+      <h1 className="text-textoPrincipal underline  font-font2 text-sm sm:text-md">
         @{autor}
       </h1>
       <Image

@@ -2,19 +2,22 @@
 import React from "react"
 import Card from "../CardPoster/index.jsx"
 
-export default function TelaPublicacao({ publicacao }) {
+export default function TelaPublicacao({ post }) {
   return (
     <>
-      {publicacao.map((item, index) => (
-        <div className="bg-background2 rounded-lg flex flex-col" key={index}>
+      {post.map((item) => (
+        <div
+          className="bg-background rounded-lg flex flex-col flex-wrap"
+          key={item.id}
+        >
           <Card
-            img={item.imagem1}
+            img={item.imagem}
             postTitulo={item.titulo}
             tempo={item.tempo}
-            data={item.data}
+            data={new Date(item.data).toLocaleDateString()}
             slug={item.slug}
             resumo={item.texto}
-            autor={item.autor}
+            autor={item.author.userautor}
           />
         </div>
       ))}

@@ -16,7 +16,7 @@
   // workbench
   "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "vs-seti",
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "workbench.colorTheme": "Monokai",
 
   // prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",

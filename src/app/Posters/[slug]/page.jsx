@@ -1,35 +1,30 @@
 import React from "react"
 import Image from "next/image"
 import ItemPost from "../../Componentes/ItemPost/index.jsx"
-
-async function getPost(slug) {
-  const url = `http://localhost:3042/Posters?slug=${slug}`
+import looger from "../../../logger.js"
+async function getPost() {
   try {
-    const response = await fetch(url)
-    if (!response.ok) {
-      throw new Error("Failed to fetch data")
-    }
+    const posts = await db.post.findMany({
+      include: {
+        author: true,
+      },
+    })
 
-    const data = await response.json()
-    if (data.length === 0) {
-      throw new Error("No data found")
-    }
-
-    return data[0]
+    return data[posts]
   } catch (error) {
-    console.error(error)
-    return null // Retorna null em caso de erro
+    looger.error("Failed to get publicacao", { error })
+    return null
   }
 }
 
 export default async function Poster({ params }) {
-  const post = await getPost(params.slug)
-  console.log("Params:", params)
+  const post = await getPost()
+
   if (!post) {
     return (
       <section className="flex flex-col items-center justify-center min-h-screen">
         <h1 className="text-4xl font-bold text-textoPrincipal ">
-          Poster not found
+          404 Poster não encontrado
         </h1>
       </section>
     )
