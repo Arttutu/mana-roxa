@@ -3,9 +3,25 @@ import looger from "../logger.js"
 import Link from "next/link.js"
 import db from "../../prisma/db.js"
 
-async function getPublicacao() {
+async function getPublicacao(page) {
   try {
+    const postPorPagina = 2
+    const skip = (page - 1) * postPorPagina
+    //pegar proxima pagina
+    const TotalItems = await db.post.count()
+
+    const TotalPages = Math.ceil(TotalItems / postPorPagina)
+
+    const next = page < TotalPages ? page + 1 : null
+    console.log(next)
+    //pega pagina anterior
+    const prev = page > 1 ? page - 1 : null
+
+    //acessa o banco de dados
     const posts = await db.post.findMany({
+      take: postPorPagina, //quantos post por pagina
+      orderBy: { data: "desc" }, //ordena os posts pela data em ordem decrescente
+      skip: skip, //
       include: {
         author: true,
       },
@@ -16,8 +32,8 @@ async function getPublicacao() {
       ...post,
       data: post.data.toISOString(), // Converta para string ISO
     }))
-
-    return { data: formattedPosts, prev: null, next: null }
+    console.log(formattedPosts)
+    return { data: formattedPosts, prev: prev, next: next }
   } catch (error) {
     looger.error(" failed to get publicacao", { error })
     return { data: [], prev: null, next: null }
@@ -25,8 +41,9 @@ async function getPublicacao() {
 }
 
 export default async function Home({ searchParams }) {
-  const PaginaAtual = searchParams?.page || 1
-  const { data: posts, prev, next } = await getPublicacao()
+  const PaginaAtual = parseInt(searchParams?.page || 1)
+  const { data: posts, prev, next } = await getPublicacao(PaginaAtual)
+
   return (
     <section className="justify-center flex  gap-8 w-full flex-wrap">
       <TelaPublicacao post={posts} />

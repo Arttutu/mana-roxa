@@ -11,7 +11,7 @@ export default function ItemPost({ imagem, titulo, texto, posterData }) {
         {texto ? texto : ""}
       </p>
 
-      {posterData.imagem ? (
+      {!posterData.imagem ? (
         <div className="w-full flex justify-center bg-background2 p-12">
           <Image
             alt={`imagem do poster do conteudo do titulo de ${titulo} `}

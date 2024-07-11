@@ -11,7 +11,7 @@ export default function BotaoCima() {
   return (
     <button
       onClick={subir}
-      className="bg-botao rounded-full p-2 w-42 text-textoPrincipal text-md sm:text-md"
+      className="bg-botao rounded-lg p-2 w-42 text-textoPrincipal text-md sm:text-md"
     >
       Voltar para cima
     </button>

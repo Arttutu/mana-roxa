@@ -13,6 +13,7 @@ module.exports = {
       paragrafo: "#94a1b2",
       titulo: "#7f5af0",
       botao: "#7f5af0",
+      icone: "#7f5af0",
       hover: "#7f5af0",
       botaoTexto: "#fffffe",
       rodape: "#010101",

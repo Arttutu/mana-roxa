@@ -13,7 +13,7 @@ export default function TelaPublicacao({ post }) {
           <Card
             img={item.imagem}
             postTitulo={item.titulo}
-            tempo={item.tempo}
+            tempo={item.tempoLeitura}
             data={new Date(item.data).toLocaleDateString()}
             slug={item.slug}
             resumo={item.texto}

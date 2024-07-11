@@ -2,15 +2,20 @@ import React from "react"
 import Image from "next/image"
 import ItemPost from "../../Componentes/ItemPost/index.jsx"
 import looger from "../../../logger.js"
-async function getPost() {
+import db from "../../../../prisma/db.js"
+async function getPost(slug) {
   try {
-    const posts = await db.post.findMany({
+    const posts = await db.post.findFirst({
+      //where qual post queremos pegar
+      where: {
+        slug, //slug do post que passamos como parametro na url
+      },
       include: {
         author: true,
       },
     })
 
-    return data[posts]
+    return posts
   } catch (error) {
     looger.error("Failed to get publicacao", { error })
     return null
@@ -18,27 +23,17 @@ async function getPost() {
 }
 
 export default async function Poster({ params }) {
-  const post = await getPost()
-
-  if (!post) {
-    return (
-      <section className="flex flex-col items-center justify-center min-h-screen">
-        <h1 className="text-4xl font-bold text-textoPrincipal ">
-          404 Poster não encontrado
-        </h1>
-      </section>
-    )
-  }
-
+  console.log("esse é o slug" + params.slug)
+  const post = await getPost(params.slug)
   return (
     <section className="flex flex-col">
       <div className="flex flex-col items-start gap-8">
-        {post.imagem1 && (
+        {post.imagem && (
           <div className="flex items-center w-full justify-center py-12">
             <Image
               className="rounded-xl"
               alt="imagem de numero 1 do poster"
-              src={post.imagem1}
+              src={post.imagem}
               width={800}
               height={500}
             />
@@ -55,11 +50,12 @@ export default async function Poster({ params }) {
           </p>
         )}
         {post.video && (
-          <div className="w-full flex items-center justify-center">
+          <div className="mx-auto flex items-center justify-center">
             <iframe
               width="800"
               height="500"
               src={post.video}
+              className=" w-[300px] h-[200px] sm:w-[800px] sm:h-[500px]"
               allowFullScreen
             ></iframe>
           </div>
