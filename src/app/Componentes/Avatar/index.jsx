@@ -1,12 +1,8 @@
 import Image from "next/image"
 import React from "react"
-import avatar from "../../../../public/assets/img/autor/logo_avatar.jpeg"
-export default function Avatar({ autor, urlImg }) {
+export default function Avatar({ autor, avatar }) {
   return (
     <div className="flex flex-row gap-4 items-center">
-      <h1 className="text-textoPrincipal underline  font-font2 text-sm sm:text-md">
-        @{autor}
-      </h1>
       <Image
         src={avatar}
         height={85}
@@ -14,6 +10,9 @@ export default function Avatar({ autor, urlImg }) {
         alt="avatar"
         className="rounded-full h-12 w-12"
       />
+      <h1 className="text-textoPrincipal underline  font-font2 text-sm sm:text-md">
+        @{autor}
+      </h1>
     </div>
   )
 }

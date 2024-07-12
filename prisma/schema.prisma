@@ -6,13 +6,14 @@ generator client {
 datasource db {
   provider = "postgresql"
   url = env("POSTGRES_PRISMA_URL")
-  directUrl = env("POSTGRES_URL_NON_POOLING")
+
 }
 model User {
     id Int @id @default(autoincrement())
     userautor String @unique
     avatar String
     Post  Post[]
+    comentario Comentario[]
 }
 model Post {
     id Int @id @default(autoincrement())
@@ -41,7 +42,21 @@ model Post {
     imagem6 String
     authorId Int
     author User @relation(fields: [authorId], references: [id])
-
+    comentarios Comentario[]
+    likes Int @default(0)
+}
+model Comentario {
+  id Int @id @default(autoincrement())
+  Texto String
+  criado DateTime @default(now())
+  atualizado DateTime @updatedAt 
+  authorId Int
+  author User @relation(fields: [authorId], references: [id])
+  postId Int
+  post Post @relation(fields: [postId], references: [id])
+  paiId Int?
+  pai Comentario? @relation("ComentariosFilhos", fields: [paiId], references: [id])
+  filhos Comentario[] @relation("ComentariosFilhos")
 }
 
        

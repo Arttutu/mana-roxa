@@ -14,9 +14,7 @@ export default function Menu() {
       </Link>
       <nav className="flex  sm:flex sm:flex-row gap-4    items-center">
         <Menuitem nome="feed" endereco="/" Icon={MdFeed} />
-        <Menuitem nome="perfil" endereco="/about" Icon={MdLogin} />
         <Menuitem nome="sobre nós " endereco="/about" Icon={MdInfo} />
-        <Menuitem nome="sair " endereco="/about" Icon={MdExitToApp} />
       </nav>
     </header>
   )

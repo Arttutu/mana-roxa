@@ -17,6 +17,7 @@ export default function TelaPublicacao({ post }) {
             data={new Date(item.data).toLocaleDateString()}
             slug={item.slug}
             resumo={item.texto}
+            avatar={item.author.avatar}
             autor={item.author.userautor}
           />
         </div>

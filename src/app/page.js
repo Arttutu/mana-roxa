@@ -9,7 +9,7 @@ async function getPublicacao(page, searchTerm) {
     if (searchTerm) {
       where.titulo = { contains: searchTerm, mode: "insensitive" }
     }
-    const postPorPagina = 2
+    const postPorPagina = 6
     const skip = (page - 1) * postPorPagina
     //pegar proxima pagina
     const TotalItems = await db.post.count({ where })
