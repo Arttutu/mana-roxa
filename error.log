@@ -243,3 +243,95 @@
 {"error":{},"level":"error","message":"Failed to get publicacao"}
 {"error":{},"level":"error","message":"Failed to get publicacao"}
 {"error":{},"level":"error","message":"Failed to get publicacao"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"slash-quest-e-"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"slash-quest-e-"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"slash--e-"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"slash-quest-e-s"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"slash-quest-e-boms"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"slash-quest-e-s"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{"clientVersion":"5.16.1","code":"P2037","meta":{"message":"FATAL: sorry, too many clients already","modelName":"Post"},"name":"PrismaClientKnownRequestError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurai"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurai"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurai"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurai"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" failed to get publicacao"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"elderring-tudo-sobre-samurais"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":" falha em pegar as publicações"}

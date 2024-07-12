@@ -12,7 +12,7 @@ export default function Menu() {
           Cronicas de um Console
         </span>
       </Link>
-      <nav className="flex flex-col sm:flex sm:flex-row gap-4    items-center">
+      <nav className="flex  sm:flex sm:flex-row gap-4    items-center">
         <Menuitem nome="feed" endereco="/" Icon={MdFeed} />
         <Menuitem nome="perfil" endereco="/about" Icon={MdLogin} />
         <Menuitem nome="sobre nós " endereco="/about" Icon={MdInfo} />

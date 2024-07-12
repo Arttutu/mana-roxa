@@ -1,9 +1,10 @@
 import "./globals.css"
 import { Exo_2, Outfit, Prompt } from "next/font/google"
 import Menu from "./Componentes/menu"
+import Buscador from "./Componentes/Buscador"
 import Rodape from "./Componentes/Rodape"
 
-const font = Prompt({
+const font = Exo_2({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
@@ -12,10 +13,13 @@ const font = Prompt({
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className={font.className}>
-      <body className="w-full flex flex-col  sm:flex sm:flex-col  bg-background">
+      <body className="w-full flex flex-col min-h-screen bg-background">
         <Menu />
-        <div className="w-full flex flex-col">
-          <main className=" flex flex-grow container h-vh mx-auto px-4 py-16">
+        <div className="flex flex-col flex-grow ">
+          <div className="flex p-8 container mx-auto justify-center">
+            <Buscador />
+          </div>
+          <main className="flex-grow container mx-auto px-4 py-8 ">
             {children}
           </main>
           <Rodape />

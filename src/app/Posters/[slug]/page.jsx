@@ -3,9 +3,10 @@ import Image from "next/image"
 import ItemPost from "../../Componentes/ItemPost/index.jsx"
 import looger from "../../../logger.js"
 import db from "../../../../prisma/db.js"
+import { redirect } from "next/navigation.js"
 async function getPost(slug) {
   try {
-    const posts = await db.post.findFirst({
+    const post = await db.post.findFirst({
       //where qual post queremos pegar
       where: {
         slug, //slug do post que passamos como parametro na url
@@ -14,16 +15,18 @@ async function getPost(slug) {
         author: true,
       },
     })
+    if (!post) {
+      throw new Error(`Post ${slug} não foi encontrado`)
+    }
 
-    return posts
+    return post
   } catch (error) {
-    looger.error("Failed to get publicacao", { error })
-    return null
+    looger.error("Falha a obter a publicação com o slug:", { slug, error })
   }
+  redirect("/not-found")
 }
 
 export default async function Poster({ params }) {
-  console.log("esse é o slug" + params.slug)
   const post = await getPost(params.slug)
   return (
     <section className="flex flex-col">
