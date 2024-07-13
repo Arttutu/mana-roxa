@@ -2,6 +2,9 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import Avatar from "../Avatar/index.jsx"
+import { BiCommentDetail } from "react-icons/bi"
+import DalikeBotao from "./DalikeBotao.jsx"
+import { DaLike } from "../../../actions/index.jsx"
 export default function Card({
   img,
   postTitulo,
@@ -11,12 +14,15 @@ export default function Card({
   autor,
   slug,
   avatar,
+  likes,
+  post,
 }) {
+  const EnviarLike = DaLike.bind(null, post)
   const descricao = typeof resumo === "string" ? resumo.slice(0, 150) : ""
   return (
     <article className="bg-background2 w-full sm:w-[450px] sm:h-[650px] rounded-lg  flex flex-col justify-between  ">
       <header>
-        <figure className="bg-textoPrincipal w-full rounded-lg sm:w-[450px] flex items-center justify-center">
+        <figure className=" w-full rounded-lg sm:w-[450px]  flex items-center justify-center">
           <Image
             width={500}
             height={0}
@@ -42,12 +48,23 @@ export default function Card({
         </p>
         <Link
           href={`/Posters/${slug}`}
-          className=" flex items-center justify-center w-24 text-botao underline font-bold text-lg rounded-lg p-[2px] "
+          className=" flex items-center justify-start w-full text-botao underline font-bold text-lg  hover:text-textoPrincipal transition-all  "
         >
           Ler mais
         </Link>
       </section>
-      <footer className="flex flex-row  justify-end p-4">
+      <footer className="flex flex-row  justify-between p-4">
+        <div>
+          <form
+            //chama a a action
+            action={EnviarLike}
+            className="flex flex-col gap-2 items-center"
+          >
+            <DalikeBotao />
+            <p className="text-paragrafo text-md">{likes}</p>
+          </form>
+        </div>
+
         <Avatar autor={autor} avatar={avatar} />
       </footer>
     </article>

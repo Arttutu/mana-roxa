@@ -11,6 +11,7 @@ export default function TelaPublicacao({ post }) {
           key={item.id}
         >
           <Card
+            post={item}
             img={item.imagem}
             postTitulo={item.titulo}
             tempo={item.tempoLeitura}
@@ -19,6 +20,7 @@ export default function TelaPublicacao({ post }) {
             resumo={item.texto}
             avatar={item.author.avatar}
             autor={item.author.userautor}
+            likes={item.likes}
           />
         </div>
       ))}

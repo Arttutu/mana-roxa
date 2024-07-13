@@ -22,7 +22,7 @@ async function getPublicacao(page, searchTerm) {
     //acessa o banco de dados
     const posts = await db.post.findMany({
       take: postPorPagina, //quantos post por pagina
-      orderBy: { data: "desc" }, //ordena os posts pela data em ordem decrescente
+      orderBy: { id: "desc" }, //ordena os posts pela data em ordem decrescente
       skip: skip,
       where: where, //
       include: {
