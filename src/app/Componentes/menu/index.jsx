@@ -8,7 +8,7 @@ export default function Menu() {
   return (
     <header className="bg-background2 flex flex-col gap-8 p-4 justify-center items-center sm:w-full sm:flex sm:flex-row sm:justify-around sm:p-8 ">
       <Link href="/" className="flex items-center flex-row gap-4">
-        <span className="text-2xl flex text-center text-textoPrincipal">
+        <span className="text-2xl sm:text-3xl flex text-center text-textoPrincipal">
           Cronicas de um Console
         </span>
       </Link>
