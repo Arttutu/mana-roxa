@@ -27,6 +27,7 @@ async function getPublicacao(page, searchTerm) {
       where: where, //
       include: {
         author: true,
+        comentarios: true,
       },
     })
 

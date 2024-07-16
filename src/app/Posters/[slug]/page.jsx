@@ -4,6 +4,7 @@ import ItemPost from "../../Componentes/ItemPost/index.jsx"
 import looger from "../../../logger.js"
 import db from "../../../../prisma/db.js"
 import { redirect } from "next/navigation.js"
+import ListaDeComentarios from "../../Componentes/ListaDeComentarios/index.jsx"
 async function getPost(slug) {
   try {
     const post = await db.post.findFirst({
@@ -13,6 +14,19 @@ async function getPost(slug) {
       },
       include: {
         author: true,
+        comentarios: {
+          include: {
+            author: true,
+            filhos: {
+              include: {
+                author: true,
+              },
+            },
+          },
+          where: {
+            paiId: null,
+          },
+        },
       },
     })
     if (!post) {
@@ -32,18 +46,19 @@ export default async function Poster({ params }) {
     <section className="flex flex-col">
       <div className="flex flex-col items-start gap-8">
         {post.imagem && (
-          <div className="flex items-center w-full justify-center py-12">
+          <div className="flex items-center bg-background2 w-full justify-center py-12">
             <Image
               className="rounded-xl"
               alt="imagem de numero 1 do poster"
               src={post.imagem}
               width={800}
-              height={500}
+              height={0}
+              priority
             />
           </div>
         )}
         {post.titulo && (
-          <h1 className="text-textoPrincipal text-xl sm:text-3xl font-font1">
+          <h1 className="text-textoPrincipal text-xl sm:text-4xl ">
             {post.titulo}
           </h1>
         )}
@@ -72,6 +87,10 @@ export default async function Poster({ params }) {
             titulo={post[`titulo${i + 2}`]}
           />
         ))}
+        <section className="bg-backgroundComentario w-full p-4 rounded-lg flex flex-col gap-8">
+          <h2 className="text-destaque text-xl sm:text-4xl ">Comentários</h2>
+          <ListaDeComentarios comentarios={post.comentarios} />
+        </section>
       </div>
     </section>
   )

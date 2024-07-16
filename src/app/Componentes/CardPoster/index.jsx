@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import Avatar from "../Avatar/index.jsx"
-import { BiCommentDetail } from "react-icons/bi"
+import ModalComentario from "../ModalComentario/index"
 import DalikeBotao from "./DalikeBotao.jsx"
 import { DaLike } from "../../../actions/index.jsx"
 export default function Card({
@@ -16,6 +16,7 @@ export default function Card({
   avatar,
   likes,
   post,
+  comentarios,
 }) {
   const EnviarLike = DaLike.bind(null, post)
   const descricao = typeof resumo === "string" ? resumo.slice(0, 150) : ""
@@ -54,7 +55,7 @@ export default function Card({
         </Link>
       </section>
       <footer className="flex flex-row  justify-between p-4">
-        <div>
+        <div className="flex items-start gap-4">
           <form
             //chama a a action
             action={EnviarLike}
@@ -63,6 +64,10 @@ export default function Card({
             <DalikeBotao />
             <p className="text-paragrafo text-md">{likes}</p>
           </form>
+          <div className="flex flex-col gap-2 items-center">
+            <ModalComentario post={post} />
+            <p className="text-paragrafo text-md">{comentarios.length}</p>
+          </div>
         </div>
 
         <Avatar autor={autor} avatar={avatar} />

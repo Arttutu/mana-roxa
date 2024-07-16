@@ -21,6 +21,7 @@ export default function TelaPublicacao({ post }) {
             avatar={item.author.avatar}
             autor={item.author.userautor}
             likes={item.likes}
+            comentarios={item.comentarios}
           />
         </div>
       ))}
