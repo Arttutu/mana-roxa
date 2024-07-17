@@ -32,7 +32,7 @@ export default function About() {
             experiências de jogo.
           </p>
         </section>
-        <section className="bg-background2 p-8 rounded-lg w-full h-auto sm:h-[850px]  flex flex-col gap-4">
+        {/* <section className="bg-background2 p-8 rounded-lg w-full h-auto sm:h-[850px]  flex flex-col gap-4">
           <h2 className="text-xl sm:text-3xl text-botao underline font-bold">
             Daniel
           </h2>
@@ -63,7 +63,7 @@ export default function About() {
             Slash, está no lugar certo! Fique à vontade para explorar, comentar
             e compartilhar suas próprias experiências de jogo.
           </p>
-        </section>
+        </section> */}
       </div>
     </div>
   )

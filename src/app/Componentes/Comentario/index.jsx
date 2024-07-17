@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function Comentario({ comentario }) {
   return (
     <div className="flex flex-col gap-2 items-start">
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-2 items-center">
         <Image
           src={comentario.author.avatar}
           height={32}

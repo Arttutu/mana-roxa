@@ -40,12 +40,12 @@ export async function Respoder(pai, formData) {
       id: pai.postId,
     },
   })
-  await db.comment.create({
+  await db.comentario.create({
     data: {
       Texto: formData.get("texto"),
       authorId: author.id,
       postId: post.id,
-      parentId: parent.parentId ?? parent.id,
+      paiId: pai.paiId ?? pai.id,
     },
   })
 

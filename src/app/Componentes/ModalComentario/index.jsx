@@ -3,8 +3,8 @@ import * as Dialog from "@radix-ui/react-dialog"
 import { BiCommentDetail } from "react-icons/bi"
 import React from "react"
 import ComentarioBotao from "../ComentarioBotao/index.jsx"
+import { IoMdClose } from "react-icons/io"
 import { Comentar } from "../../../actions/index.jsx"
-
 export default function ModalComentario({ post }) {
   const EnviarComentario = Comentar.bind(null, post)
 
@@ -25,6 +25,7 @@ export default function ModalComentario({ post }) {
           <form className="w-full h-auto" action={EnviarComentario}>
             <textarea
               name="texto"
+              rows={8}
               placeholder="Deixe seu comentário..."
               className="w-full h-[200px] rounded-lg focus:outline-none p-2 border focus:ring-2"
             />
@@ -34,7 +35,7 @@ export default function ModalComentario({ post }) {
           </form>
           <Dialog.Close asChild>
             <button className="absolute top-2 right-2 text-textoPrincipal text-xl">
-              x
+              <IoMdClose />
             </button>
           </Dialog.Close>
         </Dialog.Content>

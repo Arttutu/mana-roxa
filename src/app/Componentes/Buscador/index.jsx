@@ -6,8 +6,8 @@ export default function Buscador() {
       <input
         type="text"
         name="q"
-        placeholder="Digite para pesquisar"
-        className=" w-full sm:w-[800px] rounded-lg p-[2px] outline-none placeholder:text-paragrafo placeholder:px-2"
+        placeholder="Digite para pesquisar..."
+        className=" w-[200px] sm:w-[500px] md:w-[800px] p-[2px]  text-textoPrincipal focus:border-1  bg-background2  outline-none placeholder:text-botao "
       />
       <button
         type="submit"
