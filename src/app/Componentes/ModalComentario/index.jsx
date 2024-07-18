@@ -1,11 +1,13 @@
 "use client"
 import * as Dialog from "@radix-ui/react-dialog"
 import { BiCommentDetail } from "react-icons/bi"
-import React from "react"
+import React, { useState } from "react"
 import ComentarioBotao from "../ComentarioBotao/index.jsx"
 import { IoMdClose } from "react-icons/io"
 import { Comentar } from "../../../actions/index.jsx"
 export default function ModalComentario({ post }) {
+  const [mensagem, setMensagem] = useState()
+
   const EnviarComentario = Comentar.bind(null, post)
 
   return (
@@ -38,6 +40,11 @@ export default function ModalComentario({ post }) {
               <IoMdClose />
             </button>
           </Dialog.Close>
+          {mensagem && (
+            <div>
+              <p className="text-textoPrincipal text-md">{mensagem}</p>
+            </div>
+          )}
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>

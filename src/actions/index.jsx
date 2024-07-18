@@ -12,7 +12,7 @@ export async function DaLike(post) {
   revalidatePath(` /${post.slug}`)
 }
 export async function Comentar(post, formData) {
-  await new Promise((resolve) => setTimeout(resolve, 1000))
+  /*   await new Promise((resolve) => setTimeout(resolve, 1000)) */
   const author = await db.user.findFirst({
     where: {
       userautor: "Arthur",
@@ -29,7 +29,6 @@ export async function Comentar(post, formData) {
   revalidatePath(` /${post.slug}`)
 }
 export async function Respoder(pai, formData) {
-  await new Promise((resolve) => setTimeout(resolve, 1000))
   const author = await db.user.findFirst({
     where: {
       userautor: "Arthur",

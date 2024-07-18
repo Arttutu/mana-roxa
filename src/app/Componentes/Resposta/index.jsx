@@ -5,7 +5,18 @@ import ModalResposta from "../ModalResposta"
 
 export default function Resposta({ comentario }) {
   const [showResposta, setShowResposta] = useState(false)
+  const [respostas, setRespostas] = useState([])
 
+  async function fetchData() {
+    const response = await fetch(`/api/comentarios/${comentario.id}/respostas`)
+    const data = await response.json()
+    setRespostas(data)
+  }
+  useEffect(() => {
+    if (showResposta) {
+      fetchData()
+    }
+  }, [showResposta])
   return (
     <div className="flex flex-col gap-2 items-start">
       <button
@@ -16,10 +27,10 @@ export default function Resposta({ comentario }) {
       </button>
       {showResposta && (
         <ul className="flex flex-col gap-4 px-4 py-8">
-          {comentario.filhos.map((respostas) => (
-            <li key={respostas.id} className="flex flex-col items-start gap-4">
-              <Comentario comentario={respostas} />
-              <ModalResposta comentario={respostas} />
+          {respostas.map((resposta) => (
+            <li key={resposta.id} className="flex flex-col items-start gap-4">
+              <Comentario comentario={resposta} />
+              <ModalResposta comentario={resposta} />
             </li>
           ))}
         </ul>
