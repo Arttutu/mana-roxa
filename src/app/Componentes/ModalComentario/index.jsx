@@ -24,15 +24,17 @@ export default function ModalComentario({ post }) {
             Deixe um comentário
           </Dialog.Title>
           <Dialog.Description className="w-full h-auto"></Dialog.Description>
+
           <form className="w-full h-auto" action={EnviarComentario}>
             <textarea
+              required
               name="texto"
               rows={8}
               placeholder="Deixe seu comentário..."
               className="w-full h-[200px] rounded-lg focus:outline-none p-2 border focus:ring-2"
             />
             <Dialog.Close asChild>
-              <ComentarioBotao>Comentar</ComentarioBotao>
+              <ComentarioBotao texto="comentar"></ComentarioBotao>
             </Dialog.Close>
           </form>
           <Dialog.Close asChild>

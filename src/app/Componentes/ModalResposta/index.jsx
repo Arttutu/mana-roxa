@@ -33,12 +33,12 @@ export default function ModalResposta({ comentario }) {
               <textarea
                 required
                 name="texto"
-                placeholder="Deixe seu comentário..."
+                placeholder="Deixe sua resposta..."
                 rows={8}
                 className="w-full h-[200px] rounded-lg focus:outline-none p-2 border focus:ring-2"
               />
               <Dialog.Close asChild>
-                <ComentarioBotao>Responder</ComentarioBotao>
+                <ComentarioBotao texto="responder"></ComentarioBotao>
                 {/*    <button className="mt-4 text-textoPrincipal  bg-botao text-md flex items-center gap-2 justify-center p-2 rounded-lg">
                   Responder
                   <IoMdArrowRoundForward />
