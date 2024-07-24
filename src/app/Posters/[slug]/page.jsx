@@ -5,12 +5,12 @@ import looger from "../../../logger.js"
 import db from "../../../../prisma/db.js"
 import { redirect } from "next/navigation.js"
 import ListaDeComentarios from "../../Componentes/ListaDeComentarios/index.jsx"
+import VejaMais from "../../../../src/app/Componentes/VejaMais/index"
 async function getPost(slug) {
   try {
     const post = await db.post.findFirst({
-      //where qual post queremos pegar
       where: {
-        slug, //slug do post que passamos como parametro na url
+        slug, // slug do post que passamos como parâmetro na URL
       },
       include: {
         author: true,
@@ -29,19 +29,35 @@ async function getPost(slug) {
         },
       },
     })
+
     if (!post) {
       throw new Error(`Post ${slug} não foi encontrado`)
     }
 
     return post
   } catch (error) {
-    looger.error("Falha a obter a publicação com o slug:", { slug, error })
+    looger.error("Falha ao obter a publicação com o slug:", { slug, error })
+    redirect("/not-found")
   }
-  redirect("/not-found")
+}
+
+async function getAllPosts(excludeSlug) {
+  try {
+    const posts = await db.post.findMany({
+      where: { slug: { not: excludeSlug } },
+    })
+
+    return posts
+  } catch (error) {
+    looger.error("Falha ao obter todos os posts:", { error })
+    return []
+  }
 }
 
 export default async function Poster({ params }) {
   const post = await getPost(params.slug)
+  const allPosts = await getAllPosts(params.slug)
+
   return (
     <section className="flex flex-col">
       <div className="flex flex-col items-start gap-8">
@@ -63,7 +79,7 @@ export default async function Poster({ params }) {
           </h1>
         )}
         {post.texto && (
-          <p className="text-md sm:text-2xl text-paragrafo font-font2">
+          <p className="text-md sm:text-xl text-paragrafo font-font2">
             {post.texto}
           </p>
         )}
@@ -87,7 +103,22 @@ export default async function Poster({ params }) {
             titulo={post[`titulo${i + 2}`]}
           />
         ))}
-        <section className="bg-backgroundComentario w-full p-4 rounded-lg flex flex-col gap-8">
+        <section className="flex flex-col gap-8">
+          <h2 className="text-destaque font-bold text-xl sm:text-4xl ">
+            Veja Mais
+          </h2>
+          <div className=" flex items-center gap-8 flex-wrap">
+            {allPosts.map((post) => (
+              <VejaMais
+                key={post.slug}
+                slug={post.slug}
+                titulo={post.titulo}
+                imagem={post.imagem}
+              />
+            ))}
+          </div>
+        </section>
+        <section className="bg-backgroundComentario w-full p-4 rounded-lg flex flex-col gap-8 mt-12">
           <h2 className="text-destaque text-xl sm:text-4xl ">Comentários</h2>
           <ListaDeComentarios comentarios={post.comentarios} />
         </section>

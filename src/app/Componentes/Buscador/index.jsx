@@ -1,5 +1,5 @@
 import React from "react"
-
+import { MdOutlineManageSearch } from "react-icons/md"
 export default function Buscador() {
   return (
     <form className="flex gap-4" action="/" method="GET">
@@ -11,9 +11,10 @@ export default function Buscador() {
       />
       <button
         type="submit"
-        className="text-botaoTexto font-bold bg-botao rounded-lg p-2"
+        className="text-botaoTexto font-bold bg-botao rounded-lg p-2 flex items-center gap-1"
       >
         Buscar
+        <MdOutlineManageSearch className="text-botaoTexto text-2xl" />
       </button>
     </form>
   )

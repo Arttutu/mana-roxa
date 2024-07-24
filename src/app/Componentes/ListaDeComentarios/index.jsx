@@ -6,7 +6,7 @@ import Resposta from "../Resposta"
 export default function ListaDeComentarios({ comentarios }) {
   return (
     <ul className="flex flex-col gap-8">
-      {comentarios.map((comentario) => (
+      {comentarios.slice(-10).map((comentario) => (
         <li className="flex flex-col items-start gap-4" key={comentario.id}>
           <Comentario comentario={comentario} />
           <ModalResposta comentario={comentario} />

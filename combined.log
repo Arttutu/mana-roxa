@@ -672,3 +672,12 @@
 {"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" falha em pegar as publicações"}
 {"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" falha em pegar as publicações"}
 {"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" falha em pegar as publicações"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"resident-evil-village-analise"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"resident-evil-village-analise"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"resident-evil-village-analise"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"resident-evil-village-analise"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"resident-evil-village-analise"}
+{"error":{},"level":"error","message":"Falha a obter a publicação com o slug:","slug":"resident-evil-village-analise"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":"Falha ao obter todos os posts:"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientValidationError"},"level":"error","message":"Falha ao obter todos os posts:"}
+{"error":{"clientVersion":"5.16.1","name":"PrismaClientInitializationError"},"level":"error","message":" falha em pegar as publicações"}

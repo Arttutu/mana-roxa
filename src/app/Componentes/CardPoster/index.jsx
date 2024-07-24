@@ -21,13 +21,14 @@ export default function Card({
   const EnviarLike = DaLike.bind(null, post)
   const descricao = typeof resumo === "string" ? resumo.slice(0, 150) : ""
   return (
-    <article className="bg-background2 w-full sm:w-[450px] sm:h-[650px] rounded-lg  flex flex-col justify-between  ">
+    <article className="bg-background2 w-full sm:w-[450px] rounded-lg  flex flex-col   ">
       <header>
         <figure className=" w-full rounded-lg sm:w-[450px]  flex items-center justify-center">
           <Image
             width={500}
             height={0}
             src={img}
+            className="rounded-lg "
             alt={`Imagem do poster de titulo ${postTitulo}`}
           />
         </figure>

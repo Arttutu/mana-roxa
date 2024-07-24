@@ -7,7 +7,7 @@ export default function About() {
         Um pouco da nossa Crônica
       </h1>
       <div className="flex flex-col gap-12 sm:flex sm:flex-row sm:gap-12 items-start mt-12 sm:mt-24">
-        <section className="bg-background2 p-8 rounded-lg w-full flex h-auto sm:h-[850px] flex-col gap-4">
+        <section className="bg-background2 p-8 rounded-lg w-full flex h-auto  flex-col gap-4">
           <h2 className="text-xl sm:text-3xl text-botao underline font-bold">
             Arthur
           </h2>

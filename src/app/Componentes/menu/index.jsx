@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import Menuitem from "../MenuItem"
-import options from "../../api/auth/[...nextauth]/options"
+import { options } from "../../api/auth/[...nextauth]/options"
 import { MdFeed, MdLogin, MdInfo, MdExitToApp } from "react-icons/md"
 import { getServerSession } from "next-auth"
 

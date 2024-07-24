@@ -14,7 +14,7 @@ export default function ModalComentario({ post }) {
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <button>
-          <BiCommentDetail className="text-paragrafo text-2xl" />
+          <BiCommentDetail className="text-paragrafo text-2xl transition-all hover:text-destaque" />
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>

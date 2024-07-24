@@ -7,7 +7,7 @@ export default function ItemPost({ imagem, titulo, texto, posterData }) {
       <h2 className=" text-xl sm:text-3xl text-textoPrincipal ">
         {titulo ? titulo : ""}
       </h2>
-      <p className=" text-md sm:text-2xl text-paragrafo leading-8 ">
+      <p className=" text-md sm:text-xl text-paragrafo leading-8 ">
         {texto ? texto : ""}
       </p>
 

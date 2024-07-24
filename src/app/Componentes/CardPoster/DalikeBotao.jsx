@@ -12,7 +12,7 @@ export default function DalikeBotao() {
       {pending ? (
         <Loader />
       ) : (
-        <AiOutlineLike className="text-paragrafo text-2xl" />
+        <AiOutlineLike className="text-paragrafo text-2xl hover:text-destaque transition-all" />
       )}
     </LikeBotao>
   )
