@@ -1,11 +1,11 @@
 import React from "react"
 import Image from "next/image"
-import ItemPost from "../../Componentes/ItemPost/index.jsx"
-import looger from "../../../logger.js"
-import db from "../../../../prisma/db.js"
+import ItemPost from "../../../Componentes/ItemPost/index.jsx"
+import looger from "../../../../logger.js"
+import db from "../../../../../prisma/db.js"
 import { redirect } from "next/navigation.js"
-import ListaDeComentarios from "../../Componentes/ListaDeComentarios/index.jsx"
-import VejaMais from "../../../../src/app/Componentes/VejaMais/index"
+import ListaDeComentarios from "../../../Componentes/ListaDeComentarios/index.jsx"
+import VejaMais from "../../../../../src/app/Componentes/VejaMais/index"
 async function getPost(slug) {
   try {
     const post = await db.post.findFirst({
@@ -104,9 +104,7 @@ export default async function Poster({ params }) {
           />
         ))}
         <section className="flex flex-col gap-8">
-          <h2 className="text-destaque font-bold text-xl sm:text-4xl ">
-            Veja Mais
-          </h2>
+          <h2 className="text-destaque  text-xl sm:text-4xl ">Veja Mais</h2>
           <div className=" flex items-center gap-8 flex-wrap">
             {allPosts.map((post) => (
               <VejaMais

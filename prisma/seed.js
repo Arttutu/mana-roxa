@@ -2,15 +2,16 @@ const { PrismaClient } = require("@prisma/client")
 const prisma = new PrismaClient()
 
 const author = {
-  userautor: "Karen",
-  avatar: "/assets/karen.jpeg",
+  userautor: "Arthur",
+  avatar: "/assets/autor/logo_avatar.jpeg",
+  email: "arthur@prisma",
 }
 
 async function main() {
   // Upsert do autor Karen
-  const Karen = await prisma.user.upsert({
+  const Arthur = await prisma.user.upsert({
     where: { userautor: author.userautor },
-    update: {},
+    update: { email: "arthur@prisma" },
     create: author,
   })
 
@@ -42,7 +43,7 @@ async function main() {
       imagem5: "",
       imagem6: "",
       video: "",
-      authorId: Karen.id, // Associar o post ao autor Karen
+      authorId: Arthur.id, // Associar o post ao autor Karen
       tempoLeitura: "2",
       data: new Date(),
     },

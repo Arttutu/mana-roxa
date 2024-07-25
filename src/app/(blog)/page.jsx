@@ -1,7 +1,7 @@
-import TelaPublicacao from "./Componentes/TelaPublicacao/index.jsx"
-import looger from "../logger.js"
+import TelaPublicacao from "../Componentes/TelaPublicacao/index.jsx"
+import looger from "../../logger.js"
 import Link from "next/link.js"
-import db from "../../prisma/db.js"
+import db from "../../../prisma/db.js"
 
 async function getPublicacao(page, searchTerm) {
   try {

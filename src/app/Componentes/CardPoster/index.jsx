@@ -21,11 +21,11 @@ export default function Card({
   const EnviarLike = DaLike.bind(null, post)
   const descricao = typeof resumo === "string" ? resumo.slice(0, 150) : ""
   return (
-    <article className="bg-background2 w-full sm:w-[450px] rounded-lg  flex flex-col   ">
+    <article className="bg-background w-full h-auto sm:w-[450px] rounded-lg  flex flex-col justify-between   ">
       <header>
         <figure className=" w-full rounded-lg sm:w-[450px]  flex items-center justify-center">
           <Image
-            width={500}
+            width={450}
             height={0}
             src={img}
             className="rounded-lg "
@@ -33,7 +33,7 @@ export default function Card({
           />
         </figure>
       </header>
-      <section className="flex p-4  gap-2 items-center ">
+      <section className="flex py-4  gap-2 items-center ">
         <span className="text-textoPrincipal  text-xs sm:text-md  font-font2">
           {data}
         </span>
@@ -41,7 +41,7 @@ export default function Card({
           Leitura {tempo} min
         </span>
       </section>
-      <section className="w-full flex flex-col gap-2 p-4  ">
+      <section className="w-full flex flex-col gap-2  py-6  ">
         <h2 className="text-titulo text-xl font-bold font-font1 ">
           {postTitulo}
         </h2>
@@ -52,10 +52,10 @@ export default function Card({
           href={`/Posters/${slug}`}
           className=" flex items-center justify-start w-full text-botao underline font-bold text-lg  hover:text-textoPrincipal transition-all  "
         >
-          Ler mais
+          Continuar Lendo
         </Link>
       </section>
-      <footer className="flex flex-row  justify-between p-4">
+      <footer className="bg-background2 rounded-lg flex flex-row items-center justify-between p-4">
         <div className="flex items-start gap-4">
           <form
             //chama a a action

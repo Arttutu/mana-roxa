@@ -1,8 +1,5 @@
 import "./globals.css"
 import { Exo_2, Outfit, Prompt } from "next/font/google"
-import Menu from "./Componentes/menu"
-import Buscador from "./Componentes/Buscador"
-import Rodape from "./Componentes/Rodape"
 
 const font = Exo_2({
   subsets: ["latin"],
@@ -21,16 +18,7 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body className="w-full flex flex-col min-h-screen bg-background">
-        <Menu />
-        <div className="flex flex-col flex-grow ">
-          <div className="flex p-8 container mx-auto justify-center">
-            <Buscador />
-          </div>
-          <main className="flex-grow container mx-auto px-4 py-8 ">
-            {children}
-          </main>
-          <Rodape />
-        </div>
+        {children}
       </body>
     </html>
   )

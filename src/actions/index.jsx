@@ -1,6 +1,8 @@
 "use server"
 import { revalidatePath } from "next/cache"
 import db from "../../prisma/db"
+import { getServerSession } from "next-auth"
+import { options } from "../app/api/auth/[...nextauth]/options"
 export async function DaLike(post) {
   await new Promise((resolve) => setTimeout(resolve, 1000))
   await db.post.update({
@@ -13,15 +15,20 @@ export async function DaLike(post) {
 }
 export async function Comentar(post, formData) {
   /*   await new Promise((resolve) => setTimeout(resolve, 1000)) */
-  const author = await db.user.findFirst({
+  //pegando no banco de dados o o usuario para comentar
+  /*   const author = await db.user.findFirst({
     where: {
       userautor: "Arthur",
     },
-  })
+  }) */
+
+  //pegando o usuario logado na sesssao
+  const session = await getServerSession(options)
+
   await db.comentario.create({
     data: {
       Texto: formData.get("texto"),
-      authorId: author.id,
+      authorId: session.user.id,
       postId: post.id,
     },
   })
@@ -29,11 +36,13 @@ export async function Comentar(post, formData) {
   revalidatePath(` /${post.slug}`)
 }
 export async function Respoder(pai, formData) {
-  const author = await db.user.findFirst({
+  /*   const author = await db.user.findFirst({
     where: {
       userautor: "Arthur",
     },
-  })
+  }) */
+  const session = await getServerSession(options)
+
   const post = await db.post.findFirst({
     where: {
       id: pai.postId,
@@ -42,7 +51,7 @@ export async function Respoder(pai, formData) {
   await db.comentario.create({
     data: {
       Texto: formData.get("texto"),
-      authorId: author.id,
+      authorId: session.user.id,
       postId: post.id,
       paiId: pai.paiId ?? pai.id,
     },
