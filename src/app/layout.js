@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
           crossorigin="anonymous"
         ></script>
       </head>
-      <body className="w-full flex flex-col min-h-screen bg-background">
+      <body className="w-full flex flex-col justify-center min-h-screen bg-background">
         {children}
       </body>
     </html>

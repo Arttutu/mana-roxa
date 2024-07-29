@@ -3,6 +3,8 @@ import { revalidatePath } from "next/cache"
 import db from "../../prisma/db"
 import { getServerSession } from "next-auth"
 import { options } from "../app/api/auth/[...nextauth]/options"
+import { redirect } from "next/navigation"
+import bcrypt from "bcrypt"
 export async function DaLike(post) {
   await new Promise((resolve) => setTimeout(resolve, 1000))
   await db.post.update({
@@ -58,4 +60,23 @@ export async function Respoder(pai, formData) {
   })
 
   revalidatePath(` /${post.slug}`)
+}
+
+export async function criarUsuario(formData) {
+  try {
+    console.log("Iniciando cadastrado usuario")
+    const hashedPassword = bcrypt.hashSync(formData.get("password"), 10)
+    await db.user.create({
+      data: {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        password: hashedPassword,
+      },
+    })
+    console.log("Cadastro finalizado")
+  } catch (e) {
+    console.log("Iniciando cadastrado usuario", e)
+    return
+  }
+  redirect("/login")
 }

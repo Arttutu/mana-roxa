@@ -3,6 +3,7 @@ import Image from "next/image"
 
 export default function Comentario({ comentario }) {
   const imgSrc = comentario.author.avatar ?? comentario.author.image
+  const autorName = comentario.author.userautor ?? comentario.author.name
   return (
     <div className="flex flex-col gap-2 items-start">
       <div className="flex gap-2 items-center">
@@ -16,7 +17,7 @@ export default function Comentario({ comentario }) {
             className="bg-backgroundComentario rounded-xl"
           />
         )}
-        <strong>@{comentario.author.userautor}</strong>
+        <strong>@{autorName}</strong>
         <p>{comentario.Texto}</p>
       </div>
     </div>

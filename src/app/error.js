@@ -10,7 +10,7 @@ export default function Error({ error, reset }) {
   return (
     <div>
       <h2 className="text-textoPrincipal text-4xl font-bold">
-        Ocorreu um erro inesperado.
+        Ops algo deu errado
       </h2>
     </div>
   )
