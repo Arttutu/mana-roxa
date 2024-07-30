@@ -3,6 +3,7 @@ import Link from "next/link"
 import Menuitem from "../MenuItem"
 import { options } from "../../api/auth/[...nextauth]/options"
 import { MdFeed, MdLogin, MdInfo, MdExitToApp } from "react-icons/md"
+import { CgProfile } from "react-icons/cg"
 import { getServerSession } from "next-auth"
 
 export default async function Menu() {
@@ -18,6 +19,7 @@ export default async function Menu() {
         <ul className="flex  sm:flex sm:flex-row gap-4    items-center">
           <Menuitem nome="feed" endereco="/" Icon={MdFeed} />
           <Menuitem nome="sobre nós " endereco="/about" Icon={MdInfo} />
+          <Menuitem nome="Perfil " endereco="/profile" Icon={CgProfile} />
           {sessao ? (
             <Menuitem
               nome="Sair"
