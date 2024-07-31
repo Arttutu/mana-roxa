@@ -1,6 +1,6 @@
 import "./globals.css"
-import { Exo_2, Outfit, Prompt } from "next/font/google"
-
+import { Exo_2 } from "next/font/google"
+import AuthProvider from "./Componentes/AuthProvider"
 const font = Exo_2({
   subsets: ["latin"],
   display: "swap",
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body className="w-full flex flex-col justify-center min-h-screen bg-background">
-        {children}
+        <AuthProvider> {children}</AuthProvider>
       </body>
     </html>
   )

@@ -4,6 +4,7 @@ import db from "../../../../../prisma/db"
 import CredentialsProvider from "next-auth/providers/credentials"
 import Google from "next-auth/providers/google"
 import bcrypt from "bcrypt"
+
 export const options = {
   // Ccriando o adpatdor do  auth.js para po prisma passando banco de dados do prisma
   adapter: PrismaAdapter(db),
@@ -88,5 +89,8 @@ export const options = {
         return true // Do different verification for other providers that don't have `email_verified`
       },
     },
+  },
+  pages: {
+    signIn: "/login",
   },
 }

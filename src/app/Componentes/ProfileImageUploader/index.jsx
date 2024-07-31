@@ -30,22 +30,29 @@ export default function ProfileImageUploader({ user }) {
   }
 
   return (
-    <section className="flex flex-col gap-4">
-      <ul>
-        <li className="text-textoPrincipal text-xl">{user.name}</li>
+    <section className="flex flex-col gap-12 ">
+      <ul className="flex flex-col gap-4 list-none">
+        <li className="text-destaque font-bold text-xl">@{user.name}</li>
+        <li className="text-textoPrincipal font-bold text-xl">{user.email}</li>
 
         <li>
           <Image
             src={imgSrc}
             width={254}
             height={254}
-            alt="Imagem de perfil"
-            className="rounded-full"
+            alt={`imagem de perfil do ${user.name}`}
+            className="rounded-full border-destaque border-2 "
           />
         </li>
       </ul>
       <form onSubmit={uploadAvatar}>
-        <input type="file" required onChange={FileChange} />
+        <input
+          type="file"
+          required
+          onChange={FileChange}
+          className=" text-textoPrincipal cursor-pointer"
+        />
+
         <button
           type="submit"
           className="bg-botao rounded-lg p-2 w-42 text-textoPrincipal text-sm sm:text-md gap-2"
