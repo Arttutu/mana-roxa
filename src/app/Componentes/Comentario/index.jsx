@@ -1,8 +1,9 @@
 import React from "react"
 import Image from "next/image"
-
+import avatarPadrao from "./avatarPadrao.jpg"
 export default function Comentario({ comentario }) {
-  const imgSrc = comentario.author.avatar ?? comentario.author.image
+  const imgSrc =
+    comentario.author.avatar ?? comentario.author.image ?? avatarPadrao
   const autorName = comentario.author.userautor ?? comentario.author.name
   return (
     <div className="flex flex-col gap-2 items-start">
