@@ -94,7 +94,7 @@ export default async function Poster({ params }) {
             ></iframe>
           </div>
         )}
-        {[...Array(6)].map((_, i) => (
+        {[...Array(10)].map((_, i) => (
           <ItemPost
             key={i}
             posterData={post}

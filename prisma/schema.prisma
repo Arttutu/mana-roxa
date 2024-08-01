@@ -25,28 +25,43 @@ model User {
 model Post {
   id           Int          @id @default(autoincrement())
   slug         String       @unique
-  titulo       String
-  titulo2      String
-  titulo3      String
-  titulo4      String
-  titulo5      String
-  titulo6      String
-  texto        String
-  texto2       String
-  texto3       String
-  texto4       String
-  texto5       String
-  texto6       String
+  titulo       String?
+  titulo2      String?
+  titulo3      String?
+  titulo4      String?
+  titulo5      String?
+  titulo6      String?
+  titulo7      String?
+  titulo8      String?
+  titulo9      String?
+  titulo10     String?
+  titulo11     String?
+  texto        String?
+  texto2       String?
+  texto3       String?
+  texto4       String?
+  texto5       String?
+  texto6       String?
+  texto7       String?
+  texto8       String?
+  texto9       String?
+  texto10      String?
+  texto11      String?
   video        String
   tempoLeitura String
   data         DateTime     @default(now())
   atualizacao  DateTime     @updatedAt
-  imagem       String
-  imagem2      String
-  imagem3      String
-  imagem4      String
-  imagem5      String
-  imagem6      String
+  imagem       String?
+  imagem2      String?
+  imagem3      String?
+  imagem4      String?
+  imagem5      String?
+  imagem6      String?
+  imagem7      String?
+  imagem8      String?
+  imagem9      String?
+  imagem10     String?
+  imagem11     String?
   authorId     Int
   author       User         @relation(fields: [authorId], references: [id])
   comentarios  Comentario[]

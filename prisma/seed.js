@@ -11,37 +11,58 @@ async function main() {
   // Upsert do autor Karen
   const Arthur = await prisma.user.upsert({
     where: { userautor: author.userautor },
-    update: { email: "arthur@prisma" },
+    update: { email: "arthur@prisma.com" },
     create: author,
   })
 
   // Dados dos posts
   const posts = [
     {
-      titulo: "Resident Evil Village: Uma Análise Completa e Pessoal",
-      slug: "resident-evil-village-analise",
-      titulo2: "Olá, pessoal!",
-      titulo3: "",
-      titulo4: "Sim, é isso mesmo...",
+      titulo:
+        "Jogos Indie Imperdíveis de 2024: Descubra as Verdadeiras Joias Escondidas",
+      slug: "idies-2024",
+      titulo2: "Hades II",
+      titulo3: "Hollow Knight: Silksong",
+      titulo4: "Tunic",
       titulo5: "",
-      titulo6: "",
+      titulo6: "Axiom Verge 2",
+      titulo7: "Eastward",
+      titulo8: "Cult of the Lamb",
+      titulo9: "Spiritfarer: Farewell Edition",
+      titulo10: "Disco Elysium: The Final Cut",
+      titulo11: "Unpacking",
       texto:
-        "Resident Evil Village, lançado em 2021 pela Capcom. Muita gente conhece, muita gente já fez resenha e gameplay, mas eu ainda não tinha nenhuma plataforma para jogá-lo. Finalmente consegui um videogame e peguei esse jogo.",
+        "Olá, pessoal! O cenário dos jogos indie continua a crescer e a surpreender, trazendo experiências únicas e inovadoras que muitas vezes escapam do radar principal. Se você está procurando por algo novo, criativo e emocionante para jogar em 2024, confira nossa lista dos jogos indie imperdíveis deste ano. Prepare-se para se encantar com estas verdadeiras joias escondidas!",
       texto2:
-        "Sou muito fã da franquia Resident Evil, embora eu, às vezes, esqueça a história por completo. Nesse jogo, como todos sabem, Ethan se vê em uma vila onde quatro pessoas a controlam, a mando de Mãe Miranda, que é a chefe master da vila. Ethan, já pai da pequena Rose, se vê na difícil missão de salvá-la.",
+        "Após o enorme sucesso de Hades, a Supergiant Games retorna com *Hades II*. Esta sequência promete mais ação frenética, uma história envolvente e personagens cativantes. Com um estilo artístico deslumbrante e mecânicas de roguelike aperfeiçoadas, este jogo é um must-play para qualquer fã de indies.",
       texto3:
-        "Vou falar apenas da minha percepção sobre esse jogo. A jogabilidade é boa. Houve um momento em que me perdi no mapa, pois não consegui pensar em como passar por uma parede. Como não assisti a nenhuma gameplay, não sabia nada do que acontecia na história. Achei os bosses particularmente fáceis de derrotar, especialmente Dr. Moreau e Heisenberg. Penei um pouco para matar Mãe Miranda, pois não melhorei minhas armas, mas depois consegui derrotá-la com mais facilidade, após morrer mais de quatro vezes.",
+        "*Hollow Knight: Silksong* é a tão esperada sequência do aclamado Hollow Knight. Acompanhe Hornet em sua nova aventura através de um reino misterioso repleto de inimigos desafiadores e segredos ocultos. Com jogabilidade refinada e uma trilha sonora encantadora, este jogo promete ser tão bom quanto o original.",
       texto4:
-        "Com o nível de armamento e munições que eu tinha, consegui terminar o jogo com relativa facilidade. Enfrentei alguns desafios em algumas partes, mas depois que descobri como derrotar os monstros, o jogo se tornou mais fácil. Levei 11 horas para terminar o jogo e estou ansiosa para pegar a expansão Winters e jogar a história da Rose, filha do Ethan.",
-      texto5: "Quando jogar a história dela, farei uma resenha também.",
+        "Em *Tunic*, você assume o papel de uma pequena raposa em um mundo colorido e misterioso. Combinando elementos de aventura e puzzles, este jogo oferece uma experiência envolvente e desafiadora. A arte encantadora e a trilha sonora atmosférica fazem de Tunic um título imperdível.",
+      texto5: "",
       texto6:
-        "Por agora é isso, pessoal. Bye for now. #capcom #revillage #ethanwinters #rosemarywinters #gamergirls",
-      imagem: "/assets/img/resident/1.jpg",
-      imagem2: "",
-      imagem3: "",
-      imagem4: "",
+        "*Axiom Verge 2* é a aguardada continuação do clássico metroidvania. Explore um novo mundo com uma nova protagonista, descubra segredos ocultos e enfrente inimigos formidáveis. Com gráficos retrô e uma jogabilidade envolvente, este jogo é uma homenagem aos clássicos do gênero.",
+      texto7:
+        "Em *Eastward*, embarque em uma jornada emocionante através de um mundo pós-apocalíptico cheio de mistérios e aventuras. Com uma narrativa cativante, gráficos em pixel art deslumbrantes e personagens memoráveis, este jogo é uma verdadeira obra-prima indie.",
+      texto8:
+        "Cult of the Lamb* é um jogo de gerenciamento de cultos onde você assume o papel de um cordeiro possuído que deve construir e expandir seu próprio culto. Misturando elementos de simulação e roguelike, este jogo oferece uma experiência única e sombria com um toque de humor negro.",
+      texto9:
+        "*Spiritfarer: Farewell Edition* é uma edição definitiva do aclamado jogo de gerenciamento onde você guia espíritos para o além. Com novas atualizações e conteúdos adicionais, esta versão aprimorada promete ainda mais emoção e beleza. Uma experiência tocante e visualmente deslumbrante.",
+      texto10:
+        "*Disco Elysium: The Final Cut* é a versão definitiva do premiado RPG de detetive. Com novas missões, dublagem completa e melhorias gráficas, este jogo oferece uma narrativa profunda e escolhas significativas. Uma obra-prima que qualquer fã de RPGs narrativos deve jogar.",
+      texto11:
+        "*Unpacking* é um jogo de quebra-cabeça relaxante onde você desembrulha e organiza objetos de uma nova casa. Com uma abordagem única e uma narrativa sutilmente contada através dos itens, este jogo oferece uma experiência meditativa e introspectiva.",
+      imagem: "/assets/img/idies2024/hollow.png",
+      imagem2: "/assets/img/idies2024/hades.png",
+      imagem3: "/assets/img/idies2024/hollow.png",
+      imagem4: "/assets/img/idies2024/tunic.png",
       imagem5: "",
-      imagem6: "",
+      imagem6: "/assets/img/idies2024/axiom.png",
+      imagem7: "/assets/img/idies2024/Eastward.png",
+      imagem8: "/assets/img/idies2024/Cult.png",
+      imagem9: "/assets/img/idies2024/Spiritfarer.png",
+      imagem10: "/assets/img/idies2024/Disco.png",
+      imagem11: "/assets/img/idies2024/Unpacking.png",
       video: "",
       authorId: Arthur.id, // Associar o post ao autor Karen
       tempoLeitura: "2",
