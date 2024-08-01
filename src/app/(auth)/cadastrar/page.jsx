@@ -5,9 +5,9 @@ import Link from "next/link"
 import { criarUsuario } from "../../../actions"
 export default async function Cadastro() {
   return (
-    <div className="flex justify-around w-full">
+    <div className=" bg-backgroundComentario p-8  w-full sm:w-[500px] sm:rounded-lg justify-cente mx-auto flex flex-col gap-4 items-start ">
       <form
-        className="bg-backgroundComentario p-8  w-full sm:w-[500px] sm:rounded-lg flex flex-col gap-4 items-center "
+        className=" sm:w-[500px] sm:rounded-lg flex flex-col gap-4 "
         action={criarUsuario}
       >
         <h1 className="text-4xl font-bold">Cadastro</h1>
@@ -56,12 +56,12 @@ export default async function Cadastro() {
         >
           Cadastrar <IoMdArrowRoundForward className="text-lg" />
         </button>
-        <div className="flex flex-col gap-4 items-center">
+        <div className="flex flex-col gap-4 items-start">
           <p className="text-sm">ou entre com outras contas</p>
           <Contas />
           <div className="flex items-center gap-2">
             <span className="text-sm">Já tem conta?</span>
-            <Link href={""} className="text-destaque text-lg">
+            <Link href={"/login"} className="text-destaque text-sm font-bold">
               Faça seu login!
             </Link>
           </div>

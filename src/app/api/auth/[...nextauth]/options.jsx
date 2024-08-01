@@ -2,7 +2,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter"
 import GithubProvider from "next-auth/providers/github"
 import db from "../../../../../prisma/db"
 import CredentialsProvider from "next-auth/providers/credentials"
-import Google from "next-auth/providers/google"
+
 import bcrypt from "bcrypt"
 
 export const options = {
@@ -57,7 +57,7 @@ export const options = {
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
       httpOptions: {
-        timeout: 20000, // Aumente o tempo limite para 20 segundos (20000ms)
+        timeout: 10000, // Aumente o tempo limite para 10 segundos (20000ms)
       },
     }),
 

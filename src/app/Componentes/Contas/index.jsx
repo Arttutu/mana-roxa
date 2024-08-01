@@ -12,13 +12,13 @@ export default function Contas() {
   }
   return (
     <div className="flex gap-4">
-      <button className="flex flex-col gap-2 items-center">
-        <FcGoogle className="text-2xl" />
-        <span className="text-sm">Github</span>
+      <button className="flex flex-col gap-2 items-center disabled:opacity-50">
+        <FcGoogle className="text-2xl disabled:opacity-50" />
+        <span className="text-sm">Google</span>
       </button>
       <button className="flex flex-col gap-2 items-center">
         <FaGithub className="text-2xl" onClick={login} />
-        <span className="text-sm">Email</span>
+        <span className="text-sm">Github</span>
       </button>
     </div>
   )
