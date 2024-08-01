@@ -1,5 +1,4 @@
-"use client"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useCallback } from "react"
 import Comentario from "../Comentario"
 import ModalResposta from "../ModalResposta"
 
@@ -7,17 +6,18 @@ export default function Resposta({ comentario }) {
   const [showResposta, setShowResposta] = useState(false)
   const [respostas, setRespostas] = useState([])
 
-  async function fetchData() {
+  const fetchData = useCallback(async () => {
     const response = await fetch(`/api/comentarios/${comentario.id}/respostas`)
     const data = await response.json()
     setRespostas(data)
-  }
+  }, [comentario.id])
+
   useEffect(() => {
     if (showResposta) {
       fetchData()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [showResposta])
+  }, [showResposta, fetchData])
+
   return (
     <div className="flex flex-col gap-2 items-start">
       <button
