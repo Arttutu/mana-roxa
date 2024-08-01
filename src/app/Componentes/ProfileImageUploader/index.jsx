@@ -35,13 +35,13 @@ export default function ProfileImageUploader({ user }) {
         <li className="text-destaque font-bold text-xl">@{user.name}</li>
         <li className="text-textoPrincipal font-bold text-xl">{user.email}</li>
 
-        <li>
+        <li className="w-[]">
           <Image
             src={imgSrc}
             width={254}
             height={254}
             alt={`imagem de perfil do ${user.name}`}
-            className="rounded-full border-destaque border-2 "
+            className=" border-destaque border-2 rounded-lg "
           />
         </li>
       </ul>
