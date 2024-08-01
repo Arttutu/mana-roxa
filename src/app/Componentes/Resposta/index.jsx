@@ -16,7 +16,7 @@ export default function Resposta({ comentario }) {
     if (showResposta) {
       fetchData()
     }
-  }, [showResposta])
+  }, [showResposta, fetchData])
   return (
     <div className="flex flex-col gap-2 items-start">
       <button
