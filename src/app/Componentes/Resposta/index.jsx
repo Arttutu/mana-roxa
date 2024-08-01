@@ -16,7 +16,8 @@ export default function Resposta({ comentario }) {
     if (showResposta) {
       fetchData()
     }
-  }, [showResposta, fetchData])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showResposta])
   return (
     <div className="flex flex-col gap-2 items-start">
       <button
