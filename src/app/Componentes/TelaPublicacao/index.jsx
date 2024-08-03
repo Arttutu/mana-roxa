@@ -6,10 +6,7 @@ export default function TelaPublicacao({ post }) {
   return (
     <>
       {post.map((item) => (
-        <div
-          className="bg-background rounded-lg flex flex-col flex-wrap"
-          key={item.id}
-        >
+        <div className="" key={item.id}>
           <Card
             post={item}
             img={item.imagem}

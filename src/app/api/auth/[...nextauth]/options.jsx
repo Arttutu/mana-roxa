@@ -57,7 +57,7 @@ export const options = {
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
       httpOptions: {
-        timeout: 10000, // Aumente o tempo limite para 10 segundos (20000ms)
+        timeout: 20000, // Aumente o tempo limite para 10 segundos (20000ms)
       },
     }),
 

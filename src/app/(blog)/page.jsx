@@ -54,7 +54,7 @@ export default async function Home({ searchParams }) {
   } = await getPublicacao(PaginaAtual, searchTerm)
 
   return (
-    <section className="justify-center flex  gap-8 w-full flex-wrap">
+    <section className="flex justify-center items-center gap-8 w-full flex-wrap">
       <TelaPublicacao post={posts} />
       <div className="flex items-start gap-12">
         {prev && (

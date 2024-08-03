@@ -7,7 +7,7 @@ export default function Contas() {
   async function login(event) {
     event.preventDefault()
     signIn("github", {
-      callbackUrl: "/",
+      callbackUrl: "cronicasdoconsole.vercel.app/",
     })
   }
   return (

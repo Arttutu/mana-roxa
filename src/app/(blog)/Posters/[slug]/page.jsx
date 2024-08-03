@@ -6,7 +6,16 @@ import db from "../../../../../prisma/db.js"
 import { redirect } from "next/navigation.js"
 import ListaDeComentarios from "../../../Componentes/ListaDeComentarios/index.jsx"
 import VejaMais from "../../../../../src/app/Componentes/VejaMais/index"
+import ModalComentario from "../../../Componentes/ModalComentario/index.jsx"
+import dynamic from "next/dynamic"
+
 async function getPost(slug) {
+  const ModalComentario = dynamic(
+    () => import("../../../Componentes/ModalComentario/index.jsx"),
+    {
+      ssr: false, // Desativa a renderização no lado do servidor
+    }
+  )
   try {
     const post = await db.post.findFirst({
       where: {
@@ -91,10 +100,10 @@ export default async function Poster({ params }) {
               src={post.video}
               className=" w-[300px] h-[200px] sm:w-[800px] sm:h-[500px]"
               allowFullScreen
-            ></iframe>
+            />
           </div>
         )}
-        {[...Array(10)].map((_, i) => (
+        {[...Array(11)].map((_, i) => (
           <ItemPost
             key={i}
             posterData={post}
@@ -103,6 +112,7 @@ export default async function Poster({ params }) {
             titulo={post[`titulo${i + 2}`]}
           />
         ))}
+
         <section className="flex flex-col gap-8">
           <h2 className="text-destaque  text-xl sm:text-4xl ">Veja Mais</h2>
           <div className=" flex items-center gap-8 flex-wrap">
@@ -117,7 +127,10 @@ export default async function Poster({ params }) {
           </div>
         </section>
         <section className="bg-backgroundComentario w-full p-4 rounded-lg flex flex-col gap-8 mt-12">
-          <h2 className="text-destaque text-xl sm:text-4xl ">Comentários</h2>
+          <div className="flex items-end gap-4">
+            <h2 className="text-destaque text-xl sm:text-4xl ">Comentários</h2>
+            <ModalComentario post={post} pagina />
+          </div>
           <ListaDeComentarios comentarios={post.comentarios} />
         </section>
       </div>
