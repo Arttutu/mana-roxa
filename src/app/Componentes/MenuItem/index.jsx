@@ -4,7 +4,7 @@ import React from "react"
 export default function Menuitem({ endereco, nome, Icon }) {
   return (
     <Link href={endereco}>
-      <li className="flex flex-col sm:flex sm:flex-row items-center gap-2">
+      <li className="flex flex-col sm:flex sm:flex-row items-center gap-2 ">
         {Icon && (
           <Icon className="text-xl sm:text-2xl text-textoPrincipal  hover:text-hover" />
         )}

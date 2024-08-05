@@ -26,7 +26,7 @@ export default function ModalComentario({ post, pagina }) {
       <Dialog.Trigger disabled={!session || pending} asChild>
         {pagina ? (
           <button className="font-bold underline text-sm cursor-pointer disabled:cursor-not-allowed disabled:opacity-70">
-            Clique aqui e deixe o seu comentário!!!
+            Escreva um comentário
           </button>
         ) : (
           <button className="disabled:cursor-not-allowed disabled:opacity-50">

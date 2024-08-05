@@ -67,17 +67,30 @@ export default async function Poster({ params }) {
   const post = await getPost(params.slug)
   const allPosts = await getAllPosts(params.slug)
 
+  const items = []
+  for (let i = 2; i <= 11; i++) {
+    items.push(
+      <ItemPost
+        key={post[`titulo${i}`]}
+        posterData={post}
+        imagem={post[`imagem${i}`]}
+        texto={post[`texto${i}`]}
+        titulo={post[`titulo${i}`]}
+      />
+    )
+  }
+
   return (
     <section className="flex flex-col">
       <div className="flex flex-col items-start gap-8">
         {post.imagem && (
           <div className="flex items-center bg-background2 w-full justify-center py-12">
             <Image
-              className="rounded-xl"
+              className="rounded-xl w-auto h-auto"
               alt="imagem de numero 1 do poster"
               src={post.imagem}
               width={800}
-              height={0}
+              height={800}
               priority
             />
           </div>
@@ -103,20 +116,11 @@ export default async function Poster({ params }) {
             />
           </div>
         )}
-        {[...Array(11)].map((_, i) => (
-          <ItemPost
-            key={i}
-            posterData={post}
-            imagem={post[`imagem${i + 2}`]}
-            texto={post[`texto${i + 2}`]}
-            titulo={post[`titulo${i + 2}`]}
-          />
-        ))}
-
+        {items}
         <section className="flex flex-col gap-8">
-          <h2 className="text-destaque  text-xl sm:text-4xl ">Veja Mais</h2>
+          <h2 className="text-destaque text-xl sm:text-4xl ">Últimos posts</h2>
           <div className=" flex items-center gap-8 flex-wrap">
-            {allPosts.map((post) => (
+            {allPosts.slice(-3).map((post) => (
               <VejaMais
                 key={post.slug}
                 slug={post.slug}
