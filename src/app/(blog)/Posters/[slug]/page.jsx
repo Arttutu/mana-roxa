@@ -89,8 +89,8 @@ export default async function Poster({ params }) {
               className="rounded-xl w-auto h-auto"
               alt="imagem de numero 1 do poster"
               src={post.imagem}
-              width={800}
-              height={800}
+              width={400}
+              height={400}
               priority
             />
           </div>
