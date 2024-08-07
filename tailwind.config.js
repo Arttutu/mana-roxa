@@ -19,6 +19,7 @@ module.exports = {
       hover: "#7f5af0",
       botaoTexto: "#fffffe",
       rodape: "#010101",
+      erro: "#ff0000",
     },
   },
   /*   theme: {
