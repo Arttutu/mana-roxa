@@ -1,28 +1,33 @@
 "use client"
 import * as Dialog from "@radix-ui/react-dialog"
 import { BiCommentDetail } from "react-icons/bi"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { IoMdClose } from "react-icons/io"
 import { Comentar } from "../../../actions/index.jsx"
 import { IoMdArrowRoundForward } from "react-icons/io"
 import { useFormStatus } from "react-dom"
 import { useSession } from "next-auth/react"
 export default function ModalComentario({ post, pagina }) {
-  const [mensagem, setMensagem] = useState()
+  const [mensagem, setMensagem] = useState("")
+  const [isOpen, setIsOpen] = useState(false)
   const { pending } = useFormStatus()
-
   const { data: session } = useSession()
 
-  const EnviarComentario = (event) => {
-    Comentar.bind(null, post)
+  async function EnviarComentario(formData) {
     try {
-      setMensagem("Comentário enviado com sucesso!")
+      await Comentar(post, formData)
+      setMensagem("Mensagem enviada com sucesso")
     } catch (error) {
-      setMensagem("Falha ao enviar o comentário.")
+      setMensagem("Erro ao enviar mensagem")
     }
   }
+  useEffect(() => {
+    if (!isOpen) {
+      setMensagem("")
+    }
+  }, [isOpen])
   return (
-    <Dialog.Root>
+    <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger disabled={!session || pending} asChild>
         {pagina ? (
           <button className="font-bold underline text-sm cursor-pointer disabled:cursor-not-allowed disabled:opacity-70">
@@ -58,8 +63,8 @@ export default function ModalComentario({ post, pagina }) {
               <IoMdArrowRoundForward />
             </button>
             {mensagem && (
-              <div>
-                <p className="text-textoPrincipal text-md">{mensagem}</p>
+              <div className="py-4">
+                <p className="text-destaque font-bold text-md">{mensagem}</p>
               </div>
             )}
           </form>

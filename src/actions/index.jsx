@@ -35,7 +35,7 @@ export async function Comentar(post, formData) {
     },
   })
   revalidatePath("/")
-  revalidatePath(` /${post.slug}`)
+  revalidatePath(`/${post.slug}`)
 }
 export async function Respoder(pai, formData) {
   /*   const author = await db.user.findFirst({
