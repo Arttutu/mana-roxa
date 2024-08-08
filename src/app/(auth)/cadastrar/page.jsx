@@ -52,7 +52,7 @@ export default async function Cadastro() {
 
         <button
           type="submit"
-          className="bg-botao  text-lg p-4 rounded-lg text-textoPrincipal font-bold w-32 flex gap-2 items-center justify-center"
+          className="bg-botao  text-lg p-4 rounded-lg text-textoPrincipal font-bold w-32 flex gap-2 items-center justify-center hover:rounded-full transition-all"
         >
           Cadastrar <IoMdArrowRoundForward className="text-lg" />
         </button>

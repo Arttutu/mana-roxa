@@ -1,19 +1,36 @@
 "use client"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import * as Dialog from "@radix-ui/react-dialog"
 import { Respoder } from "../../../actions/index.jsx"
 import { IoMdArrowRoundForward } from "react-icons/io"
 import { IoMdClose } from "react-icons/io"
 import Comentario from "../Comentario/index.jsx"
 import ComentarioBotao from "../ComentarioBotao/index.jsx"
+import { useFormStatus } from "react-dom"
+import { useSession } from "next-auth/react"
 export default function ModalResposta({ comentario }) {
-  const action = Respoder.bind(null, comentario)
-
+  const [mensagem, setMensagem] = useState("")
+  const [isOpen, setIsOpen] = useState(false)
+  const { pending } = useFormStatus()
+  const { data: session } = useSession()
+  async function action(formData) {
+    try {
+      await Respoder(comentario, formData)
+      setMensagem("Mensagem enviada com sucesso")
+    } catch (error) {
+      setMensagem("Erro ao enviar mensagem" + error)
+    }
+  } 
+  useEffect(() => {
+    if (!isOpen) {
+      setMensagem("")
+    }
+  }, [isOpen])
   return (
     <>
-      <Dialog.Root>
-        <Dialog.Trigger asChild>
-          <button className="text-md font-bold hover:text-hover transition-all">
+      <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
+        <Dialog.Trigger disabled={!session || pending} asChild>
+          <button className="text-md font-bold hover:text-hover transition-all disabled:cursor-not-allowed disabled:opacity-70">
             Responder
           </button>
         </Dialog.Trigger>
@@ -45,8 +62,13 @@ export default function ModalResposta({ comentario }) {
                 </button> */}
               </Dialog.Close>
             </form>
+            {mensagem && (
+              <div className="py-4">
+                <p className="text-destaque font-bold text-md">{mensagem}</p>
+              </div>
+            )}
             <Dialog.Close asChild>
-              <button className="absolute top-2 right-2 text-textoPrincipal text-xl">
+              <button className="absolute top-2 right-2 text-textoPrincipal text-xl ">
                 <IoMdClose />
               </button>
             </Dialog.Close>

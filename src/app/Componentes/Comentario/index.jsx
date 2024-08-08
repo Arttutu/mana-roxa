@@ -11,11 +11,13 @@ export default function Comentario({ comentario }) {
         {imgSrc && (
           <Image
             src={imgSrc}
-            height={32}
-            width={32}
+            height={42}
+            width={42}
             priority
-            alt={`Avatar do(a) ${comentario.author.userautor}`}
-            className="bg-backgroundComentario rounded-xl"
+            alt={`Avatar do(a) ${
+              comentario.author.userautor ?? comentario.author.name
+            }`}
+            className="bg-backgroundComentario rounded-full w-[42px] h-[42px] "
           />
         )}
         <strong>@{autorName}</strong>

@@ -11,7 +11,10 @@ export default async function Login() {
         <p className="text-sm">ou entre com outras contas</p>
         <Contas />
         <span className="text-sm">Ainda nao tem conta ?</span>
-        <Link href={"/cadastrar"} className="text-destaque text-sm font-bold">
+        <Link
+          href={"/cadastrar"}
+          className="text-destaque text-sm font-bold hover:text-background2 transition-all"
+        >
           Crie o seu cadastro !
         </Link>
       </div>

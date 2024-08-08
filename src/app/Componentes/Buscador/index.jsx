@@ -11,7 +11,7 @@ export default function Buscador() {
       />
       <button
         type="submit"
-        className="text-botaoTexto font-bold bg-botao rounded-lg p-2 flex items-center gap-1"
+        className="text-botaoTexto font-bold bg-botao rounded-lg p-2 flex items-center gap-1 transition-all  hover:rounded-full"
       >
         Buscar
         <MdOutlineManageSearch className="text-botaoTexto text-2xl" />

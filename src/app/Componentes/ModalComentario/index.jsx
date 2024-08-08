@@ -56,7 +56,7 @@ export default function ModalComentario({ post, pagina }) {
             />
 
             <button
-              className="mt-4 text-textoPrincipal  bg-botao text-md flex items-center gap-2 justify-center p-2 rounded-lg"
+              className="mt-4 text-textoPrincipal  bg-botao text-md flex items-center gap-2 justify-center p-2 rounded-lg hover:rounded-full transition-all"
               type="submit"
             >
               Comentar

@@ -118,8 +118,8 @@ export default async function Poster({ params }) {
         )}
         {items}
         <section className="flex flex-col gap-8">
-          <h2 className="text-destaque text-xl sm:text-4xl ">Últimos posts</h2>
-          <div className=" flex items-center gap-8 flex-wrap">
+          <h2 className="text-destaque text-2xl sm:text-4xl ">Últimos posts</h2>
+          <div className=" flex items-center   gap-12 flex-wrap">
             {allPosts.slice(-3).map((post) => (
               <VejaMais
                 key={post.slug}
