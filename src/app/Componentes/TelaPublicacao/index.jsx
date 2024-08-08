@@ -10,22 +10,21 @@ export default function TelaPublicacao({ post }) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeIn" }}
+          key={item.id}
         >
-          <div key={item.id}>
-            <Card
-              post={item}
-              img={item.imagem}
-              postTitulo={item.titulo}
-              tempo={item.tempoLeitura}
-              data={new Date(item.data).toLocaleDateString()}
-              slug={item.slug}
-              resumo={item.texto}
-              avatar={item.author.avatar}
-              autor={item.author.userautor}
-              likes={item.likes}
-              comentarios={item.comentarios}
-            />
-          </div>
+          <Card
+            post={item}
+            img={item.imagem}
+            postTitulo={item.titulo}
+            tempo={item.tempoLeitura}
+            data={new Date(item.data).toLocaleDateString()}
+            slug={item.slug}
+            resumo={item.texto}
+            avatar={item.author.avatar}
+            autor={item.author.userautor}
+            likes={item.likes}
+            comentarios={item.comentarios}
+          />
         </motion.div>
       ))}
     </>
