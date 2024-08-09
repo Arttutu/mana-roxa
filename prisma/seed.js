@@ -18,51 +18,43 @@ async function main() {
   // Dados dos posts
   const posts = [
     {
-      titulo:
-        "Jogos Indie Imperdíveis de 2024: Descubra as Verdadeiras Joias Escondidas",
-      slug: "idies-2024",
-      titulo2: "Hades II",
-      titulo3: "Hollow Knight: Silksong",
-      titulo4: "Tunic",
+      titulo: " Darksiders Está de Volta! Tudo o que Sabemos sobre o Novo Jogo",
+      slug: "darksiders-esta-de-volta",
+      titulo2: "Um Breve Histórico da Franquia",
+      titulo3: "O Novo Jogo",
+      titulo4: "",
       titulo5: "",
-      titulo6: "Axiom Verge 2",
-      titulo7: "Eastward",
-      titulo8: "Cult of the Lamb",
-      titulo9: "Spiritfarer: Farewell Edition",
-      titulo10: "Disco Elysium: The Final Cut",
-      titulo11: "Unpacking",
+      titulo6: "",
+      titulo7: "",
+      titulo8: "",
+      titulo9: "",
+      titulo10: "",
+      titulo11: "",
       texto:
-        "Olá, pessoal! O cenário dos jogos indie continua a crescer e a surpreender, trazendo experiências únicas e inovadoras que muitas vezes escapam do radar principal. Se você está procurando por algo novo, criativo e emocionante para jogar em 2024, confira nossa lista dos jogos indie imperdíveis deste ano. Prepare-se para se encantar com estas verdadeiras joias escondidas!",
+        "E aí, gamers! Preparados para mais uma aventura épica? A THQ Nordic acaba de confirmar que a franquia Darksiders está de volta com um novo jogo! Para quem não conhece, Darksiders é uma série de ação e aventura que coloca os jogadores no papel de um dos Quatro Cavaleiros do Apocalipse, em uma jornada para restaurar o equilíbrio entre o Céu e o Inferno.",
       texto2:
-        "Após o enorme sucesso de Hades, a Supergiant Games retorna com *Hades II*. Esta sequência promete mais ação frenética, uma história envolvente e personagens cativantes. Com um estilo artístico deslumbrante e mecânicas de roguelike aperfeiçoadas, este jogo é um must-play para qualquer fã de indies.",
+        "Antes de mergulharmos nas novidades, vamos relembrar um pouco da história da franquia:/n• Darksiders: O primeiro jogo da série, lançado em 2010, apresentou War, o primeiro Cavaleiro a ser invocado antes da hora, e sua jornada para limpar seu nome. /n• Darksiders II: Em 2012, foi a vez de Death, o segundo Cavaleiro, buscar a ressurreição de seu irmão./n* Darksiders III: Lançado em 2018, o terceiro jogo trouxe Fury, a terceira Cavaleira, em uma busca para capturar os Sete Pecados Capitais./n * Darksiders Genesis: Um prequel lançado em 2019, que apresentou Strife, o quarto Cavaleiro, em uma aventura que se passa antes dos eventos do primeiro jogo.",
       texto3:
-        "*Hollow Knight: Silksong* é a tão esperada sequência do aclamado Hollow Knight. Acompanhe Hornet em sua nova aventura através de um reino misterioso repleto de inimigos desafiadores e segredos ocultos. Com jogabilidade refinada e uma trilha sonora encantadora, este jogo promete ser tão bom quanto o original.",
-      texto4:
-        "Em *Tunic*, você assume o papel de uma pequena raposa em um mundo colorido e misterioso. Combinando elementos de aventura e puzzles, este jogo oferece uma experiência envolvente e desafiadora. A arte encantadora e a trilha sonora atmosférica fazem de Tunic um título imperdível.",
+        "E o que podemos esperar do novo Darksiders? Ainda não temos muitos detalhes, mas o teaser lançado pela THQ Nordic já deixou os fãs ansiosos. No vídeo, é possível verificar a convocação dos Cavaleiros do Apocalipse pelo Charred Council, que é a entidade responsável por manter o equilíbrio do universo. /n O que sabemos até agora:/n* Confirmação: A THQ Nordic confirmou oficialmente o desenvolvimento de um novo jogo da franquia./n* Teaser: Um teaser intrigante foi lançado, gerando diversas especulações entre os fãs./n* Detalhes: A maioria dos detalhes, como a história, os personagens jogáveis e a data de lançamento, ainda são desconhecidos./nO que você acha? Qual Cavaleiro você gostaria de controlar no novo jogo? Deixe sua opinião nos comentários!",
+      texto4: "",
       texto5: "",
-      texto6:
-        "*Axiom Verge 2* é a aguardada continuação do clássico metroidvania. Explore um novo mundo com uma nova protagonista, descubra segredos ocultos e enfrente inimigos formidáveis. Com gráficos retrô e uma jogabilidade envolvente, este jogo é uma homenagem aos clássicos do gênero.",
-      texto7:
-        "Em *Eastward*, embarque em uma jornada emocionante através de um mundo pós-apocalíptico cheio de mistérios e aventuras. Com uma narrativa cativante, gráficos em pixel art deslumbrantes e personagens memoráveis, este jogo é uma verdadeira obra-prima indie.",
-      texto8:
-        "Cult of the Lamb* é um jogo de gerenciamento de cultos onde você assume o papel de um cordeiro possuído que deve construir e expandir seu próprio culto. Misturando elementos de simulação e roguelike, este jogo oferece uma experiência única e sombria com um toque de humor negro.",
-      texto9:
-        "*Spiritfarer: Farewell Edition* é uma edição definitiva do aclamado jogo de gerenciamento onde você guia espíritos para o além. Com novas atualizações e conteúdos adicionais, esta versão aprimorada promete ainda mais emoção e beleza. Uma experiência tocante e visualmente deslumbrante.",
-      texto10:
-        "*Disco Elysium: The Final Cut* é a versão definitiva do premiado RPG de detetive. Com novas missões, dublagem completa e melhorias gráficas, este jogo oferece uma narrativa profunda e escolhas significativas. Uma obra-prima que qualquer fã de RPGs narrativos deve jogar.",
-      texto11:
-        "*Unpacking* é um jogo de quebra-cabeça relaxante onde você desembrulha e organiza objetos de uma nova casa. Com uma abordagem única e uma narrativa sutilmente contada através dos itens, este jogo oferece uma experiência meditativa e introspectiva.",
-      imagem: "/assets/img/idies2024/hollow.png",
-      imagem2: "/assets/img/idies2024/hades.png",
-      imagem3: "/assets/img/idies2024/hollow.png",
-      imagem4: "/assets/img/idies2024/tunic.png",
+      texto6: "",
+      texto7: "",
+      texto8: "",
+      texto9: "",
+      texto10: "",
+      texto11: "",
+      imagem: "/assets/img/darksiders/darksiders.jpg",
+      imagem2: "",
+      imagem3: "/assets/img/darksiders/darksiders2.jpg",
+      imagem4: "",
       imagem5: "",
-      imagem6: "/assets/img/idies2024/axiom.png",
-      imagem7: "/assets/img/idies2024/Eastward.png",
-      imagem8: "/assets/img/idies2024/Cult.png",
-      imagem9: "/assets/img/idies2024/Spiritfarer.png",
-      imagem10: "/assets/img/idies2024/Disco.png",
-      imagem11: "/assets/img/idies2024/Unpacking.png",
+      imagem6: "",
+      imagem7: "",
+      imagem8: "",
+      imagem9: "",
+      imagem10: "",
+      imagem11: "",
       video: "",
       authorId: Arthur.id, // Associar o post ao autor Karen
       tempoLeitura: "2",

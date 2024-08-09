@@ -19,7 +19,7 @@ export default function ItemPost({ imagem, titulo, texto, posterData }) {
             width={700}
             height={500}
             priority
-            className="rounded-xl w-auto h-auto"
+            className="w-full rounded-xl sm:w-auto h-auto"
           />
         </div>
       ) : (

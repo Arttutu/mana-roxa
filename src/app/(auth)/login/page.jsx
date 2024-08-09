@@ -15,9 +15,9 @@ export default async function Login(/* { error } */) {
       )} */}
       <FormLogin />
       <div className="flex flex-col gap-4 items-start">
-        <p className="text-sm">ou entre com outras contas</p>
+        <p className="text-sm text-paragrafo">ou entre com outras contas</p>
         <Contas />
-        <span className="text-sm">Ainda nao tem conta ?</span>
+        <span className="text-sm  text-paragrafo">Ainda nao tem conta ?</span>
         <Link
           href={"/cadastrar"}
           className="text-destaque text-sm font-bold hover:text-background2 transition-all"
