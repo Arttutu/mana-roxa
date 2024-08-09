@@ -6,9 +6,9 @@ export default function Menuitem({ endereco, nome, Icon }) {
     <Link href={endereco}>
       <li className="flex flex-col sm:flex sm:flex-row items-center gap-2 ">
         {Icon && (
-          <Icon className="text-xl sm:text-2xl text-textoPrincipal  hover:text-hover" />
+          <Icon className="text-2xl sm:text-2xl text-textoPrincipal  hover:text-hover" />
         )}
-        <span className="text-paragrafo hover:underline text-lg sm:text-2xl hover:text-hover transition-all font-font">
+        <span className="  sm:block text-paragrafo hover:underline text-md sm:text-xl hover:text-hover transition-all font-font">
           {nome}
         </span>
       </li>

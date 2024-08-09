@@ -1,8 +1,10 @@
 import { PrismaAdapter } from "@auth/prisma-adapter"
-
-import db from "../../../../../prisma/db"
+import db from "../../../../../../prisma/db"
 import CredentialsProvider from "next-auth/providers/credentials"
-import bcrypt from "bcrypt"
+import GoogleProvider from "next-auth/providers/google"
+import bcrypt from "bcryptjs"
+import { error } from "console"
+import { redirect } from "next/dist/server/api-utils"
 
 export const options = {
   // Ccriando o adpatdor do  auth.js para po prisma passando banco de dados do prisma
@@ -51,6 +53,18 @@ export const options = {
         return null
       },
     }),
+    GoogleProvider({
+      clientId: process.env.AUTH_GOOGLE_ID,
+      clientSecret: process.env.AUTH_GOOGLE_SECRET,
+      authorization: {
+        params: {
+          scope: "openid profile email",
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code",
+        },
+      },
+    }),
 
     // ...add more providers here
   ],
@@ -58,11 +72,20 @@ export const options = {
   callbacks: {
     async session({ session, token }) {
       if (session?.user) {
+        /*   const verificarEmail = await db.user.findFirst({
+          where: {
+            email: session.user.email,
+          },
+        })
+        if (verificarEmail) {
+          redirect("/login?error=AccountAlreadyLinked")
+        } */
         session.user.id = parseInt(token.sub)
       }
       return session
     },
   },
+
   pages: {
     signIn: "/login",
   },

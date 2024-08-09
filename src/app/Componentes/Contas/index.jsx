@@ -9,12 +9,20 @@ export default function Contas() {
     signIn("github", {
       callbackUrl: "/",
     }) */
-
+  async function login(event) {
+    event.preventDefault()
+    await signIn("google", {
+      callbackUrl: "/",
+    })
+  }
   return (
     <div className="flex gap-4">
-      <button className="flex flex-col gap-2 items-center disabled:opacity-50">
+      <button
+        className="flex  bg-background2 p-2 rounded-lg transition-all hover:rounded-full gap-4 items-center disabled:opacity-50"
+        onClick={login}
+      >
         <FcGoogle className="text-2xl disabled:opacity-50" />
-        <span className="text-sm">Google</span>
+        <span className="text-sm text-textoPrincipal">Google</span>
       </button>
       {/*       <button className="flex flex-col gap-2 items-center">
         <FaGithub className="text-2xl" onClick={login} />

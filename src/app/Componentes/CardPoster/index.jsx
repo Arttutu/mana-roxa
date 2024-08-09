@@ -65,7 +65,7 @@ export default function Card({
           Continuar Lendo
         </Link>
       </section>
-      <footer className="bg-background2 rounded-lg flex flex-row items-center justify-between p-4">
+      <footer className="bg-background2  rounded-lg flex flex-row items-center justify-between p-4">
         <div className="flex items-start gap-4">
           <form
             //chama a a action

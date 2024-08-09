@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth"
 import ProfileImageUploader from "../../Componentes/ProfileImageUploader/index.jsx"
-import { options } from "../../api/auth/[...nextauth]/options"
+import { options } from "../../api/auth/[...nextauth]/google/options.jsx"
 import db from "../../../../prisma/db.js"
 import { redirect } from "next/navigation.js"
 

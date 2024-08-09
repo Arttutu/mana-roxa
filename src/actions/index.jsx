@@ -2,9 +2,10 @@
 import { revalidatePath } from "next/cache"
 import db from "../../prisma/db"
 import { getServerSession } from "next-auth"
-import { options } from "../app/api/auth/[...nextauth]/options"
+import { options } from "../app/api/auth/[...nextauth]/google/options"
 import { redirect } from "next/navigation"
-import bcrypt from "bcrypt"
+import bcrypt from "bcryptjs"
+
 export async function DaLike(post) {
   await new Promise((resolve) => setTimeout(resolve, 1000))
   await db.post.update({
