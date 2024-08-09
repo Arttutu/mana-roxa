@@ -6,10 +6,12 @@ import FormLogin from "../../Componentes/FormLogin"
 export default async function Login({ error }) {
   return (
     <div className=" bg-backgroundComentario p-8  w-full sm:w-[500px] sm:rounded-lg justify-cente mx-auto flex flex-col gap-4 items-start ">
-      {error === "email-ja-existe" && (
+      {error === "email-ja-existe" ? (
         <h1 className="font-bold text-erro text-xl">
           Você ja tem um e-mail cadastrado
         </h1>
+      ) : (
+        ""
       )}
       <FormLogin />
       <div className="flex flex-col gap-4 items-start">
