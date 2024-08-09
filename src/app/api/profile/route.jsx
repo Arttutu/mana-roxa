@@ -1,7 +1,7 @@
 import { put } from "@vercel/blob"
 import { getServerSession } from "next-auth"
 import { NextResponse } from "next/server"
-import { options } from "../auth/[...nextauth]/options"
+import { options } from "../auth/[...nextauth]/google/options"
 import db from "../../../../prisma/db"
 export async function POST(request) {
   const session = await getServerSession(options)
