@@ -18,12 +18,13 @@ async function main() {
   // Dados dos posts
   const posts = [
     {
-      titulo: " Darksiders Está de Volta! Tudo o que Sabemos sobre o Novo Jogo",
-      slug: "darksiders-esta-de-volta",
-      titulo2: "Um Breve Histórico da Franquia",
-      titulo3: "O Novo Jogo",
-      titulo4: "",
-      titulo5: "",
+      titulo:
+        "Prepare-se para agosto! A PS Plus te presenteia com esses 3 jogaços!",
+      slug: "ps-plus-agosto",
+      titulo2: "LEGO Star Wars: The Skywalker Saga",
+      titulo3: "Five Nights at Freddy's: Security Breach",
+      titulo4: "Ender Lilies: Quietus of the Knights",
+      titulo5: "Considerações Finais:",
       titulo6: "",
       titulo7: "",
       titulo8: "",
@@ -31,23 +32,25 @@ async function main() {
       titulo10: "",
       titulo11: "",
       texto:
-        "E aí, gamers! Preparados para mais uma aventura épica? A THQ Nordic acaba de confirmar que a franquia Darksiders está de volta com um novo jogo! Para quem não conhece, Darksiders é uma série de ação e aventura que coloca os jogadores no papel de um dos Quatro Cavaleiros do Apocalipse, em uma jornada para restaurar o equilíbrio entre o Céu e o Inferno.",
+        "Galera! Preparados para mais um mês de jogos incríveis na PS Plus Essencial? Agosto chegou com tudo e a Sony não decepcionou! Para te ajudar a aproveitar ao máximo sua assinatura, separamos tudo sobre os 3 jogos que vão te fazer passar horas grudado no controle",
       texto2:
-        "Antes de mergulharmos nas novidades, vamos relembrar um pouco da história da franquia:/n• Darksiders: O primeiro jogo da série, lançado em 2010, apresentou War, o primeiro Cavaleiro a ser invocado antes da hora, e sua jornada para limpar seu nome. /n• Darksiders II: Em 2012, foi a vez de Death, o segundo Cavaleiro, buscar a ressurreição de seu irmão./n* Darksiders III: Lançado em 2018, o terceiro jogo trouxe Fury, a terceira Cavaleira, em uma busca para capturar os Sete Pecados Capitais./n * Darksiders Genesis: Um prequel lançado em 2019, que apresentou Strife, o quarto Cavaleiro, em uma aventura que se passa antes dos eventos do primeiro jogo.",
+        "Que tal reviver toda a saga Star Wars de uma forma divertida e cheia de humor? Em LEGO Star Wars: The Skywalker Saga, você poderá controlar seus personagens favoritos e construir, batalhar e explorar a galáxia. Com gráficos coloridos, missões épicas e muito conteúdo desbloqueável, esse jogo é perfeito para fãs de todas as idades.  ",
       texto3:
-        "E o que podemos esperar do novo Darksiders? Ainda não temos muitos detalhes, mas o teaser lançado pela THQ Nordic já deixou os fãs ansiosos. No vídeo, é possível verificar a convocação dos Cavaleiros do Apocalipse pelo Charred Council, que é a entidade responsável por manter o equilíbrio do universo. /n O que sabemos até agora:/n* Confirmação: A THQ Nordic confirmou oficialmente o desenvolvimento de um novo jogo da franquia./n* Teaser: Um teaser intrigante foi lançado, gerando diversas especulações entre os fãs./n* Detalhes: A maioria dos detalhes, como a história, os personagens jogáveis e a data de lançamento, ainda são desconhecidos./nO que você acha? Qual Cavaleiro você gostaria de controlar no novo jogo? Deixe sua opinião nos comentários!",
-      texto4: "",
-      texto5: "",
+        "Se você gosta de um bom susto, prepare-se para passar noites agitadas em Five Nights at Freddy's: Security Breach. Neste novo capítulo da franquia, você explorará uma pizzaria assustadora repleta de animatrônicos que querem te pegar. Com uma jogabilidade mais livre e uma atmosfera ainda mais intensa, este é um jogo que vai te deixar à beira do seu assento.",
+      texto4:
+        "Para quem busca uma experiência mais sombria e desafiadora, Ender Lilies: Quietus of the Knights é a escolha perfeita. Neste metroidvania, você controlará uma jovem que precisa purificar uma terra corrompida por uma maldição. Com gráficos belíssimos, uma trilha sonora envolvente e uma jogabilidade desafiadora, este jogo é um prato cheio para os fãs do gênero.",
+      texto5:
+        "Qual desses jogos você mais está ansioso para jogar? Compartilhe nos comentários e não se esqueça de seguir nosso blog para ficar por dentro das últimas novidades do mundo dos games.",
       texto6: "",
       texto7: "",
-      texto8: "",
+      texto8: " ",
       texto9: "",
       texto10: "",
       texto11: "",
-      imagem: "/assets/img/darksiders/darksiders.jpg",
-      imagem2: "",
-      imagem3: "/assets/img/darksiders/darksiders2.jpg",
-      imagem4: "",
+      imagem: "/assets/img/ps-plus-agosto/psplus.png",
+      imagem2: "/assets/img/ps-plus-agosto/lego.jpg",
+      imagem3: "/assets/img/ps-plus-agosto/five.jpg",
+      imagem4: "/assets/img/ps-plus-agosto/ender.jpg",
       imagem5: "",
       imagem6: "",
       imagem7: "",
@@ -56,7 +59,7 @@ async function main() {
       imagem10: "",
       imagem11: "",
       video: "",
-      authorId: Arthur.id, // Associar o post ao autor Karen
+      authorId: Arthur.id,
       tempoLeitura: "2",
       data: new Date(),
     },
@@ -66,7 +69,9 @@ async function main() {
   for (const post of posts) {
     await prisma.post.upsert({
       where: { slug: post.slug },
-      update: {},
+      update: {
+        titulo6: post.titulo6,
+      },
       create: post,
     })
   }

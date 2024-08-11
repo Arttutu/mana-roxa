@@ -18,7 +18,7 @@ export default function Contas() {
   return (
     <div className="flex gap-4">
       <button
-        className="flex  bg-background2 p-2 rounded-lg transition-all hover:rounded-full gap-4 items-center disabled:opacity-50"
+        className="flex justify-center w-[300px]  bg-background2 p-2 rounded-lg transition-all hover:rounded-full gap-4 items-center disabled:opacity-50"
         onClick={login}
       >
         <FcGoogle className="text-2xl disabled:opacity-50" />

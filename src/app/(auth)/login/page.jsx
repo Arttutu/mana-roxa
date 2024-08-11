@@ -13,17 +13,19 @@ export default async function Login(/* { error } */) {
       ) : (
         ""
       )} */}
-      <FormLogin />
+      {/*       <FormLogin /> */}
+      <h1 className="text-4xl font-bold">Login</h1>
+      <h2 className="text-lg font-semibold">Boas-vindas! Faça seu login</h2>
       <div className="flex flex-col gap-4 items-start">
-        <p className="text-sm text-paragrafo">ou entre com outras contas</p>
+        {/*  <p className="text-sm text-paragrafo">ou entre com outras contas</p> */}
         <Contas />
-        <span className="text-sm  text-paragrafo">Ainda nao tem conta ?</span>
+        {/*     <span className="text-sm  text-paragrafo">Ainda nao tem conta ?</span>
         <Link
           href={"/cadastrar"}
           className="text-destaque text-sm font-bold hover:text-background2 transition-all"
         >
           Crie o seu cadastro !
-        </Link>
+        </Link> */}
       </div>
     </div>
   )
