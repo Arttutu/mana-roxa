@@ -1,10 +1,10 @@
 import Link from "next/link"
 import React from "react"
 
-export default function Menuitem({ endereco, nome, Icon }) {
+export default function Menuitem({ endereco, nome, Icon, disable }) {
   return (
     <Link href={endereco}>
-      <li className="flex flex-col sm:flex sm:flex-row items-center gap-2 ">
+      <li className="flex flex-col sm:flex sm:flex-row items-center gap-2 disabled:opacity-45 ">
         {Icon && (
           <Icon className="text-2xl sm:text-2xl text-textoPrincipal  hover:text-hover" />
         )}

@@ -11,6 +11,7 @@ export default function TelaPublicacao({ post }) {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeIn" }}
           key={item.id}
+          className=""
         >
           <Card
             post={item}

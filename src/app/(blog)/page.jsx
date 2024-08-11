@@ -54,13 +54,13 @@ export default async function Home({ searchParams }) {
   } = await getPublicacao(PaginaAtual, searchTerm)
 
   return (
-    <section className="flex justify-center items-center gap-12 w-full flex-wrap ">
+    <section className="flex justify-center items-center gap-16 w-full flex-wrap ">
       <TelaPublicacao post={posts} />
       <div className="flex items-start gap-12">
         {prev && (
           <Link
             href={{ pathname: "/", query: { page: prev, q: searchTerm } }}
-            className="text-2xl text-botao hover:text-textoPrincipal transition-all underline"
+            className="mt-4 text-textoPrincipal  bg-botao text-md flex items-center gap-2 justify-center p-2 rounded-lg hover:rounded-full transition-all"
           >
             Pagina Anterior
           </Link>
@@ -68,7 +68,7 @@ export default async function Home({ searchParams }) {
         {next && (
           <Link
             href={{ pathname: "/", query: { page: next, q: searchTerm } }}
-            className="text-2xl text-botao hover:text-textoPrincipal transition-all underline"
+            className="mt-4 text-textoPrincipal  bg-botao text-md flex items-center gap-2 justify-center p-2 rounded-lg hover:rounded-full transition-all"
           >
             Próxima Pagina
           </Link>

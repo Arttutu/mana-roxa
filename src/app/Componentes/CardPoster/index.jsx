@@ -23,7 +23,7 @@ export default function Card({
   const EnviarLike = DaLike.bind(null, post)
   const descricao = typeof resumo === "string" ? resumo.slice(0, 150) : ""
   return (
-    <article className="bg-background h-[600px] w-full  sm:w-[450px] rounded-lg  flex flex-col justify-between   ">
+    <article className="bg-background  w-full  sm:w-[400px] rounded-lg  flex flex-col justify-between   ">
       <header>
         <Link
           href={`/Posters/${slug}`}

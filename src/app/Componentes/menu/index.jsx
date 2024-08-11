@@ -21,7 +21,7 @@ export default async function Menu() {
       <nav>
         <ul className="flex   sm:flex sm:flex-row gap-4    items-center">
           <Menuitem nome="feed" endereco="/" Icon={MdFeed} />
-          <Menuitem nome="sobre nós " endereco="/" Icon={MdInfo} />
+          {/*  <Menuitem disable nome="sobre nós " endereco="/" Icon={MdInfo} /> */}
           <Menuitem nome="Perfil " endereco="/profile" Icon={CgProfile} />
           {sessao ? (
             <Menuitem
