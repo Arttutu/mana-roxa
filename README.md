@@ -22,7 +22,7 @@ Crônicas do Console é um blog dedicado ao universo dos videogames. Exploramos 
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/Arttutu/cronicas-do-console/blob/main/cronicas.png?raw=true)
 
 
 ## Autor
