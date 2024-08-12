@@ -9,6 +9,9 @@ Crônicas do Console é um blog dedicado ao universo dos videogames. Exploramos 
 * Auth.js
 * Tailiwind CSS
 * Postregre
+* Figma
+* ORM prisma
+* Google API
 
 
 
