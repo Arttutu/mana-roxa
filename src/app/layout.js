@@ -6,7 +6,17 @@ const font = Exo_2({
   display: "swap",
   weight: "400",
 })
-
+export const metadata = {
+  title:
+    "Crônicas do Console - Blog de Análises e Notícias sobre Games e Consoles",
+  description:
+    "Acompanhe as últimas notícias e análises detalhadas de jogos e consoles no Crônicas do Console. Mantenha-se atualizado com reviews e informações relevantes sobre o universo gamer.",
+  keywords:
+    "notícias de jogos, análises de consoles, reviews de games, novidades sobre consoles, blog gamer, atualizações do mundo dos games",
+  icons: {
+    icon: "/assets/img/logo.png", // Caminho correto para o favicon
+  },
+}
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className={font.className}>

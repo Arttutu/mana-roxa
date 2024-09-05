@@ -4,11 +4,11 @@ const prisma = new PrismaClient()
 const author = {
   userautor: "Arthur",
   avatar: "/assets/autor/logo_avatar.jpeg",
-  email: "arthur@prisma",
+  email: "arthur@prisma.com",
 }
 
 async function main() {
-  // Upsert do autor Karen
+  // Upsert do autor Arthur
   const Arthur = await prisma.user.upsert({
     where: { userautor: author.userautor },
     update: { email: "arthur@prisma.com" },
@@ -18,49 +18,33 @@ async function main() {
   // Dados dos posts
   const posts = [
     {
-      titulo:
-        "Prepare-se para agosto! A PS Plus te presenteia com esses 3 jogaços!",
-      slug: "ps-plus-agosto",
-      titulo2: "LEGO Star Wars: The Skywalker Saga",
-      titulo3: "Five Nights at Freddy's: Security Breach",
-      titulo4: "Ender Lilies: Quietus of the Knights",
-      titulo5: "Considerações Finais:",
-      titulo6: "",
-      titulo7: "",
-      titulo8: "",
-      titulo9: "",
-      titulo10: "",
-      titulo11: "",
+      titulo: "Nintendo Direct 2024: As Principais Novidades",
+      slug: "nintendo-direct-2024-novidades",
+      titulo2: "Novo jogo da série Mario vs. Donkey Kong",
+      titulo3:
+        "F-Zero 99 traz de volta o clássico com um toque de battle royale",
+      titulo4: "Paper Mario: The Thousand-Year Door Remake",
+      titulo5: "Splatoon 3 recebe novo DLC com atualizações emocionantes",
+      titulo6: "Considerações Finais",
       texto:
-        "Galera! Preparados para mais um mês de jogos incríveis na PS Plus Essencial? Agosto chegou com tudo e a Sony não decepcionou! Para te ajudar a aproveitar ao máximo sua assinatura, separamos tudo sobre os 3 jogos que vão te fazer passar horas grudado no controle",
+        "A última apresentação do Nintendo Direct 2024 trouxe muitas surpresas e jogos aguardados pelos fãs da Big N. Desde remakes até novos títulos de franquias amadas, a Nintendo não poupou esforços para agradar o público. Vamos conferir as principais novidades reveladas no evento.",
       texto2:
-        "Que tal reviver toda a saga Star Wars de uma forma divertida e cheia de humor? Em LEGO Star Wars: The Skywalker Saga, você poderá controlar seus personagens favoritos e construir, batalhar e explorar a galáxia. Com gráficos coloridos, missões épicas e muito conteúdo desbloqueável, esse jogo é perfeito para fãs de todas as idades.  ",
+        "Mario vs. Donkey Kong está de volta! Este clássico jogo de puzzle e plataforma foi reimaginado para o Nintendo Switch. Nele, Mario precisa enfrentar Donkey Kong em uma série de desafios, resgatando Mini-Marios e enfrentando quebra-cabeças com mecânicas atualizadas e gráficos vibrantes.",
       texto3:
-        "Se você gosta de um bom susto, prepare-se para passar noites agitadas em Five Nights at Freddy's: Security Breach. Neste novo capítulo da franquia, você explorará uma pizzaria assustadora repleta de animatrônicos que querem te pegar. Com uma jogabilidade mais livre e uma atmosfera ainda mais intensa, este é um jogo que vai te deixar à beira do seu assento.",
+        "F-Zero, um dos jogos de corrida mais rápidos e emocionantes da Nintendo, retorna com um toque moderno. F-Zero 99 coloca 99 jogadores competindo ao mesmo tempo em uma pista cheia de ação, proporcionando uma experiência de battle royale dentro da icônica série de corridas futuristas.",
       texto4:
-        "Para quem busca uma experiência mais sombria e desafiadora, Ender Lilies: Quietus of the Knights é a escolha perfeita. Neste metroidvania, você controlará uma jovem que precisa purificar uma terra corrompida por uma maldição. Com gráficos belíssimos, uma trilha sonora envolvente e uma jogabilidade desafiadora, este jogo é um prato cheio para os fãs do gênero.",
+        "Uma das maiores surpresas foi o anúncio do remake de Paper Mario: The Thousand-Year Door. O amado RPG que originalmente foi lançado para o GameCube retorna com visuais remasterizados e melhorias de jogabilidade, prometendo trazer nostalgia e diversão para os jogadores antigos e novos.",
       texto5:
-        "Qual desses jogos você mais está ansioso para jogar? Compartilhe nos comentários e não se esqueça de seguir nosso blog para ficar por dentro das últimas novidades do mundo dos games.",
-      texto6: "",
-      texto7: "",
-      texto8: " ",
-      texto9: "",
-      texto10: "",
-      texto11: "",
-      imagem: "/assets/img/ps-plus-agosto/psplus.png",
-      imagem2: "/assets/img/ps-plus-agosto/lego.jpg",
-      imagem3: "/assets/img/ps-plus-agosto/five.jpg",
-      imagem4: "/assets/img/ps-plus-agosto/ender.jpg",
-      imagem5: "",
-      imagem6: "",
-      imagem7: "",
-      imagem8: "",
-      imagem9: "",
-      imagem10: "",
-      imagem11: "",
-      video: "",
+        "Splatoon 3 também ganhou destaque com o anúncio de um novo DLC. A expansão trará novas arenas, armas e eventos sazonais, garantindo que os fãs do jogo continuem a se divertir com conteúdo fresco e competitivo.",
+      texto6:
+        "O Nintendo Direct 2024 provou mais uma vez que a Nintendo continua inovando e encantando os fãs. Com remakes de clássicos, novas entradas em franquias amadas e atualizações emocionantes, 2024 promete ser um grande ano para os jogadores de Nintendo Switch.",
+      imagem: "/assets/img/nintendo-direct-2024/mario-dk.jpg",
+      imagem2: "/assets/img/nintendo-direct-2024/fzero.jpg",
+      imagem3: "/assets/img/nintendo-direct-2024/paper-mario.jpg",
+      imagem4: "/assets/img/nintendo-direct-2024/splatoon3.jpg",
       authorId: Arthur.id,
-      tempoLeitura: "2",
+      tempoLeitura: "3",
+      video: "",
       data: new Date(),
     },
   ]

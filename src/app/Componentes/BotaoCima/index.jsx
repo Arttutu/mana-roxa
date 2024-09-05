@@ -5,7 +5,7 @@ export default function BotaoCima() {
   const subir = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Adiciona uma animação suave ao rolar
+      behavior: "smooth",
     })
   }
   return (
