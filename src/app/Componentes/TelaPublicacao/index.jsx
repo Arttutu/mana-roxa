@@ -1,33 +1,24 @@
 "use client"
 import React from "react"
-import Card from "../CardPoster/index.jsx"
 import { motion } from "framer-motion"
+import CardPoster from "../CardPoster/index.jsx"
+
 export default function TelaPublicacao({ post }) {
   return (
-    <>
-      {post.map((item) => (
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeIn" }}
-          key={item.id}
-          className=""
-        >
-          <Card
-            post={item}
-            img={item.imagem}
-            postTitulo={item.titulo}
-            tempo={item.tempoLeitura}
-            data={new Date(item.data).toLocaleDateString()}
-            slug={item.slug}
-            resumo={item.texto}
-            avatar={item.author.avatar}
-            autor={item.author.userautor}
-            likes={item.likes}
-            comentarios={item.comentarios}
-          />
-        </motion.div>
-      ))}
-    </>
+    <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeIn" }}
+        key={post.data.uid}
+      >
+        <CardPoster
+          banner={post.data.banner}
+          titulo={post.data.titulo}
+          data={post.data.data}
+          descricao={post.data.descricao}
+        />
+      </motion.div>
+    </div>
   )
 }

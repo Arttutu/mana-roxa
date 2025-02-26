@@ -22,20 +22,6 @@ module.exports = {
       erro: "#ff0000",
     },
   },
-  /*   theme: {
-    colors: {
-      background: "#f9f4ef",
-      background2: "#eaddcf",
-      textoPrincipal: "#020826",
-      paragrafo: "#716040",
-      titulo: "#020826",
-      botao: "#8c7851",
-      icone: "#020826",
-      hover: "#020826",
-      botaoTexto: "#fffffe",
-      rodape: "#010101",
-    },
-  }, */
 
   plugins: [],
 }

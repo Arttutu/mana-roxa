@@ -1,7 +1,7 @@
 {
   // editor
   "editor.wordWrap": "on",
-  "editor.fontSize": 18,
+  "editor.fontSize": 16,
   "editor.lineHeight": 30,
   "editor.tabSize": 2,
   "editor.bracketPairColorization.enabled": true,
@@ -15,8 +15,8 @@
 
   // workbench
   "workbench.editor.enablePreview": false,
-  "workbench.iconTheme": "vs-seti",
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Dracula Theme",
 
   // prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -33,7 +33,7 @@
     }
   },
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0.5,
   "liveServer.settings.port": 5502,
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"

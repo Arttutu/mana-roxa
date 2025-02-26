@@ -1,85 +1,10 @@
 import React from "react"
 import Image from "next/image"
-import ItemPost from "../../../Componentes/ItemPost/index.jsx"
-import looger from "../../../../logger.js"
-import db from "../../../../../prisma/db.js"
-import { redirect } from "next/navigation.js"
 import ListaDeComentarios from "../../../Componentes/ListaDeComentarios/index.jsx"
 import VejaMais from "../../../../../src/app/Componentes/VejaMais/index"
 import ModalComentario from "../../../Componentes/ModalComentario/index.jsx"
-import dynamic from "next/dynamic"
 
-async function getPost(slug) {
-  const ModalComentario = dynamic(
-    () => import("../../../Componentes/ModalComentario/index.jsx"),
-    {
-      ssr: false, // Desativa a renderização no lado do servidor
-    }
-  )
-  try {
-    const post = await db.post.findFirst({
-      where: {
-        slug, // slug do post que passamos como parâmetro na URL
-      },
-      include: {
-        author: true,
-        comentarios: {
-          include: {
-            author: true,
-            filhos: {
-              include: {
-                author: true,
-              },
-            },
-          },
-          where: {
-            paiId: null,
-          },
-        },
-      },
-    })
-
-    if (!post) {
-      throw new Error(`Post ${slug} não foi encontrado`)
-    }
-
-    return post
-  } catch (error) {
-    looger.error("Falha ao obter a publicação com o slug:", { slug, error })
-    redirect("/not-found")
-  }
-}
-
-async function getAllPosts(excludeSlug) {
-  try {
-    const posts = await db.post.findMany({
-      where: { slug: { not: excludeSlug } },
-    })
-
-    return posts
-  } catch (error) {
-    looger.error("Falha ao obter todos os posts:", { error })
-    return []
-  }
-}
-
-export default async function Poster({ params }) {
-  const post = await getPost(params.slug)
-  const allPosts = await getAllPosts(params.slug)
-
-  const items = []
-  for (let i = 2; i <= 11; i++) {
-    items.push(
-      <ItemPost
-        key={post[`titulo${i}`]}
-        posterData={post}
-        imagem={post[`imagem${i}`]}
-        texto={post[`texto${i}`]}
-        titulo={post[`titulo${i}`]}
-      />
-    )
-  }
-
+export default async function Poster({ post }) {
   return (
     <section className="flex flex-col">
       <div className="flex flex-col items-start gap-8">

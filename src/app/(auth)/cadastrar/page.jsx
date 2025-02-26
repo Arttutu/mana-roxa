@@ -2,13 +2,13 @@ import React from "react"
 import { IoMdArrowRoundForward } from "react-icons/io"
 import Contas from "../../Componentes/Contas"
 import Link from "next/link"
-import { criarUsuario } from "../../../actions"
+
 export default async function Cadastro() {
   return (
     <div className=" bg-backgroundComentario p-8  w-full sm:w-[500px] sm:rounded-lg justify-cente mx-auto flex flex-col gap-4 items-start ">
       <form
         className=" sm:w-[500px] sm:rounded-lg flex flex-col gap-4 "
-        action={criarUsuario}
+        action={""}
       >
         <h1 className="text-4xl font-bold">Cadastro</h1>
         <h2 className="text-lg font-semibold">Olá! Preencha seus dados</h2>

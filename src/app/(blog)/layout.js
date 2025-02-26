@@ -7,13 +7,11 @@ export default function BlogLayout({ children }) {
   return (
     <>
       <Menu />
-      <main className="flex-grow container mx-auto h-auto py-12 px-4  ">
-        <div className="flex flex-col  flex-grow ">
-          <div className="flex pb-12  justify-center">
-            <Buscador />
-          </div>
-          {children}
-        </div>
+      <main className="flex-grow container mx-auto h-auto  px-4   ">
+        <h1 className="text-4xl text-destaque flex justify-start py-12">
+          Publicações recentes
+        </h1>
+        <div className="flex flex-col  flex-grow pb-12 ">{children}</div>
       </main>
       <Rodape />
     </>

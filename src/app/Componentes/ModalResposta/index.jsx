@@ -1,8 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react"
 import * as Dialog from "@radix-ui/react-dialog"
-import { Respoder } from "../../../actions/index.jsx"
-import { IoMdArrowRoundForward } from "react-icons/io"
 import { IoMdClose } from "react-icons/io"
 import Comentario from "../Comentario/index.jsx"
 import ComentarioBotao from "../ComentarioBotao/index.jsx"
@@ -13,14 +11,7 @@ export default function ModalResposta({ comentario }) {
   const [isOpen, setIsOpen] = useState(false)
   const { pending } = useFormStatus()
   const { data: session } = useSession()
-  async function action(formData) {
-    try {
-      await Respoder(comentario, formData)
-      setMensagem("Mensagem enviada com sucesso")
-    } catch (error) {
-      setMensagem("Erro ao enviar mensagem" + error)
-    }
-  } 
+
   useEffect(() => {
     if (!isOpen) {
       setMensagem("")
@@ -46,7 +37,7 @@ export default function ModalResposta({ comentario }) {
             <div className="text-textoPrincipal">
               <Comentario comentario={comentario} />
             </div>
-            <form className="w-full h-auto" action={action}>
+            <form className="w-full h-auto" action={""}>
               <textarea
                 required
                 name="texto"
@@ -56,10 +47,6 @@ export default function ModalResposta({ comentario }) {
               />
               <Dialog.Close asChild>
                 <ComentarioBotao texto="responder"></ComentarioBotao>
-                {/*    <button className="mt-4 text-textoPrincipal  bg-botao text-md flex items-center gap-2 justify-center p-2 rounded-lg">
-                  Responder
-                  <IoMdArrowRoundForward />
-                </button> */}
               </Dialog.Close>
             </form>
             {mensagem && (

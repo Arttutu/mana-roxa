@@ -1,6 +1,6 @@
 import "./globals.css"
 import { Exo_2 } from "next/font/google"
-import AuthProvider from "./Componentes/AuthProvider"
+
 const font = Exo_2({
   subsets: ["latin"],
   display: "swap",
@@ -14,7 +14,7 @@ export const metadata = {
   keywords:
     "notícias de jogos, análises de consoles, reviews de games, novidades sobre consoles, blog gamer, atualizações do mundo dos games",
   icons: {
-    icon: "/assets/img/logo.png", // Caminho correto para o favicon
+    icon: "/assets/img/logo.png",
   },
 }
 export default function RootLayout({ children }) {
@@ -24,11 +24,11 @@ export default function RootLayout({ children }) {
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9774681383780198"
-          crossorigin="anonymous"
-        ></script>
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="w-full flex flex-col justify-center min-h-screen bg-background">
-        <AuthProvider> {children}</AuthProvider>
+        {children}
       </body>
     </html>
   )

@@ -32,38 +32,6 @@ export default function About() {
             experiências de jogo.
           </p>
         </section>
-        {/* <section className="bg-background2 p-8 rounded-lg w-full h-auto sm:h-[850px]  flex flex-col gap-4">
-          <h2 className="text-xl sm:text-3xl text-botao underline font-bold">
-            Daniel
-          </h2>
-          <p className="text-md sm:text-lg text-paragrafo leading-6 font-font2">
-            Olá, pessoal! Meu nome é Diell e minha paixão por videogames começou
-            quando eu tinha apenas 5 ou 6 anos de idade. Desde então, os jogos
-            têm sido uma parte fundamental da minha vida. Meus gêneros favoritos
-            são RPG, Survival Horror e Hack and Slash, onde posso me envolver em
-            narrativas profundas, enfrentar desafios assustadores e curtir
-            combates dinâmicos. Embora nunca tenha participado de torneios, sou
-            um grande entusiasta da cena de fighting games, especialmente
-            &quot;Mortal Kombat&quot; e &quot;Street Fighter&quot;. Entre os
-            muitos jogos que marcaram minha trajetória, &quot;The Witcher
-            3&quot; e &quot;Shadow of the Colossus&quot; se destacam como
-            títulos que tiveram um impacto enorme em mim, embora eu tenha muitos
-            outros favoritos. Sempre fui um jogador de console, sem experiência
-            com jogos de PC, pois não consigo desvincular a ideia de trabalho da
-            máquina. Meu coração pertence aos consoles da
-            &quot;PlayStation&quot;, especialmente ao &quot;PS2&quot; e
-            &quot;PS4&quot;. Valorizo narrativas envolventes e gameplay fluida,
-            acreditando que o resto é consequência. Embora não tenha um blog, eu
-            já criei uma página no &quot;Instagram&quot; com um amigo, focada em
-            games, onde compartilhamos nossas experiências e análises. Meu
-            objetivo é compartilhar todo o meu conhecimento sobre jogos e
-            aprender com os leitores, trocando experiências. Adoro analisar cada
-            detalhe dos games e passar o que sinto jogando através dos meus
-            textos. Se você também é fã de RPGs, Survival Horror ou Hack and
-            Slash, está no lugar certo! Fique à vontade para explorar, comentar
-            e compartilhar suas próprias experiências de jogo.
-          </p>
-        </section> */}
       </div>
     </div>
   )

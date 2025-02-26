@@ -23,7 +23,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/app/data/constates/publicacao.js"
+    "src/app/data/constates/publicacao.js",
+    "src/prismicio.js"
   ],
   "exclude": ["node_modules"]
 }
