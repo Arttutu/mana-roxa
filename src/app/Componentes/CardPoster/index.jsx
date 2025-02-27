@@ -3,19 +3,19 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { PrismicImage, PrismicRichText } from "@prismicio/react"
 
-export default function CardPoster({ banner, titulo, data, descricao }) {
+export default function CardPoster({ banner, titulo, data, descricao, uid }) {
   return (
     <article className="bg-background2  full sm:w-[400px] rounded-lg flex flex-col gap-2 justify-between">
       <header>
         <Link
-          href={"/"}
-          className="flex items-center justify-start w-full text-botao underline font-bold text-lg hover:text-textoPrincipal transition-all"
+          href={`/Posters/${uid}`}
+          className="flex items-center justify-start w-full text-botao underline overflow-hidden font-bold text-lg hover:text-textoPrincipal transition-all"
         >
           <motion.figure
-            className="w-full rounded-lg sm:w-[450px] flex items-center justify-center cursor-pointer"
-            whileHover={{ scale: 0.9 }}
+            className="w-full rounded-lg sm:w-[450px] object-cover flex items-center justify-center cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            {/* Renderização do banner */}
             <PrismicImage
               field={banner}
               className="w-full h-auto rounded-t-lg"
@@ -36,8 +36,8 @@ export default function CardPoster({ banner, titulo, data, descricao }) {
           <PrismicRichText field={descricao} />
         </div>
         <Link
-          href={`/`}
-          className="flex items-center justify-center w-full text-textoPrincipal bg-destaque rounded-lg p-2  sm:w-[200px] font-bold text-lg hover:text-textoPrincipal transition-all"
+          href={`/Posters/${uid}`}
+          className="flex items-center  justify-center w-full text-textoPrincipal bg-destaque rounded-lg p-2  sm:w-[200px] font-bold text-lg hover:text-titulo  hover:bg-background transition-all ease-out"
         >
           Continuar Lendo
         </Link>

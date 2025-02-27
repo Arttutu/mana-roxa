@@ -16,6 +16,7 @@ export default function TelaPublicacao({ post }) {
           banner={post.data.banner}
           titulo={post.data.titulo}
           data={post.data.data}
+          uid={post.uid}
           descricao={post.data.descricao}
         />
       </motion.div>

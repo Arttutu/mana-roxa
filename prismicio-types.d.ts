@@ -4,6 +4,41 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+/**
+ * Item in *post → conteudo*
+ */
+export interface PostDocumentDataConteudoItem {
+  /**
+   * titulo field in *post → conteudo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.conteudo[].titulo
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  titulo: prismic.KeyTextField;
+
+  /**
+   * imagem field in *post → conteudo*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.conteudo[].imagem
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem: prismic.ImageField<never>;
+
+  /**
+   * descricao field in *post → conteudo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.conteudo[].descricao
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  descricao: prismic.KeyTextField;
+}
+
 type PostDocumentDataSlicesSlice = never;
 
 /**
@@ -53,6 +88,17 @@ interface PostDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#date
    */
   data: prismic.DateField;
+
+  /**
+   * conteudo field in *post*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.conteudo[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  conteudo: prismic.GroupField<Simplify<PostDocumentDataConteudoItem>>;
 
   /**
    * Slice Zone field in *post*
@@ -134,6 +180,7 @@ declare module "@prismicio/client" {
     export type {
       PostDocument,
       PostDocumentData,
+      PostDocumentDataConteudoItem,
       PostDocumentDataSlicesSlice,
       AllDocumentTypes,
     };

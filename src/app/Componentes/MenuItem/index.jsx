@@ -1,14 +1,11 @@
 import Link from "next/link"
 import React from "react"
 
-export default function Menuitem({ endereco, nome, Icon, disable }) {
+export default function Menuitem({ endereco, nome }) {
   return (
     <Link href={endereco}>
-      <li className="flex flex-col sm:flex sm:flex-row items-center gap-2 disabled:opacity-45 ">
-        {Icon && (
-          <Icon className="text-2xl sm:text-2xl text-textoPrincipal  hover:text-hover" />
-        )}
-        <span className="  sm:block text-paragrafo hover:underline text-md sm:text-xl hover:text-hover transition-all font-font">
+      <li className="flex uppercase flex-col sm:flex sm:flex-row items-center gap-2 transition-all hover:bg-destaque hover:p-2 hover:rounded-lg ">
+        <span className="  sm:block text-paragrafo hover:underline text-sm sm:text-l  hover:text-textoPrincipal font-font">
           {nome}
         </span>
       </li>

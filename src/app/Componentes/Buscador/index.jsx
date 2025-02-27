@@ -3,7 +3,7 @@ import { MdOutlineManageSearch } from "react-icons/md"
 export default function Buscador() {
   return (
     <form
-      className=" w-full flex justify-center gap-4"
+      className=" sm:w-[200px] flex justify-center gap-4"
       /* action="/" m */ method="GET"
     >
       <input
