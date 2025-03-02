@@ -7,7 +7,7 @@ export default function BlogLayout({ children }) {
   return (
     <>
       <Menu />
-      <main className="flex-grow container mx-auto h-auto  px-4   ">
+      <main className="flex-grow container mx-auto h-auto  px-4 py-16   ">
         <h1 className=" text-xl sm:text-4xl text-destaque flex justify-start py-12">
           Publicações recentes
         </h1>

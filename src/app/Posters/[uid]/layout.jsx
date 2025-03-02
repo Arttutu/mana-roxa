@@ -6,7 +6,7 @@ export default function BlogLayout({ children }) {
   return (
     <>
       <Menu />
-      <main className="flex-grow container mx-auto h-auto     ">
+      <main className="flex-grow container mx-auto h-auto py-16">
         <div className="flex flex-col pb-12">{children}</div>
       </main>
       <Rodape />

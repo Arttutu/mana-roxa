@@ -2,7 +2,7 @@ import React from "react"
 import { createClient } from "@prismicio/client"
 import { PrismicImage, PrismicRichText, PrismicText } from "@prismicio/react"
 import { asText } from "@prismicio/client" // Certifique-se de importar isso
-
+import Indice from "../../Componentes/Indice/index"
 export default async function Poster({ params }) {
   const client = createClient("mana-roxa", {
     accessToken: process.env.PRISMIC_ACCESS_TOKEN,
@@ -10,7 +10,7 @@ export default async function Poster({ params }) {
   const post = await client.getByUID("post", params.uid)
 
   return (
-    <section className="flex flex-col">
+    <section className="flex justify-between">
       <div className="flex flex-col items-start justify-start gap-8 py-16  w-2/3">
         <h1 className="text-2xl text-left text-destaque uppercase ">
           {asText(post.data.titulo)} {/* Usar asText aqui */}
@@ -24,14 +24,17 @@ export default async function Poster({ params }) {
         </div>
         {post.data.conteudo.map((item, index) => (
           <div key={index}>
-            <h3 className=" text-xl sm:text-2xl pb-4 text-left text-destaque ">
+            <div className=" text-xl sm:text-2xl pb-4 text-left text-destaque ">
               <PrismicRichText field={item.titulo} />
-            </h3>
-            <p className="text-md leading-10 sm:text-xl text-left   text-textoPrincipal ">
+            </div>
+            <div className="text-md leading-10 sm:text-xl text-left   text-textoPrincipal ">
               <PrismicRichText field={item.descricao} />
-            </p>
+            </div>
           </div>
         ))}
+      </div>
+      <div className="py-16 ">
+        <Indice post={post} />
       </div>
     </section>
   )
