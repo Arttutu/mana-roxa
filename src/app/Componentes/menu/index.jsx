@@ -13,7 +13,7 @@ export default async function Menu() {
           <span className="text-icone mx-2 text-xl sm:text-3xl ">Roxa</span>
         </span>
       </Link>
-      <div className="flex items-center gap-28">
+      <div className="md:flex items-center gap-28  hidden">
         <Buscador />
         <Navegacao />
       </div>

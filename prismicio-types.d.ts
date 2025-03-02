@@ -9,16 +9,6 @@ type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
  */
 export interface PostDocumentDataConteudoItem {
   /**
-   * titulo field in *post → conteudo*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: post.conteudo[].titulo
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  titulo: prismic.KeyTextField;
-
-  /**
    * imagem field in *post → conteudo*
    *
    * - **Field Type**: Image
@@ -29,14 +19,24 @@ export interface PostDocumentDataConteudoItem {
   imagem: prismic.ImageField<never>;
 
   /**
+   * titulo field in *post → conteudo*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.conteudo[].titulo
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  titulo: prismic.RichTextField;
+
+  /**
    * descricao field in *post → conteudo*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: post.conteudo[].descricao
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  descricao: prismic.KeyTextField;
+  descricao: prismic.RichTextField;
 }
 
 type PostDocumentDataSlicesSlice = never;

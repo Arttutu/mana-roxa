@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import CardPoster from "../CardPoster/index.jsx"
 
 export default function TelaPublicacao({ post }) {
+  console.log(post)
   return (
     <div>
       <motion.div

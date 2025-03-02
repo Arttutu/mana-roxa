@@ -7,7 +7,7 @@ export default function BlogLayout({ children }) {
     <>
       <Menu />
       <main className="flex-grow container mx-auto h-auto     ">
-        <div className="flex flex-col   pb-12 ">{children}</div>
+        <div className="flex flex-col pb-12">{children}</div>
       </main>
       <Rodape />
     </>

@@ -51,13 +51,6 @@
           "label": "conteudo",
           "repeat": true,
           "fields": {
-            "titulo": {
-              "type": "Text",
-              "config": {
-                "label": "titulo",
-                "placeholder": ""
-              }
-            },
             "imagem": {
               "type": "Image",
               "config": {
@@ -66,11 +59,22 @@
                 "thumbnails": []
               }
             },
+            "titulo": {
+              "type": "StructuredText",
+              "config": {
+                "label": "titulo",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
             "descricao": {
-              "type": "Text",
+              "type": "StructuredText",
               "config": {
                 "label": "descricao",
-                "placeholder": ""
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
             }
           }

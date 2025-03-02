@@ -6,15 +6,11 @@ export default async function Home() {
 
   return (
     <section className="flex justify-start items-center gap-16 w-full flex-wrap">
-      {posts.length > 0 ? (
-        posts.map((post) => (
-          <div key={post.uid}>
-            <TelaPublicacao post={post} />
-          </div>
-        ))
-      ) : (
-        <p>Não há posts disponíveis.</p>
-      )}
+      {posts.map((post) => (
+        <div key={post.uid}>
+          <TelaPublicacao post={post} />
+        </div>
+      ))}
     </section>
   )
 }

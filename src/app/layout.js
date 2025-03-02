@@ -7,8 +7,7 @@ const font = Exo_2({
   weight: "400",
 })
 export const metadata = {
-  title:
-    "Crônicas do Console - Blog de Análises e Notícias sobre Games e Consoles",
+  title: "Mana roxa - Blog de Análises e Notícias sobre Games e Consoles",
   description:
     "Acompanhe as últimas notícias e análises detalhadas de jogos e consoles no Crônicas do Console. Mantenha-se atualizado com reviews e informações relevantes sobre o universo gamer.",
   keywords:
