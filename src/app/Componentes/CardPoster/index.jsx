@@ -5,7 +5,12 @@ import { PrismicImage, PrismicRichText } from "@prismicio/react"
 
 export default function CardPoster({ banner, titulo, data, descricao, uid }) {
   return (
-    <article className="bg-background2 pb-2 w-full sm:w-[400px] sm:h-[700px] rounded-lg flex overflow-hidden flex-col gap-2 ">
+    <motion.article
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-background2 pb-2 w-full sm:w-[400px] sm:h-[700px] rounded-lg flex overflow-hidden flex-col gap-2 "
+    >
       <header>
         <Link
           href={`/Posters/${uid}`}
@@ -23,11 +28,7 @@ export default function CardPoster({ banner, titulo, data, descricao, uid }) {
           </motion.figure>
         </Link>
       </header>
-      <section className="flex gap-2 items-center">
-        {/*  <span className="text-textoPrincipal text-xs sm:text-md">
-          <PrismicRichText field={data} />
-        </span> */}
-      </section>
+      <section className="flex gap-2 items-center"></section>
       <section className="w-full flex flex-col gap-4  p-5">
         <h2 className="text-titulo text-xl font-bold">
           <PrismicRichText field={titulo} />
@@ -44,6 +45,6 @@ export default function CardPoster({ banner, titulo, data, descricao, uid }) {
           Continuar Lendo
         </Link>
       </footer>
-    </article>
+    </motion.article>
   )
 }

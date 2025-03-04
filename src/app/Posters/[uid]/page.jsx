@@ -11,8 +11,8 @@ export default async function Poster({ params }) {
   const post = await client.getByUID("post", params.uid)
 
   return (
-    <section className="flex justify-between ">
-      <div className="flex flex-col items-start justify-start gap-8 py-16  w-2/3">
+    <section className="flex w-full justify-center md:justify-between  ">
+      <div className="flex flex-col items-start justify-start gap-8  py-4 md:py-16  w-2/3">
         <h1 className="text-2xl text-left text-destaque uppercase ">
           {asText(post.data.titulo)}
         </h1>

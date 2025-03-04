@@ -5,7 +5,7 @@ export default async function Home() {
   const posts = await fetchPosts()
 
   return (
-    <section className="flex justify-start items-center gap-16 w-full flex-wrap">
+    <section className="flex  justify-center md:justify-start md:tems-center gap-16 w-full flex-wrap">
       {posts.map((post) => (
         <div key={post.uid}>
           <TelaPublicacao post={post} />
