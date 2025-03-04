@@ -9,10 +9,8 @@ const Navegacao = ({ mobile }) => {
         className={`flex ${mobile ? "flex-col" : "flex-row"} gap-4 items-center`}
       >
         <Menuitem nome="Notícias" endereco="/" />
-        <Menuitem nome="Jogos Mobile" endereco="/" />
-        <Menuitem nome="Xbox" endereco="/" />
-        <Menuitem nome="Playstation" endereco="/" />
-        <Menuitem nome="Jogos PC" endereco="/" />
+        <Menuitem nome="RPG" endereco="/" />
+        <Menuitem nome="Estratégia" endereco="/" />
       </ul>
     </nav>
   )
