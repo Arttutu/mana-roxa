@@ -11,21 +11,26 @@ export default async function Poster({ params }) {
   const post = await client.getByUID("post", params.uid)
 
   return (
-    <section className="flex w-full justify-center md:justify-between  ">
-      <div className="flex flex-col items-start justify-start gap-8  py-4 md:py-16  w-2/3">
-        <h1 className="text-2xl text-left text-destaque uppercase ">
+    <section className="flex w-full justify-center gap-4 px-4 sm:px-0 ">
+      <div className="flex flex-col items-start justify-start gap-8  py-4 md:py-16 w-full sm:w-2/3">
+        <h1 className=" text-2xl md:text-4xl text-left font-bold font-title text-destaque uppercase ">
           {asText(post.data.titulo)}
         </h1>
-        <div className=" w-full sm:w-[400px] md:w-2/3">
-          <PrismicImage field={post.data.banner} className="w-full h-auto" />
+        <div className=" w-full ">
+          <PrismicImage
+            field={post.data.banner}
+            className="w-full h-auto rounded-lg"
+          />
         </div>
-        <div className="text-md sm:text-xl text-left text-textoPrincipal">
+        <div className="text-md sm:text-lg leading-6 text-left text-textoPrincipal font-text">
           <PrismicRichText field={post.data.descricao} />
         </div>
-        <Conteudo post={post} />
-      </div>
-      <div className="py-16 ">
-        <Indice post={post} />
+        <div className="flex w-full gap-12 ">
+          <div className="flex flex-col gap-4 w-full sm:w-1/2 md:w-3/4">
+            <Conteudo post={post} />
+          </div>
+          <Indice post={post} />
+        </div>
       </div>
     </section>
   )

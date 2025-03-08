@@ -2,6 +2,8 @@ import React from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { PrismicImage, PrismicRichText } from "@prismicio/react"
+import { MdCalendarViewWeek } from "react-icons/md"
+import { GiCalendar } from "react-icons/gi"
 
 export default function CardPoster({ banner, titulo, data, descricao, uid }) {
   return (
@@ -28,19 +30,24 @@ export default function CardPoster({ banner, titulo, data, descricao, uid }) {
           </motion.figure>
         </Link>
       </header>
-      <section className="flex gap-2 items-center"></section>
+      <div className="px-5 flex gap-2 items-center">
+        <GiCalendar className="text-textoPrincipal text-sm  sm:text-lg " />
+        <span className="text-sm text-gray-500  text-textoPrincipal sm:text-lg ">
+          {new Date(data).toLocaleDateString("pt-BR")}
+        </span>
+      </div>
       <section className="w-full flex flex-col gap-4  p-5">
-        <h2 className="text-titulo text-xl font-bold">
+        <h2 className="text-titulo text-xl  font-title">
           <PrismicRichText field={titulo} />
         </h2>
-        <div className="text-paragrafo text-sm sm:text-lg w-full flex flex-wrap leading-6">
+        <div className="text-paragrafo text-sm sm:text-lg font-text w-full flex flex-wrap leading-6">
           <PrismicRichText field={descricao} />
         </div>
       </section>
       <footer className="w-full flex flex-col gap-4 p-5">
         <Link
           href={`/Posters/${uid}`}
-          className="flex items-center  justify-center w-full text-textoPrincipal bg-destaque rounded-lg p-2  sm:w-[200px] font-bold text-lg hover:text-titulo  hover:bg-background transition-all ease-out"
+          className="flex items-center  justify-center w-full text-botaoTexto bg-destaque rounded-lg p-2  sm:w-[200px] font-bold font-text text-lg hover:text-titulo  hover:bg-background transition-all ease-out"
         >
           Continuar Lendo
         </Link>

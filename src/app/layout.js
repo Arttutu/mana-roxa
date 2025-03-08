@@ -1,11 +1,5 @@
 import "./globals.css"
-import { Exo_2 } from "next/font/google"
 
-const font = Exo_2({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
-})
 export const metadata = {
   title: "Mana roxa - Blog de Análises e Notícias sobre Games e Consoles",
   description:
@@ -18,7 +12,7 @@ export const metadata = {
 }
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br" className={font.className}>
+    <html lang="pt-br">
       <head>
         <script
           async

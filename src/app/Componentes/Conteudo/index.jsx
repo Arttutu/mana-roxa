@@ -3,11 +3,11 @@
 import { PrismicRichText } from "@prismicio/react"
 const Conteudo = ({ post }) => {
   return post.data.conteudo.map((item, index) => (
-    <div key={index}>
-      <div className=" text-xl sm:text-2xl pb-4 text-left text-destaque ">
+    <div className="w-full" key={index}>
+      <div className=" text-xl sm:text-xl pb-4 font-title text-left text-destaque ">
         <PrismicRichText field={item.titulo} />
       </div>
-      <div className="text-md leading-6 sm:text-xl text-left   text-textoPrincipal ">
+      <div className="text-md leading-6 sm:text-lg text-left font-text     text-textoPrincipal ">
         <PrismicRichText field={item.descricao} />
       </div>
     </div>

@@ -39,6 +39,21 @@ export interface PostDocumentDataConteudoItem {
   descricao: prismic.RichTextField;
 }
 
+/**
+ * Item in *post → categoria*
+ */
+export interface PostDocumentDataCategoriaItem {
+  /**
+   * categoria field in *post → categoria*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.categoria[].categoria
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  categoria: prismic.RichTextField;
+}
+
 type PostDocumentDataSlicesSlice = never;
 
 /**
@@ -99,6 +114,17 @@ interface PostDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   conteudo: prismic.GroupField<Simplify<PostDocumentDataConteudoItem>>;
+
+  /**
+   * categoria field in *post*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.categoria[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  categoria: prismic.GroupField<Simplify<PostDocumentDataCategoriaItem>>;
 
   /**
    * Slice Zone field in *post*
@@ -181,6 +207,7 @@ declare module "@prismicio/client" {
       PostDocument,
       PostDocumentData,
       PostDocumentDataConteudoItem,
+      PostDocumentDataCategoriaItem,
       PostDocumentDataSlicesSlice,
       AllDocumentTypes,
     };
