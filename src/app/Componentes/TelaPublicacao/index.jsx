@@ -4,8 +4,6 @@ import { motion } from "framer-motion"
 import CardPoster from "../CardPoster/index.jsx"
 
 export default function TelaPublicacao({ post }) {
-  console.log(post.data.data)
-
   return (
     <div>
       <motion.div
@@ -20,6 +18,7 @@ export default function TelaPublicacao({ post }) {
           data={post.data.data}
           uid={post.uid}
           descricao={post.data.descricao}
+          categoria={post.data.categoria}
         />
       </motion.div>
     </div>

@@ -14,6 +14,7 @@ module.exports = {
       },
     },
     colors: {
+      backgroundCategoria: "#ffffff",
       background: "#f8f9fa",
       backgroundComentario: "#ffffff",
       background2: "#e9ecef",

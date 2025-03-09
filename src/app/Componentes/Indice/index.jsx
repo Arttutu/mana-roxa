@@ -23,7 +23,7 @@ export default function Indice({ post }) {
 
   return (
     <div className=" w-96 h-fit   rounded-x hidden rounded-lg md:block  bg-backgroundComentario p-8">
-      <h2 className="flex gap-2 items-center uppercase text-md  text-destaque font-bold">
+      <h2 className="flex gap-2 items-center uppercase text-md  text-destaque font-title">
         Índice
       </h2>
       <div className="bg-colors-background2 dark:bg-colors-backgroundClar2 h-[1px] mt-4 w-full"></div>

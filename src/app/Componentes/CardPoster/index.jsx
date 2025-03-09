@@ -2,10 +2,17 @@ import React from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { PrismicImage, PrismicRichText } from "@prismicio/react"
-import { MdCalendarViewWeek } from "react-icons/md"
 import { GiCalendar } from "react-icons/gi"
+import Categoria from "../Catergoria/index"
 
-export default function CardPoster({ banner, titulo, data, descricao, uid }) {
+export default function CardPoster({
+  banner,
+  titulo,
+  data,
+  descricao,
+  uid,
+  categoria,
+}) {
   return (
     <motion.article
       initial={{ opacity: 0, scale: 0.5 }}
@@ -35,6 +42,7 @@ export default function CardPoster({ banner, titulo, data, descricao, uid }) {
         <span className="text-sm text-gray-500  text-textoPrincipal sm:text-lg ">
           {new Date(data).toLocaleDateString("pt-BR")}
         </span>
+        <Categoria categoria={categoria} />
       </div>
       <section className="w-full flex flex-col gap-4  p-5">
         <div className="text-titulo text-xl  font-title">
@@ -49,7 +57,7 @@ export default function CardPoster({ banner, titulo, data, descricao, uid }) {
           href={`/Posters/${uid}`}
           className="flex items-center  justify-center w-full text-botaoTexto bg-destaque rounded-lg p-2  sm:w-[200px] font-bold font-text text-lg hover:text-titulo  hover:bg-background transition-all ease-out"
         >
-          Continuar Lendo
+          Ver post
         </Link>
       </footer>
     </motion.article>
