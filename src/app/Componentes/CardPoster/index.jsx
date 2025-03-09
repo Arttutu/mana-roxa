@@ -18,7 +18,7 @@ export default function CardPoster({
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-background2 pb-2 w-full sm:w-[400px] sm:h-[700px] rounded-lg flex overflow-hidden flex-col gap-2 "
+      className="bg-background2 pb-2 w-full sm:w-[400px] sm:h-[650px] rounded-lg flex justify-between drop-shadow-xl overflow-hidden flex-col gap-2 "
     >
       <header>
         <Link
@@ -38,8 +38,8 @@ export default function CardPoster({
         </Link>
       </header>
       <div className="px-5 flex gap-2 items-center">
-        <GiCalendar className="text-textoPrincipal text-sm  sm:text-lg " />
-        <span className="text-sm text-gray-500  text-textoPrincipal sm:text-lg ">
+        <GiCalendar className="text-textoPrincipal text-sm " />
+        <span className="text-sm  text-textoPrincipal ">
           {new Date(data).toLocaleDateString("pt-BR")}
         </span>
         <Categoria categoria={categoria} />
@@ -48,7 +48,7 @@ export default function CardPoster({
         <div className="text-titulo text-xl  font-title">
           <PrismicRichText field={titulo} />
         </div>
-        <div className="text-paragrafo text-sm sm:text-lg font-text w-full flex flex-wrap leading-6">
+        <div className="text-paragrafo text-sm sm:text-md font-text w-full flex flex-wrap leading-6">
           <PrismicRichText field={descricao} />
         </div>
       </section>

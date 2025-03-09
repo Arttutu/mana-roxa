@@ -12,9 +12,22 @@ module.exports = {
         text: ['"Roboto"', "sans-serif"],
         logo: ["Luckiest Guy", "regular"],
       },
+      container: {
+        center: true, // Centraliza o container
+        padding: "1rem", // Adiciona padding padrão
+        screens: {
+          sm: "640px",
+          md: "768px",
+          lg: "1024px",
+          xl: "1280px",
+          "2xl": "1536px", // Aumentei o valor padrão para 1536px
+          "3xl": "1800px", // Adicionei um novo breakpoint maior
+        },
+      },
     },
     colors: {
       backgroundCategoria: "#ffffff",
+      backgroundConteudo: "#ffffff",
       background: "#f8f9fa",
       backgroundComentario: "#ffffff",
       background2: "#e9ecef",

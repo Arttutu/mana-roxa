@@ -3,7 +3,7 @@
 import { PrismicRichText } from "@prismicio/react"
 const Conteudo = ({ post }) => {
   return (
-    <div className="flex flex-col gap-4 w-full sm:w-1/2 md:w-3/4">
+    <div className="flex flex-col gap-4 w-full sm:w-1/2 md:w-3/4 ">
       {post.data.conteudo.map((item, index) => (
         <div className="w-full" key={index}>
           <div className=" text-xl pb-4 font-title text-left text-destaque ">
