@@ -2,16 +2,20 @@
 
 import { PrismicRichText } from "@prismicio/react"
 const Conteudo = ({ post }) => {
-  return post.data.conteudo.map((item, index) => (
-    <div className="w-full" key={index}>
-      <div className=" text-xl sm:text-xl pb-4 font-title text-left text-destaque ">
-        <PrismicRichText field={item.titulo} />
-      </div>
-      <div className="text-md leading-6 sm:text-lg text-left font-text     text-textoPrincipal ">
-        <PrismicRichText field={item.descricao} />
-      </div>
+  return (
+    <div className="flex flex-col gap-4 w-full sm:w-1/2 md:w-3/4">
+      {post.data.conteudo.map((item, index) => (
+        <div className="w-full" key={index}>
+          <div className=" text-xl pb-4 font-title text-left text-destaque ">
+            <PrismicRichText field={item.titulo} />
+          </div>
+          <div className="text-md leading-6 sm:text-lg text-left font-text     text-textoPrincipal ">
+            <PrismicRichText field={item.descricao} />
+          </div>
+        </div>
+      ))}
     </div>
-  ))
+  )
 }
 
 export default Conteudo

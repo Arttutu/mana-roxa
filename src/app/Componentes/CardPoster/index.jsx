@@ -37,9 +37,9 @@ export default function CardPoster({ banner, titulo, data, descricao, uid }) {
         </span>
       </div>
       <section className="w-full flex flex-col gap-4  p-5">
-        <h2 className="text-titulo text-xl  font-title">
+        <div className="text-titulo text-xl  font-title">
           <PrismicRichText field={titulo} />
-        </h2>
+        </div>
         <div className="text-paragrafo text-sm sm:text-lg font-text w-full flex flex-wrap leading-6">
           <PrismicRichText field={descricao} />
         </div>
