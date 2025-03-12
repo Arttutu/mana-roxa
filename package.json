@@ -13,8 +13,7 @@
     "slicemachine": "start-slicemachine"
   },
   "prisma": {
-    "seed": "node prisma/seed.js",
-    "schema": "prisma/schema.prisma"
+    "seed": "node prisma/seed.js"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.4.1",
