@@ -10,7 +10,7 @@ export default function Buscador() {
         type="text"
         name="q"
         placeholder="Digite para pesquisar..."
-        className=" w-full sm:w-[500px] md:w-[800px] p-[2px] px-4 rounded-lg   text-textoPrincipal ring-offset-2 ring-offset-destaque ring-destaque focus-within:ring-1 bg-background  outline-none  "
+        className=" w-full sm:w-[500px] md:w-[800px] p-[2px] px-4 rounded-lg ring-offset-2 ring-offset-destaque ring-destaque focus-within:ring-1 bg-background  outline-none  "
       />
       <button
         type="submit"

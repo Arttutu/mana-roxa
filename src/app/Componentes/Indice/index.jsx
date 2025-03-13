@@ -1,7 +1,6 @@
 "use client"
 import { asText } from "@prismicio/client"
 import { useEffect, useState } from "react"
-import { MdKeyboardDoubleArrowRight } from "react-icons/md"
 import Link from "next/link"
 export default function Indice({ post }) {
   const [hash, setHash] = useState("")

@@ -18,7 +18,7 @@ export default function CardPoster({
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-background2 pb-2 w-full sm:w-[400px] sm:h-[650px] rounded-lg flex justify-between drop-shadow-xl overflow-hidden flex-col gap-2 "
+      className="bg-background2 pb-2 w-full sm:w-[500px] sm:h-[650px] rounded-lg flex justify-between drop-shadow-xl overflow-hidden flex-col gap-2 "
     >
       <header>
         <Link
@@ -26,7 +26,7 @@ export default function CardPoster({
           className="flex items-center justify-start w-full text-botao underline overflow-hidden font-bold text-lg hover:text-textoPrincipal transition-all"
         >
           <motion.figure
-            className="w-full rounded-lg sm:w-[450px] object-cover flex items-center justify-center cursor-pointer"
+            className="w-full rounded-lg sm:w-[500px] object-cover flex items-center justify-center cursor-pointer"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
