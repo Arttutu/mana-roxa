@@ -6,8 +6,8 @@ const Categoria = ({ categoria }) => {
     <>
       {categoria.map((item, index) => {
         return (
-          <div className="rounded-lg  bg-backgroundCategoria p-2 ">
-            <div key={index} className="text-xs text-textoPrincipal font-text">
+          <div key={index} className="rounded-lg  bg-backgroundCategoria p-2 ">
+            <div className="text-xs text-textoPrincipal font-text">
               <PrismicRichText field={item.categoria} />
             </div>
           </div>
