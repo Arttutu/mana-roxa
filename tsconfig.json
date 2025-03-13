@@ -24,7 +24,8 @@
     "**/*.ts",
     "**/*.tsx",
     "src/app/data/constates/publicacao.js",
-    "src/prismicio.js"
+    "src/prismicio.js",
+    "src/app/slice-simulator/page.js"
   ],
   "exclude": ["node_modules"]
 }
