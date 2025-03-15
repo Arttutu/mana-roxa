@@ -1,5 +1,5 @@
 import "./globals.css"
-
+import SubirCima from "../app/Componentes/UI/subirCima"
 export const metadata = {
   title: "Mana roxa - Blog de Análises e Notícias sobre Games e Consoles",
   description:

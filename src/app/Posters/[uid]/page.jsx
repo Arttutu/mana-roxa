@@ -27,9 +27,9 @@ export default async function Poster({ params }) {
         <div className="text-md sm:text-lg leading-6 text-left text-textoPrincipal font-text">
           <PrismicRichText field={post.data.descricao} />
         </div>
-        <div className="flex w-full gap-12 bg-backgroundConteudo relative px-4 py-12 drop-shadow-xl rounded-xl ">
+        <div className="flex w-full  gap-12 bg-backgroundConteudo relative px-4 py-12 drop-shadow-xl rounded-xl ">
           <Conteudo post={post} />
-          <div className=" hidden h-full relative lg:flex lg:flex-col    gap-8">
+          <div className=" hidden h-full  lg:sticky  lg:top-24  lg:flex lg:flex-col    gap-8">
             <Indice post={post} />
             <UltimosPost post={LastPost} />
           </div>

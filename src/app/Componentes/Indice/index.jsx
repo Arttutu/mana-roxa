@@ -21,7 +21,7 @@ export default function Indice({ post }) {
   }, [])
 
   return (
-    <div className=" sticky  top-24  h-fit   rounded-x hidden rounded-lg lg:block  bg-backgroundComentario ">
+    <div className="  h-fit   rounded-x hidden rounded-lg lg:block  bg-backgroundComentario ">
       <h2 className="flex gap-2 items-center uppercase text-md  text-destaque font-title">
         Índice
       </h2>

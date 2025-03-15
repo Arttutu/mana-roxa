@@ -37,9 +37,8 @@ export default function CardPoster({
           </motion.figure>
         </Link>
       </header>
-      <div className="px-5 flex gap-2 items-center">
-        <GiCalendar className="text-textoPrincipal text-sm " />
-        <span className="text-sm  text-textoPrincipal ">
+      <div className="px-5 flex gap-3 items-center">
+        <span className="text-sm font-bold  text-textoPrincipal ">
           {new Date(data).toLocaleDateString("pt-BR")}
         </span>
         <Categoria categoria={categoria} />
