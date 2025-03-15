@@ -28,7 +28,10 @@ export default function Indice({ post }) {
       <div className="bg-colors-background2 dark:bg-colors-backgroundClar2 h-[1px] mt-4 w-full"></div>
       <ul className=" flex flex-col gap-2">
         {post.data.conteudo.map((item, index) => (
-          <li className="list-none text-textoPrincipal text-sm font-text">
+          <li
+            key={index}
+            className="list-none text-textoPrincipal text-sm font-text"
+          >
             {asText(item.titulo)}
           </li>
         ))}
