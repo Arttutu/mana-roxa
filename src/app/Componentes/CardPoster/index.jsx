@@ -18,7 +18,7 @@ export default function CardPoster({
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-background2 pb-2 w-full sm:w-[500px] sm:h-[650px] rounded-lg flex justify-between drop-shadow-xl overflow-hidden flex-col gap-2 "
+      className="bg-background2 pb-2 w-full sm:w-[380px] sm:h-[650px] rounded-lg flex justify-between drop-shadow-xl overflow-hidden flex-col gap-2 "
     >
       <header>
         <Link

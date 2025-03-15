@@ -26,15 +26,16 @@ export default function Menu() {
     <header className="fixed w-full top-0 z-10  bg-background2  gap-8 p-4 sm:w-full sm:p-4 ">
       <div className="flex  items-center  justify-between   sm:flex  sm:justify-around">
         <Logo />
-        <div className="md:flex items-center gap-28  hidden">
+        {/*   <div className="md:flex items-center gap-28  hidden">
           <Buscador />
           <Navegacao />
-        </div>
-        <div className="md:hidden items-center gap-28  flex">
+        </div> */}
+        {/*  <div className="md:hidden items-center gap-28  flex">
           <BotaoMenu openMenu={openMenu} handleMenu={handleMenu} />
         </div>
       </div>
-      {openMenu ? <Navegacao mobile /> : ""}
+      {openMenu ? <Navegacao mobile /> : ""} */}
+      </div>
     </header>
   )
 }

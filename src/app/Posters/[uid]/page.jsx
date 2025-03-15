@@ -12,7 +12,7 @@ export default async function Poster({ params }) {
   const post = await Client.getByUID("post", params.uid)
   const LastPost = await lastPost()
   return (
-    <section className="flex w-full justify-center gap-2 px-4 sm:px-0 ">
+    <section className="flex justify-center gap-2 px-4 sm:px-0 ">
       <div className="flex flex-col items-start justify-start gap-8  py-4 md:py-16 w-full sm:w-2/3">
         <h1 className=" text-2xl md:text-4xl text-left font-bold font-title text-destaque uppercase ">
           {asText(post.data.titulo)}
@@ -27,9 +27,9 @@ export default async function Poster({ params }) {
         <div className="text-md sm:text-lg leading-6 text-left text-textoPrincipal font-text">
           <PrismicRichText field={post.data.descricao} />
         </div>
-        <div className="flex w-full gap-12 bg-backgroundConteudo px-4 py-12 drop-shadow-xl rounded-xl ">
+        <div className="flex w-full gap-12 bg-backgroundConteudo relative px-4 py-12 drop-shadow-xl rounded-xl ">
           <Conteudo post={post} />
-          <div className="flex flex-col gap-8">
+          <div className=" hidden h-full relative lg:flex lg:flex-col    gap-8">
             <Indice post={post} />
             <UltimosPost post={LastPost} />
           </div>
