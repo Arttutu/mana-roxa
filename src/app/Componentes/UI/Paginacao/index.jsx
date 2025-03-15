@@ -14,8 +14,8 @@ export default function Pagination({ currentPage, totalPages }) {
   return (
     <div className="flex items-center justify-center mt-24 space-x-4">
       <button
-        className={`px-4 py-2 bg-gray-700 text-white  font-text rounded ${
-          currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""
+        className={`px-4 py-2 bg-destaque text-white  font-text rounded-lg ${
+          currentPage === 1 ? "opacity-20 cursor-not-allowed" : ""
         }`}
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
@@ -23,13 +23,13 @@ export default function Pagination({ currentPage, totalPages }) {
         Anterior
       </button>
 
-      <span className="text-lg font-semibold">
+      <span className="text-lg font-semibold font-text">
         Página {currentPage} de {totalPages}
       </span>
 
       <button
-        className={`px-4 py-2 bg-gray-700  font-text text-white rounded ${
-          currentPage === totalPages ? "opacity-50 cursor-not-allowed" : ""
+        className={`px-4 py-2 bg-destaque font-text text-white rounded-lg ${
+          currentPage === totalPages ? "opacity-20 cursor-not-allowed" : ""
         }`}
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}

@@ -11,7 +11,7 @@ export async function fetchPosts(page = 1) {
     orderings: [
       { field: "document.first_publication_date", direction: "desc" },
     ],
-    pageSize: 6, // Máximo de 6 posts por página
+    pageSize: 3, // Máximo de 6 posts por página
     page: page, // Página atual
   })
 

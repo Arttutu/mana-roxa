@@ -1,7 +1,8 @@
+"use client"
 import React from "react"
 import Menu from "../../Componentes/menu"
 import Rodape from "../../Componentes/Rodape"
-import VoltarInicio from "../../Componentes/UI/VoltarInicio"
+import VoltarInicio from "../../Componentes/UI/voltarInicio"
 export default function BlogLayout({ children }) {
   return (
     <>
